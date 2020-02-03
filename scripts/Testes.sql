@@ -25,7 +25,7 @@ execute InsCliente 'Joyce Ribeiro', 'Cyjoe', '121212'
 execute SelCliente 'Cyjoe'
 
 --altera 
-execute AltCliente '1','Joyce', 'Cyjoe', '151515'
+execute AltCliente '5','Joyce', 'Cyjoe', '151515'
 
 --seleciona Cliente por usuario
 execute SelCliente 'Cyjoe'
@@ -80,3 +80,18 @@ execute SelAlimento '0'
 
 --Pedido
 
+execute SelCliente '0'
+execute SelAlimento '1'
+
+execute InsPedido '03-02-2020', 5, 1
+execute InsPedido '03-02-2020', 5, 2
+execute InsPedido '03-02-2020', 5, 18
+execute InsPedido '02-02-2020', 5, 1
+execute InsPedido '02-02-2020', 5, 2
+execute InsPedido '02-02-2020', 5, 18
+
+execute SelPedido '2'
+
+execute DelPedido '4'
+
+execute AltPedido 5,'02-02-2020', 2, 1

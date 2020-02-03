@@ -72,7 +72,7 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[DelCliente
 GO 
 
 CREATE PROCEDURE [dbo].[DelCliente](
-	@Nom_Usuario	varchar(11))
+	@Num_Id	varchar(11))
 
 	AS
 	/*
@@ -89,7 +89,7 @@ CREATE PROCEDURE [dbo].[DelCliente](
 
 	BEGIN
 		DELETE FROM Cliente 
-			WHERE Cliente.Nom_Usuario = @Nom_Usuario
+			WHERE Cliente.Num_IDCliente = @Num_Id
 		RETURN 0
 	END
 GO

@@ -1,4 +1,4 @@
-﻿using ProjetoAlmoco.Domain.Entidades;
+﻿using ProjetoAlmoco.Domain.Entities;
 using System.Collections.Generic;
 
 namespace ProjetoAlmoco.Domain.Interfaces.Repository
@@ -7,7 +7,7 @@ namespace ProjetoAlmoco.Domain.Interfaces.Repository
     {
         int Post(Cliente cliente);
         int Put(Cliente cliente);
-        void Delete(string Nom_Usuario);
+        void Delete(int Num_IDCliente);
         IEnumerable<Cliente> Get();
         Cliente GetById(string Nom_Usuario);
     }

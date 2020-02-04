@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace ProjetoAlmoco.Domain.Entidades
+namespace ProjetoAlmoco.Domain.Entities
 {
     public class Pedido
     {
         public int Num_IDPedido { get; set; }
         public DateTime Dat_DataPedido { get; set; }
         public int Num_IDCliente { get; set; }
-        IEnumerable<Alimento> Alimentos { get; set; }
+        public int Num_IDAlimento { get; set; }
     }
 }

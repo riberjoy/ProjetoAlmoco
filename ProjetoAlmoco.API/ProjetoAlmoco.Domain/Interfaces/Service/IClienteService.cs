@@ -1,4 +1,4 @@
-﻿using ProjetoAlmoco.Domain.Entidades;
+﻿using ProjetoAlmoco.Domain.Entities;
 
 namespace ProjetoAlmoco.Domain.Interfaces.Service
 {

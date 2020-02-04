@@ -1,0 +1,43 @@
+﻿@*@model ProjetoAlmoco.Web.Models.Cliente*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/Cadastro.css")
+</head>
+<body class="flex">
+    <div>
+        <div class="cadastro ">
+            <img class="login__logo" src="~/Content/Img/logo-smn.png" alt="logo-smn">
+            <div class="cadastro__titulo">
+                <h1>Cadastre-se</h1>
+
+            </div>
+            <div class="cadastro__form">
+
+                <input class="cadastro__input" type="text" placeholder="NOME" name="nome" id="" autocomplete="off">
+                <input class="cadastro__input" type="text" placeholder="LOGIN" name="senha" id="" autocomplete="off">
+                <input class="cadastro__input" type="password" placeholder="SENHA" name="nome" id="">
+                <input class="cadastro__input" type="password" placeholder="CONFIRMA SENHA" name="senha" id="">
+
+
+
+                <input class="cadastro__link" type="submit" value="CADASTRAR">
+                @Html.ActionLink(" CANCELAR", "Index", "Login", null, new { @class = "cadastro__link cancelar" })
+                @*<input class="cadastro__link cancelar" type="submit" href="login.html" value="CANCELAR">*@
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

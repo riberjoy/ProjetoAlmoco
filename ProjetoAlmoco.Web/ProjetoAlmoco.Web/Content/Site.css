@@ -1,0 +1,34 @@
+﻿@i@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+    --cor-fundo: #023145;
+    --cor-btn-confirma: #00E866;
+    --cor-btn-cancela: #707070;
+    --cor-input: #395c6d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.flex {
+    /* height: 100vh; */    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+::placeholder {
+    color: white;
+    padding-left: 0%;
+    font-size: 15pt;
+}
+
+.btnConf {
+
+}

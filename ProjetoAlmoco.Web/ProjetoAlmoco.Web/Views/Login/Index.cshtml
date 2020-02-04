@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "SMN Almoço";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/Login.css")
+</head>
+<body class="flex">
+    <div>
+        <div class="login ">
+            <img class="login__logo" src="~/Content/Img/logo-smn.png" alt="logo-smn">
+            <div class="login__titulo">
+                <h1>Log In</h1>
+                <h3>Logue-se para desfrutar-se</h3>
+            </div>
+            <div class="login__form">
+                <input class="login__input" type="text" placeholder="LOGIN" name="nome" id="" autocomplete="off">
+                <input class="login__input" type="password" placeholder="SENHA" name="senha" id="">
+
+                <input class="login__link" type="submit" value="LOGAR">
+
+                @Html.ActionLink(" Não tem um Cadastro?", "Index", "Cadastro", null, new { @class = "login__cadastro" })
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

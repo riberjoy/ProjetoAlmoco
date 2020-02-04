@@ -60,6 +60,35 @@ CREATE PROCEDURE [dbo].[DelAlimento](
 GO
 
 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[AltAlimento]') AND objectproperty(id, N'IsPROCEDURE')=1)
+	DROP PROCEDURE [dbo].[AltAlimento] 
+GO 
+
+CREATE PROCEDURE [dbo].[AltAlimento](
+	@Num_IDAlimento		int,
+	@Ind_Ativo			char(1))
+
+	AS
+	/*
+		Documentação
+		Arquivo Fonte.....: Alimento.sql
+		Objetivo..........: Remove um determinado Alimento
+		Autor.............: Joyce Ribeiro
+ 		Data..............: 03/02/2020
+		Comentários.......: Parâmetro Status :
+							0 - Processado OK
+							1 - Erro ao excluir
+		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+	*/
+
+	BEGIN
+		UPDATE Alimento 
+			SET Ind_Ativo = @Ind_Ativo
+			WHERE Alimento.Num_IDAlimento = @Num_IDAlimento
+		RETURN 0
+	END
+GO
+
 
 
 IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[SelAlimento]') AND objectproperty(id, N'IsPROCEDURE')=1)

@@ -82,12 +82,21 @@ CREATE PROCEDURE [dbo].[SelCategoria](
 	*/
 
 	BEGIN
-
-		SELECT Num_IDCategoria,
-			Nom_Categoria
-		FROM Categoria ct WITH(NOLOCK)
-		WHERE ct.Num_IDCategoria = @Num_id
 		
-		RETURN 0
+		IF @Num_id = '0'
+			BEGIN
+				SELECT Num_IDCategoria,
+					Nom_Categoria
+				FROM Categoria ct WITH(NOLOCK)
+				RETURN 0
+			END
+		ELSE
+			BEGIN
+				SELECT Num_IDCategoria,
+					Nom_Categoria
+				FROM Categoria ct WITH(NOLOCK)
+				WHERE ct.Num_IDCategoria = @Num_id
+				RETURN 0
+			END
 	END
 GO

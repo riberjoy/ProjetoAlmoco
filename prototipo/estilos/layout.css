@@ -12,11 +12,11 @@ body{
     padding: 0;
     background-color: var(--cor-fundo);
     font-family: 'Montserrat', sans-serif;
-
     height: 100vh;
-}
+    }
 
 .flex {
+    /* height: 100vh; */
     align-items: center;
     justify-content: center;
     display: flex;
@@ -113,6 +113,8 @@ input[type = "text"]:focus, input[type = "password"]:focus{
     padding-left: 0%;
     font-size: 15pt;
 }
+
+
 
 @media (max-width:600px){
     .login__form{

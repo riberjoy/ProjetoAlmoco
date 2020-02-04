@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="../logo-smn.png" />
-    <link rel="stylesheet" href="../estilos/layout.css">
+
+    
     <link rel="stylesheet" href="../estilos/ADM.css">
+    <link rel="stylesheet" href="../estilos/mobile.css">
+    <link rel="stylesheet" href="../estilos/padrao.css">
    
     <title>SMN Almoço</title>
 </head>
@@ -17,26 +20,25 @@
          <div class="topbar__mensagem"><h2>Olá Administrador!</h2></div>
          <img class="topbar__logout" src="../logout.png" alt="">
       </div>
-      <div class="flex">
-        <div class="home__conteudo">
-            <h1>Selecione o cardápio do dia.</h1>
-            <h4><a href="">Cadastrar Nova Categoria</a></h4>
-            <div class="home__conteudo__categorias">
-                <div class="celulaCategoria">
-                    <div class="celulaTopo">
-                        <h2>Arroz</h2>
-                        <div class="celulaBotoes">
-                            <div class="edita">a</div>
-                            <div class="apaga">a</div>
-                        </div>
-                    </div>
-                    <div class="celulaBaixo">
 
+      <div class="conteudo">
+        <div class="conteudo__titulo">
+            <h1 >Selecione o cardápio do dia.</h1>
+            <h4><a class="addCat">Adicionar nova categoria</a></h4>
+
+            <div class="categoria">
+                <div class="categoria__topo">
+                    <div class="nomeCategoria">Arroz</div>
+                    <div class="botoes">
+                        <div class="adicionarCat"><img id="icone1" src="../imagens/add-svg.svg" alt=""></div>
+                        <div class="apagaCat"><img id="icone2" src="../imagens/trash-svg.svg" alt=""></div>
                     </div>
                 </div>
+                
+                <div class="categoria__baixo"></div>
             </div>
         </div>
       </div>
-    
+      
 </body>
 </html>

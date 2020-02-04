@@ -1,0 +1,62 @@
+
+:root{
+    --cor-fundo:#023145;
+    --cor-btn-confirma:#00E866;
+    --cor-btn-cancela:#707070;
+    --cor-input:#395c6d;
+}
+
+
+/* ======== CADASTRO ========= */
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cadastro__logo{
+    height: 10%;
+    width: 10%;
+}
+
+.cadastro__titulo{
+    color: white;
+    text-align: center;
+    height: auto;
+}
+
+.cadastro__titulo h1{
+    margin: 0;
+    font-size: 2em;
+}
+
+.cadastro__form{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+.cadastro__link{
+    margin-top: 25px;
+    background-color: var(--cor-btn-confirma);
+    color: white;
+    font-size: 15pt;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .4s;
+    outline: none
+}
+
+
+
+.cancelar{
+    margin-top: 10px;
+    background-color: var(--cor-btn-cancela);
+}

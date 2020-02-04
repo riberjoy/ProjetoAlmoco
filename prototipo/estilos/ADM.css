@@ -1,0 +1,21 @@
+.topo{
+    background-color: darkgray;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 0;
+
+}
+
+.topo .logo img{
+    height: 5%;
+    width: 5%;
+}
+
+.topo .logout img{
+    height: 3%;
+    width: 3%;
+}
+
+.aaa{
+    color: blue;
+}

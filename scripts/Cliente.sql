@@ -19,6 +19,7 @@ CREATE PROCEDURE [dbo].[InsCliente](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao inserir
+		Ex................: EXEC InsCliente 'Cliente 01', 'Teste01', '131313'
 	*/
 
 	BEGIN 
@@ -50,11 +51,11 @@ CREATE PROCEDURE [dbo].[AltCliente](
 		Arquivo Fonte.....: Cliente.sql
 		Objetivo..........: Altera um cliente existente
 		Autor.............: Joyce Ribeiro
- 		Data..............: 24/01/2020
+ 		Data..............: 03/02/2020
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao alterar
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC AltCliente '1','Cliente 01', 'Teste01', '151515'
 	*/
 
 	BEGIN
@@ -80,11 +81,11 @@ CREATE PROCEDURE [dbo].[DelCliente](
 		Arquivo Fonte.....: Cliente.sql
 		Objetivo..........: Remove um determinado cliente
 		Autor.............: Joyce Ribeiro
- 		Data..............: 24/01/2020
+ 		Data..............: 03/02/2020
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao excluir
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC DelCliente '1'
 	*/
 
 	BEGIN
@@ -110,11 +111,13 @@ CREATE PROCEDURE [dbo].[SelCliente](
 		Arquivo Fonte.....: Cliente.sql
 		Objetivo..........: Seleciona todos os clientes
 		Autor.............: Joyce Ribeiro
- 		Data..............: 24/01/2020
+ 		Data..............: 03/02/2020
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao selecionar
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC SelCliente 'Cliente 01'
+
+
 	*/
 
 	BEGIN

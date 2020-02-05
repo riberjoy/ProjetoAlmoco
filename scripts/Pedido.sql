@@ -19,6 +19,7 @@ CREATE PROCEDURE [dbo].[InsPedido](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao inserir
+		Ex:...............: EXEC InsPedido '03-02-2020', 5, 1
 	*/
 
 	BEGIN
@@ -35,7 +36,7 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[DelPedido]
 GO 
 
 CREATE PROCEDURE [dbo].[DelPedido](
-	@Num_IDPedido	int)
+	@Num_IDCliente	int)
 
 	AS
 	/*
@@ -47,12 +48,17 @@ CREATE PROCEDURE [dbo].[DelPedido](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao excluir
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC DelPedido '1'
 	*/
 
 	BEGIN
+	IF @Num_IDCliente = '0'
+		BEGIN
+			DELETE FROM Pedido
+		END
+	ELSE
 		DELETE FROM Pedido 
-			WHERE Pedido.Num_IDPedido = @Num_IDPedido
+			WHERE Pedido.Num_IDCliente = @Num_IDCliente
 		RETURN 0
 	END
 GO
@@ -76,11 +82,11 @@ CREATE PROCEDURE [dbo].[AltPedido](
 		Arquivo Fonte.....: Pedido.sql
 		Objetivo..........: Altera um Pedido existente
 		Autor.............: Joyce Ribeiro
- 		Data..............: 24/01/2020
+ 		Data..............: 03/02/2020
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao alterar
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC AltPedido 5,'02-02-2020', 2, 1
 	*/
 
 	BEGIN
@@ -112,17 +118,24 @@ CREATE PROCEDURE [dbo].[SelPedido](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao selecionar
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC SelPedido '2'
 	*/
 
 	BEGIN
 		IF @Num_id = '0'
 			BEGIN
-				SELECT Num_IDPedido,
-					Dat_DataPedido,
-					Num_IDCliente, 
-					Num_IDAlimento
-				FROM Pedido WITH(NOLOCK)
+				SELECT pd.Num_IDPedido,
+					pd.Dat_DataPedido,
+					pd.Num_IDCliente, 
+					cl.Nom_Cliente,
+					pd.Num_IDAlimento,
+					al.Nom_Alimento,
+					ct.Nom_Categoria
+				FROM Pedido pd WITH(NOLOCK) 
+				INNER JOIN Cliente cl ON pd.Num_IDCliente = cl.Num_IDCliente
+				INNER JOIN Alimento al ON pd.Num_IDAlimento = al.Num_IDAlimento
+				INNER JOIN Categoria ct ON al.Num_IDCategoria = ct.Num_IDCategoria
+				WHERE Dat_DataPedido = getDate() ORDER BY cl.Nom_Cliente ASC
 			END
 		ELSE
 			BEGIN

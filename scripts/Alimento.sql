@@ -19,6 +19,7 @@ CREATE PROCEDURE [dbo].[InsAlimento](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao inserir
+		Ex................: EXEC InsAlimento 'Arroz branco', 1, '0' 
 	*/
 
 	BEGIN 
@@ -49,7 +50,7 @@ CREATE PROCEDURE [dbo].[DelAlimento](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao excluir
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC DelAlimento '1'
 	*/
 
 	BEGIN
@@ -72,13 +73,16 @@ CREATE PROCEDURE [dbo].[AltAlimento](
 	/*
 		Documentação
 		Arquivo Fonte.....: Alimento.sql
-		Objetivo..........: Remove um determinado Alimento
+		Objetivo..........: Altera um determinado Alimento
 		Autor.............: Joyce Ribeiro
  		Data..............: 03/02/2020
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao excluir
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+							Tipo alimento:
+							0 - Desativo;
+							1 - Ativo;
+		Ex................: EXEC AltAlimento 1, '0'
 	*/
 
 	BEGIN
@@ -108,7 +112,7 @@ CREATE PROCEDURE [dbo].[SelAlimento](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao selecionar
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC SelAlimento '0'
 	*/
 
 	BEGIN

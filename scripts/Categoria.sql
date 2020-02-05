@@ -17,6 +17,7 @@ CREATE PROCEDURE [dbo].[InsCategoria](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao inserir
+	    Ex................: EXEC InsCategoria 'Arroz'
 	*/
 
 	BEGIN 
@@ -48,7 +49,7 @@ CREATE PROCEDURE [dbo].[DelCategoria](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao excluir
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC DelCategoria '1'
 	*/
 
 	BEGIN
@@ -78,7 +79,7 @@ CREATE PROCEDURE [dbo].[SelCategoria](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao selecionar
-		Ex................: EXEC [dbo].[GKSSP_SelSolicAbonos] 30004644, 2018, 10, '0'
+		Ex................: EXEC SelCategoria '0' 
 	*/
 
 	BEGIN

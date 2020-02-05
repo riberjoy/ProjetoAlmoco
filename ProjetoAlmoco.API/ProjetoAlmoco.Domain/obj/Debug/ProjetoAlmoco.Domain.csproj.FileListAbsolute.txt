@@ -1,0 +1,5 @@
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\bin\Debug\ProjetoAlmoco.Domain.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\bin\Debug\ProjetoAlmoco.Domain.pdb
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.csprojAssemblyReference.cache
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.pdb

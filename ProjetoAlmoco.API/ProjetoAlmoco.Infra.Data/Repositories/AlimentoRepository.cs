@@ -16,7 +16,7 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
             {
                 cmd.CommandText = "InsAlimento";
                 cmd.Parameters.AddWithValue("@Nom_Alimento", alimento.Nom_Alimento);
-                cmd.Parameters.AddWithValue("@Num_IDCategoria", alimento.Num_IDAlimento);
+                cmd.Parameters.AddWithValue("@Num_IDCategoria", alimento.Num_IDCategoria);
                 cmd.Parameters.AddWithValue("@Ind_Ativo", 1);
 
                 using (contexto = new Context())
@@ -68,7 +68,7 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
 
                     var alimentos = new List<Alimento>();
 
-                    if (dados.Read())
+                    while (dados.Read())
                     {
                         var alimento = new Alimento
                         {
@@ -89,31 +89,33 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
         }
         public IEnumerable<Alimento> GetAtivos()
         {
-            cmd.CommandText = "SelAlimento";
-            cmd.Parameters.AddWithValue("@Num_id", 1);
-
-            using (contexto = new Context())
+            using (cmd = new SqlCommand())
             {
-                SqlDataReader dados = contexto.ExecutaComandoRetorno(cmd);
+                cmd.CommandText = "SelAlimento";
+                cmd.Parameters.AddWithValue("@Num_id", 1);
 
-                if (dados.Read())
+                using (contexto = new Context())
                 {
-                    var alimentos = new List<Alimento>();
+                    SqlDataReader dados = contexto.ExecutaComandoRetorno(cmd);
 
-                    var alimento = new Alimento
+                    while (dados.Read())
                     {
-                        Num_IDAlimento = Convert.ToInt32(dados["Num_IDAlimento"]),
-                        Nom_Alimento = dados["Nom_Alimento"].ToString(),
-                        Num_IDCategoria = Convert.ToInt32(dados["Num_IDCategoria"]),
-                        Ind_Ativo = true
-                    };
+                        var alimentos = new List<Alimento>();
 
-                    alimentos.Add(alimento);
+                        var alimento = new Alimento
+                        {
+                            Num_IDAlimento = Convert.ToInt32(dados["Num_IDAlimento"]),
+                            Nom_Alimento = dados["Nom_Alimento"].ToString(),
+                            Num_IDCategoria = Convert.ToInt32(dados["Num_IDCategoria"]),
+                            Ind_Ativo = true
+                        };
 
-                    return alimentos;
+                        alimentos.Add(alimento);
+
+                        return alimentos;
+                    }
+                        return null;
                 }
-                else
-                    return null;
             }
         }
     }

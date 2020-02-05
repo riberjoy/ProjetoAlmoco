@@ -15,7 +15,7 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                 using (cmd = new SqlCommand())
                 {
                     cmd.CommandText = "InsCategoria";
-                    cmd.Parameters.AddWithValue("@Nom_Categoria	", categoria.Nom_Categoria);
+                    cmd.Parameters.AddWithValue("@Nom_Categoria", categoria.Nom_Categoria);
 
                     using (contexto = new Context())
                     {
@@ -49,7 +49,7 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
 
                     var categorias = new List<Categoria>();
 
-                    if (dados.Read())
+                    while (dados.Read())
                     {
                         var categoria = new Categoria
                         {

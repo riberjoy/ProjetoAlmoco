@@ -31,10 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AlimentoService.cs" />
+    <Compile Include="CategoriaService.cs" />
+    <Compile Include="ClienteService.cs" />
     <Compile Include="Entities\Alimento.cs" />
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Pedido.cs" />
+    <Compile Include="Entities\PedidoCliente.cs" />
     <Compile Include="Interfaces\Repository\IAlimentoRepository.cs" />
     <Compile Include="Interfaces\Repository\ICategoriaRepository.cs" />
     <Compile Include="Interfaces\Repository\IClienteRepository.cs" />
@@ -43,6 +47,7 @@
     <Compile Include="Interfaces\Service\ICategoriaService.cs" />
     <Compile Include="Interfaces\Service\IClienteService.cs" />
     <Compile Include="Interfaces\Service\IPedidoService.cs" />
+    <Compile Include="PedidoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

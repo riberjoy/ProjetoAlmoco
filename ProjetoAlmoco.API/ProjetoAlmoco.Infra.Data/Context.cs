@@ -10,7 +10,7 @@ namespace ProjetoAlmoco.Infra.Data
 
         public Context()
         {
-            string _connectionString = "Data Source=ESTAGIO12\\SQLEXPRESS;Initial Catalog=ProjetoAlmoco;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string _connectionString = "Data Source=ESTAGIO12\\SQLEXPRESS;Initial Catalog=db_ProjetoAlmoco;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             minhaConexao = new SqlConnection(_connectionString);
             minhaConexao.Open();

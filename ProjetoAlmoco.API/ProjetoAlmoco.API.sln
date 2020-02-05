@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoAlmoco.Domain", "ProjetoAlmoco.Domain\ProjetoAlmoco.Domain.csproj", "{2ECF8A9D-62A3-40E1-9EF4-147D234377BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoAlmoco.Infra.Data", "ProjetoAlmoco.Infra.Data\ProjetoAlmoco.Infra.Data.csproj", "{591737A6-9226-4A32-8899-1807C4F28036}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoAlmoco.Repository", "ProjetoAlmoco.Infra.Data\ProjetoAlmoco.Repository.csproj", "{591737A6-9226-4A32-8899-1807C4F28036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoAlmoco.API", "ProjetoAlmoco.WebApi\ProjetoAlmoco.API.csproj", "{0B9948A8-1981-4DB0-BA7B-4D9D80E15A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{591737A6-9226-4A32-8899-1807C4F28036}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{591737A6-9226-4A32-8899-1807C4F28036}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{591737A6-9226-4A32-8899-1807C4F28036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9948A8-1981-4DB0-BA7B-4D9D80E15A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9948A8-1981-4DB0-BA7B-4D9D80E15A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9948A8-1981-4DB0-BA7B-4D9D80E15A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9948A8-1981-4DB0-BA7B-4D9D80E15A89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -67,7 +67,7 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
 
                     var clientes = new List<Cliente>();
 
-                    if (dados.Read())
+                    while (dados.Read())
                     {
                         var cliente = new Cliente
                         {

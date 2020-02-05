@@ -1,0 +1,86 @@
+﻿/* Fonte do site */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+:root {
+    --cor-fundo: #023145;
+    --cor-btn-confirma: #00E866;
+    --cor-btn-cancela: #707070;
+    --cor-input: #395c6d;
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+    width: 9px
+}
+
+::-webkit-scrollbar-track {
+    background: #cccccc;
+    border-radius: 30px
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0080c0;
+    border-radius: 30px
+}
+
+/* padrões de uso */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.flex {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* PLaceholder */
+
+
+::placeholder {
+    color: white;
+    padding-left: 0%;
+    font-size: 15pt;
+}
+
+
+/* inputs */
+input[type = "text"], input[type = "password"] {
+    margin-top: 10px;
+    width: 70%;
+    height: 20px;
+    background-color: var(--cor-input);
+    border: none;
+    /* border-radius: 50px; */
+    border-radius: 50px 10px 50px;
+    padding: 20px;
+    font-size: 15pt;
+    color: white;
+    padding-left: 10%;
+    transition: .5s;
+    outline: none;
+}
+
+    input[type = "text"]:focus, input[type = "password"]:focus {
+        width: 90%;
+        border-radius: 10px 50px 10px;
+    }
+
+.texto {
+    color: whitesmoke;
+    position: absolute;
+}
+
+p {
+    padding: 0;
+    margin-left: 2%;
+    font-size: 16pt;
+    align-items: center;
+}

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Img/logo-smn-fav.png" rel="shortcut icon" type="image/x-icon" />
+
+
+    <title>SMN Almoço</title>
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/Login.css")
+    @Styles.Render("~/Content/Cadastro.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

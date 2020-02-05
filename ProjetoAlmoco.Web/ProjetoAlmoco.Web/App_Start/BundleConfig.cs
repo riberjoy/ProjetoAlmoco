@@ -19,8 +19,8 @@ namespace ProjetoAlmoco.Web
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+           // bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+           //           "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/Login.css",

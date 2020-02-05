@@ -11,12 +11,18 @@ namespace ProjetoAlmoco.Web.Models
         [Required(ErrorMessage ="Necessário inserir o nome do cliente!")]
         public string NomeCliente { get; set; }
 
-        [Required(ErrorMessage = "Necessário inserir um nome de usuario válido!")]
+        [Required(ErrorMessage = "Necessário inserir um nome de usuário válido!")]
+        [MaxLength(10, ErrorMessage = "Máximo de 20 caracteres")]
+        [MinLength(5, ErrorMessage = "Mínimo de 5 caracteres")]
         public string Usuario { get; set; }
 
         [Required(ErrorMessage = "Necessário inserir a senha!")]
+        [MaxLength(20, ErrorMessage = "Máximo de 20 caracteres")]
+        [MinLength(5, ErrorMessage = "Mínimo de 5 caracteres")]
         public string Senha { get; set; }
 
+        [MinLength(5, ErrorMessage = "Mínimo de 5 caracteres")]
+        [Compare(nameof(Senha), ErrorMessage = "Senhas não coincidem!")]
         public string ConfirmaSenha { get; set; }
 
     }

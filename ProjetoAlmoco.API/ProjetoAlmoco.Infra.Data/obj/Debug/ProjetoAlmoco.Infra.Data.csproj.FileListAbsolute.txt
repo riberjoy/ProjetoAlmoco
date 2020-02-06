@@ -1,0 +1,10 @@
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\bin\Debug\ProjetoAlmoco.Infra.Data.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\bin\Debug\ProjetoAlmoco.Infra.Data.pdb
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\bin\Debug\ProjetoAlmoco.Domain.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\bin\Debug\System.Data.SqlClient.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\bin\Debug\ProjetoAlmoco.Domain.pdb
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\bin\Debug\System.Data.SqlClient.xml
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\obj\Debug\ProjetoAlmoco.Infra.Data.csprojAssemblyReference.cache
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\obj\Debug\ProjetoAlmoco.Infra.Data.csproj.CopyComplete
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\obj\Debug\ProjetoAlmoco.Infra.Data.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Infra.Data\obj\Debug\ProjetoAlmoco.Infra.Data.pdb

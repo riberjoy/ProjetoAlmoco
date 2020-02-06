@@ -25,12 +25,12 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                     }
             }
         }
-        public void Delete(int Num_IDPedido)
+        public void Delete(int Num_IDCliente)
         {
             using (cmd = new SqlCommand())
             {
                 cmd.CommandText = "DelPedido";
-                cmd.Parameters.AddWithValue("@Num_IDPedido", Num_IDPedido);
+                cmd.Parameters.AddWithValue("@Num_IDCliente", Num_IDCliente);
 
                 using (contexto = new Context())
                 {
@@ -47,18 +47,21 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
 
                 using (contexto = new Context())
                 {
-                    SqlDataReader dados = contexto.ExecutaComandoRetorno(cmd);
-
                     var pedidos = new List<Pedido>();
 
-                    if (dados.Read())
+                    SqlDataReader dados = contexto.ExecutaComandoRetorno(cmd);
+
+                    while(dados.Read())
                     {
                         var pedido = new Pedido
                         {
                             Num_IDPedido = Convert.ToInt32(dados["Num_IDPedido"]),
                             Dat_DataPedido = Convert.ToDateTime(dados["Dat_DataPedido"]),
                             Num_IDCliente = Convert.ToInt32(dados["Num_IDCliente"]),
-                            Num_IDAlimento = Convert.ToInt32(dados["Num_IDAlimento"])
+                            Nom_Cliente = dados["Nom_Cliente"].ToString(),
+                            Num_IDAlimento = Convert.ToInt32(dados["Num_IDAlimento"]),
+                            Nom_Alimento = dados["Nom_Alimento"].ToString(),
+                            Nom_Categoria = dados["Nom_Categoria"].ToString()
                         };
 
                         pedidos.Add(pedido);
@@ -80,14 +83,17 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
 
                     var pedidos = new List<Pedido>();
 
-                    if (dados.Read())
+                    while (dados.Read())
                     {
                         var pedido = new Pedido
                         {
                             Num_IDPedido = Convert.ToInt32(dados["Num_IDPedido"]),
                             Dat_DataPedido = Convert.ToDateTime(dados["Dat_DataPedido"]),
                             Num_IDCliente = Convert.ToInt32(dados["Num_IDCliente"]),
-                            Num_IDAlimento = Convert.ToInt32(dados["Num_IDAlimento"])
+                            Nom_Cliente = dados["Nom_Cliente"].ToString(),
+                            Num_IDAlimento = Convert.ToInt32(dados["Num_IDAlimento"]),
+                            Nom_Alimento = dados["Nom_Alimento"].ToString(),
+                            Nom_Categoria = dados["Nom_Categoria"].ToString()
                         };
 
                         pedidos.Add(pedido);

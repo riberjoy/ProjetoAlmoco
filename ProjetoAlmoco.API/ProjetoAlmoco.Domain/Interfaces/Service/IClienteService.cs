@@ -6,6 +6,6 @@ namespace ProjetoAlmoco.Domain.Interfaces.Service
     {
         string Post(Cliente cliente);
         string Put(Cliente cliente);
-        string ConsLogin(Cliente cliente);
+        int ConsLogin(Cliente usuario);
     }
 }

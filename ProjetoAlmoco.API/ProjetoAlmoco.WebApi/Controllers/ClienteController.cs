@@ -26,7 +26,7 @@ namespace ProjetoAlmoco.WebApi.Controllers
         public IHttpActionResult Get() => Ok(_clienteRepository.Get());
 
         public IHttpActionResult GetById(string Nom_Usuario) => Ok(_clienteRepository.GetById(Nom_Usuario));
-        [HttpGet, Route(template: "api/cliente/conslogin")]
+        [HttpPost, Route(template: "api/cliente/conslogin")]
         public IHttpActionResult ConsLogin(Cliente usuario)
         {
             var retorno = _clienteService.ConsLogin(usuario);

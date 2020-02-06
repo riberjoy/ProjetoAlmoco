@@ -1,7 +1,6 @@
 ﻿using ProjetoAlmoco.Domain.Entities;
 using ProjetoAlmoco.Domain.Interfaces.Repository;
 using ProjetoAlmoco.Domain.Interfaces.Service;
-using System.Collections;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -34,7 +33,7 @@ namespace ProjetoAlmoco.WebApi.Controllers
                 _alimentoRepository.Put(alimentos, 0);
             return Ok();
         }
-        [HttpPut, Route(template: "api/alimento/editarcardapio")]
+        [HttpGet, Route(template: "api/alimento/editarcardapio")]
         public IHttpActionResult EditarCardapio() => Ok(_alimentoService.EditarCardapio());
         public IHttpActionResult Get() => Ok(_alimentoRepository.Get());
         [HttpGet, Route(template: "api/alimento/getativos")]

@@ -21,10 +21,10 @@ namespace ProjetoAlmoco.WebApi.Controllers
             _pedidoRepository.Post(pedido);
             return Ok();
         }
-        public IHttpActionResult Put(int Num_IDCliente) => Ok(_pedidoService.EditarPedido(Num_IDCliente));
-        public IHttpActionResult Delete(int Num_IDPedido)
+        public IHttpActionResult Put(Pedido pedido) => Ok(_pedidoService.EditarPedido(pedido.Num_IDCliente));
+        public IHttpActionResult Delete(int Num_IDCliente)
         {
-            _pedidoRepository.Delete(Num_IDPedido);
+            _pedidoRepository.Delete(Num_IDCliente);
             return Ok();
         }
         public IHttpActionResult Get() => Ok(_pedidoService.SepararPedidos(_pedidoRepository.Get().ToList()));

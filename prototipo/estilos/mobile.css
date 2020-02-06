@@ -1,0 +1,29 @@
+@media (max-width:600px){
+    /* login */
+    .login__form{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .login__logo{
+        height: 40%;
+        width: 40%;
+    }
+
+    
+    /* Cadastro */
+    .cadastro__form{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .cadastro__logo{
+        height: 40%;
+        width: 40%;
+    }
+}
+

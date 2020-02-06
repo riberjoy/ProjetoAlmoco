@@ -1,0 +1,96 @@
+:root{
+    --cor-fundo:#023145;
+    --cor-btn-confirma:#00E866;
+    --cor-btn-cancela:#707070;
+    --cor-input:#395c6d;
+    --cor-deleta:#FF5B5B;
+}
+
+/* ADM home */
+
+.topbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.topbar__logo{
+    height: 6%;
+    width: 6%;
+}
+
+.topbar__logout{
+    width: 3%;
+    height: 3%;
+    
+}
+
+.topbar__mensagem{
+    color: white;
+    margin-left: -50px;
+}
+
+/* =========================== */
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
+}
+
+.conteudo__titulo{
+    color: white;
+}
+
+.addCat{
+    color: var(--cor-btn-confirma);
+    text-decoration: underline;
+}
+
+/* categoria */
+
+.categoria{
+    
+    background-color: white;
+    border-radius: 30px;
+   
+}
+.nomeCategoria{
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: fit-content;
+}
+.categoria__topo{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.botoes{
+    display: flex;
+    flex-direction:row ;
+}
+
+#icone2{
+    width: 10%;
+    height: 10%;
+}
+
+.adicionarCat{
+    border-radius: 30px;
+    background-color: var(--cor-btn-confirma);
+}
+
+.apagaCat{
+    border-radius: 30px;
+    background-color: var(--cor-deleta);
+}

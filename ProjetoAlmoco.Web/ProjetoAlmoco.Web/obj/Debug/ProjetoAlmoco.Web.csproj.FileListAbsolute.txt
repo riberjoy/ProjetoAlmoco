@@ -1,0 +1,126 @@
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.dll.config
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.pdb
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csc.exe
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csc.exe.config
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csc.rsp
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csi.exe
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csi.rsp
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.AppContext.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.exe
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.exe.config
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.rsp
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Antlr3.Runtime.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Newtonsoft.Json.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Helpers.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Mvc.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Optimization.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Razor.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\WebGrease.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Helpers.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Mvc.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Optimization.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Razor.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Newtonsoft.Json.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Antlr3.Runtime.pdb
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csprojAssemblyReference.cache
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csproj.CoreCompileInputs.cache
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csproj.CopyComplete
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.dll
+C:\Users\riber\source\repos\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.pdb
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.dll.config
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.pdb
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csc.exe
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csc.exe.config
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csc.rsp
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csi.exe
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\csi.rsp
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.AppContext.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.exe
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.exe.config
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.rsp
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Antlr3.Runtime.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Newtonsoft.Json.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Helpers.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Mvc.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Optimization.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Razor.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\WebGrease.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Helpers.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Mvc.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Optimization.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.Razor.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Newtonsoft.Json.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Antlr3.Runtime.pdb
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csprojAssemblyReference.cache
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csproj.CoreCompileInputs.cache
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csproj.CopyComplete
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.dll
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.pdb

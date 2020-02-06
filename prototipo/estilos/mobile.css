@@ -25,5 +25,48 @@
         height: 40%;
         width: 40%;
     }
+
+    /* botoes */
+    .button-text{
+        display: none;
+    }
+    button.learn-more{
+        width: none;
+      }
+
+    /* alimentos */
+    .alimentos__ul li label {
+        padding: 4px 8px;
+    }
+      
+      .alimentos__ul li label::before {
+        font-size: 8px;
+        padding: 2px 6px 2px 2px;
+       
+      }
+
+    /* categoria */
+    .categoria{
+        width: 90vw;
+        
+       
+    }
+
+    .topbar__logo{
+        height: 12%;
+        width: 12%;
+    }
+    
+    .topbar__logout{
+        width: 9%;
+        height: 9%;
+        
+    }
+    
+    .topbar__mensagem h2{
+       font-size: 18pt;
+       margin-left: 40px;
+    }
+
 }
 

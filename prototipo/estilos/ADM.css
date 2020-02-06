@@ -58,6 +58,7 @@
 /* categoria */
 
 .categoria{
+    margin-top: 15px;
     width: 50vw;
     background-color: white;
     border-radius: 30px;
@@ -78,60 +79,6 @@
     align-items: center;
 }
 
-/* SWITCH */
-.botao__switch{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.onoffswitch {
-    position: relative; width: 122px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-}
-.onoffswitch-checkbox {
-    display: none;
-}
-.onoffswitch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #FFFFFF; border-radius: 15px;
-}
-.onoffswitch-inner {
-    display: block; width: 200%; margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-}
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 33px; padding: 0; line-height: 33px;
-    font-size: 13px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-    box-sizing: border-box;
-}
-.onoffswitch-inner:before {
-    content: "SELECIONA";
-    text-align: left;
-    padding-left: 10px;
-    background-color: #00E866; color: #FFFFFF;
-}
-.onoffswitch-inner:after {
-    content: "DELETA";
-    padding-right: 10px;
-    background-color: #FF5B5B; color: #FFFFFF;
-    text-align: right;
-}
-.onoffswitch-switch {
-    display: block; width: 18px; margin: 7.5px;
-    background: #FFFFFF;
-    position: absolute; top: 0; bottom: 0;
-    right: 85px;
-    border: 2px solid #FFFFFF; border-radius: 15px;
-    transition: all 0.3s ease-in 0s; 
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-    margin-left: 0px;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px; 
-}
-
 /* ====================== */
 
 .categoria hr{
@@ -142,13 +89,15 @@
 }
 
 /* AlIMENTOS */
-.alimentos__ul {
+/* .alimentos__ul {
     list-style: none;
     padding: 5px;
   }
   .alimentos__ul li {
     display: inline;
   }
+
+
   .alimentos__ul li label {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.9);
@@ -167,8 +116,12 @@
   }
   
   .alimentos__ul li label {
-    padding: 8px 12px;
+    padding: 8px 10px ;
     cursor: pointer;
+  }
+
+  .alimentos__ul li label i {
+    display: inline;
   }
   
   .alimentos__ul li label::before {
@@ -195,7 +148,8 @@
     border: 2px solid var(--cor-btn-confirma);
     background-color: var(--cor-btn-confirma);
     color: #fff;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
+    
   }
   
   .alimentos__ul li input[type="checkbox"] {
@@ -208,5 +162,124 @@
   .alimentos__ul li input[type="checkbox"]:focus + label {
     border: 2px solid var(--cor-btn-confirma);
   }
-  
+ 
+   input[type="checkbox"]:checked +  label  .icon-deleta{
+    background-color: var(--cor-fundo);
+    padding: 10px;
+    border-radius: 30px;
+    color: white;
+    display: inline;
+  }
 
+    label .icon-deleta{
+    display: none !;
+    background-color: var(--cor-deleta);
+    padding: 5px;
+    border-radius: 30px;
+    color: white;
+  } */
+/* ===================== */
+
+ /* AlIMENTOS */
+.alimentos__ul {
+    list-style: none;
+    padding: 5px;
+  }
+  .alimentos__ul li {
+    display: inline;
+  }
+
+
+  .alimentos__ul li .alimento-redondo /*label*/ {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--cor-btn-cancela);
+    color: #000000;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.2s;
+  }
+  
+  .alimentos__ul li .alimento-redondo /*label*/ {
+    padding: 8px 10px ;
+   
+  }
+  .alimentos__ul li .alimento-redondo label{
+    cursor: pointer;
+  }
+
+  .alimentos__ul li .alimento-redondo i {
+    display: none;
+  }
+
+  
+  .alimentos__ul li .alimento-redondo label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    content: "\f067";
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo label::before {
+    content: "\f00c";
+    transform: rotate(-360deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo /*label*/ {
+    border: 2px solid var(--cor-btn-confirma);
+    background-color: var(--cor-btn-confirma);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    /* padding: 8px 0px 8px 12px ; */
+  }
+  
+  .alimentos__ul li input[type="checkbox"] {
+    display: absolute;
+  }
+  .alimentos__ul li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+  .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo /*label*/ {
+    border: 2px solid var(--cor-btn-confirma);
+  }
+
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo  i/*label*/ {
+    display: inline;
+    background-color: var(--cor-deleta);
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+ 
+
+ 
+/*   
+  .alimentos__ul li input[type="checkbox"]:focus:checked + label::after {
+    padding-left: 20px;
+    content: "\f1f8";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    background-color: var(--cor-deleta);
+    height: 10px;
+    width: 5px;
+    border-radius: 15px;
+    text-align: center;
+  }
+ */

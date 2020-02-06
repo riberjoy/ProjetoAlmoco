@@ -1,4 +1,4 @@
-﻿using ProjetoAlmoco.Domain.Entidades;
+﻿using ProjetoAlmoco.Domain.Entities;
 
 namespace ProjetoAlmoco.Domain.Interfaces.Service
 {
@@ -6,6 +6,5 @@ namespace ProjetoAlmoco.Domain.Interfaces.Service
     {
         string txtPedido();
         Pedido EditarPedido(Pedido pedido);
-        Pedido GetPorUsuario(int Num_IDCliente);
     }
 }

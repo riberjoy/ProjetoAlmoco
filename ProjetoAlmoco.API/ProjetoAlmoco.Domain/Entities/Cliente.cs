@@ -1,4 +1,4 @@
-﻿namespace ProjetoAlmoco.Domain.Entidades
+﻿namespace ProjetoAlmoco.Domain.Entities
 {
     public class Cliente
     {

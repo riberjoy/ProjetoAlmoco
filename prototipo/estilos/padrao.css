@@ -7,6 +7,7 @@
     --cor-btn-confirma:#00E866;
     --cor-btn-cancela:#707070;
     --cor-input:#395c6d;
+    --cor-deleta:#FF5B5B
 }
 
 
@@ -72,3 +73,118 @@ input[type = "text"]:focus, input[type = "password"]:focus{
     width: 90%;
     border-radius: 10px 50px 10px;
 }
+
+
+/* botoes */
+/* .botoes{
+    margin-right: 0;
+}
+
+.botoes__deleta,.botoes__adiciona{
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    font-size: 25px; 
+    cursor: pointer;
+    border-radius: 30px;
+    outline: none;
+    width: fit-content;
+}
+
+.botoes__adiciona{
+    background-color: var(--cor-btn-confirma);
+
+}
+
+.botoes__deleta{
+    display: flex;
+    background-color: var(--cor-deleta);
+    align-items: flex-end;
+}
+
+
+.botoes__deleta:hover{
+    width: 200px;
+} */
+
+
+/*
+.botoes__deleta:hover::before{
+    content: "Deletar Categoria  ";
+    font-size: 16pt;
+    width: 200px;
+} */
+
+/* =============== */
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  button.learn-more {
+    width: 15rem;
+    height: auto;
+  }
+
+  button.learn-more .circle {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    width: 3rem;
+    height: 3rem;
+    background: var(--cor-deleta);
+    border-radius: 1.625rem;
+  }
+  
+  button.learn-more .circle i {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-left: auto;
+    width: 3rem;
+    height: 3rem;
+    font-size: 18pt;
+    color: white;
+  }
+  
+  button.learn-more .button-text {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 1.85rem 0 0;
+    color: white;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  
+  button:hover .circle {
+    width: 100%;
+  }
+
+  button:hover .button-text {
+    color: #fff;
+  } 
+ 
+  

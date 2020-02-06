@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="../logo-smn.png" />
 
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../estilos/ADM.css">
     <link rel="stylesheet" href="../estilos/mobile.css">
     <link rel="stylesheet" href="../estilos/padrao.css">
@@ -26,19 +26,47 @@
             <h1 >Selecione o cardápio do dia.</h1>
             <h4><a class="addCat">Adicionar nova categoria</a></h4>
 
-            <div class="categoria">
-                <div class="categoria__topo">
-                    <div class="nomeCategoria">Arroz .</div>
-                    <div class="botoes">
-                        <div class="adicionarCat"><img id="icone1" src="../imagens/add-svg.svg" alt=""></div>
-                        <div class="apagaCat"><img id="icone2" src="../imagens/trash-svg.svg" alt=""></div>
-                    </div>
+            
+        </div>
+        <div class="categoria">
+            <div class="categoria__topo">
+                <div class="nomeCategoria">Arroz</div>
+                <div class="botoes">
+                    
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <i class="trash fa fa-trash"></i>
+                        </span>
+                        <span class="button-text">Apagar Categoria</span>
+                      </button>
+                   <!-- <button class="botoes__adiciona"><i class="fa fa-plus"></i></button> -->
+                   <!-- <button class="botoes__deleta"></button> -->
                 </div>
+            </div>
+            <hr>
+            <div class="categoria__baixo">
+                <!-- <div class="botao__switch">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div> -->
+                <div class="alimentos">
+                    <ul class="alimentos__ul">
+                        <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne">Branco</label></li>
+                        <li><input type="checkbox" id="checkboxTwo" value="Cotton Candy"><label for="checkboxTwo">Integral</label></li>
+                        <li><input type="checkbox" id="checkboxThree" value="Rarity" ><label for="checkboxThree">Verde</label></li>
+                        <li><input type="checkbox" id="checkboxFour" value="Moondancer"><label for="checkboxFour">Carreteiro</label></li>
                 
-                <div class="categoria__baixo"></div>
+                      </ul>
+                </div>
             </div>
         </div>
       </div>
       
+     
 </body>
 </html>

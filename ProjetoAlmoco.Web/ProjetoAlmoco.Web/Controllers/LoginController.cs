@@ -1,8 +1,4 @@
 ﻿using ProjetoAlmoco.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ProjetoAlmoco.Web.Controllers
@@ -21,7 +17,7 @@ namespace ProjetoAlmoco.Web.Controllers
             {
                 /*var userInfo = "Usuario: "+usuario.NomeUsuario+" -- Senha: "+usuario.Senha;
                 ViewBag.selectedUser = userInfo;*/
-                return View();
+                return RedirectToAction("Index","Admin");
             }
 
             return View(usuario);

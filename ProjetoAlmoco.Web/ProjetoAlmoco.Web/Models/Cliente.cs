@@ -21,7 +21,6 @@ namespace ProjetoAlmoco.Web.Models
         [MinLength(5, ErrorMessage = "Mínimo de 5 caracteres")]
         public string Senha { get; set; }
 
-        [MinLength(5, ErrorMessage = "Mínimo de 5 caracteres")]
         [Compare(nameof(Senha), ErrorMessage = "Senhas não coincidem!")]
         public string ConfirmaSenha { get; set; }
 

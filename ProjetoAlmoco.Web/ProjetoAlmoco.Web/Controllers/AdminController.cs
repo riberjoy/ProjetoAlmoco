@@ -12,6 +12,16 @@ namespace ProjetoAlmoco.Web.Controllers
         // GET: Admin
         public ActionResult Index()
         {
+            List<string> Categorias = new List<string>();
+            Categorias.Add("item1");
+            Categorias.Add("item2");
+            ViewBag.CriaCategorias = Categorias;
+
+            List<string> Alimentos = new List<string>();
+            Alimentos.Add("Alimento 1 ");
+            Alimentos.Add("Alimento 2");
+            ViewBag.CriaAlimentos = Alimentos;
+
             return View();
         }
 
@@ -20,6 +30,5 @@ namespace ProjetoAlmoco.Web.Controllers
         {
             return RedirectToAction("Index");
         }
-
     }
 }

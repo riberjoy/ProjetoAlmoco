@@ -1,0 +1,13 @@
+﻿@{
+    List<string> Alimentos = (List<string>)ViewBag.CriaAlimentos;
+}
+
+@foreach (var itemA in Alimentos)
+{
+    <li>
+        <input type="checkbox" id="checkboxOne" value="Rainbow Dash">
+        <div class="alimento-redondo">
+            <label for="checkboxOne">@itemA </label><i class="icon-deleta fas fa-trash"></i>
+        </div>
+    </li>
+}

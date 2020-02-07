@@ -1,59 +1,36 @@
-﻿<div class="categoria">
-    <div class="categoria__topo">
-        <div class="nomeCategoria">Arroz</div>
-        <div class="botoes">
+﻿@{
+    List<string> Categorias = (List<string>)ViewBag.CriaCategorias;
+}
 
-            <button class="learn-more">
-                <span class="circle" aria-hidden="true">
-                    <i class="trash fa fa-trash"></i>
-                </span>
-                <span class="button-text">Apagar Categoria</span>
-            </button>
+@foreach (var item in Categorias)
+{
+    <div class="categoria">
+        <div class="categoria__topo">
+            <div class="nomeCategoria"> @item </div>
+            <div class="botoes">
+
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <i class="trash fa fa-trash"></i>
+                    </span>
+                    <span class="button-text">Apagar Categoria</span>
+                </button>
+            </div>
         </div>
+        <hr>
+        <div class="categoria__baixo">
+                <div class="alimentos">
+                    <ul class="alimentos__ul">
+                        @Html.Partial("_Alimentos")
+                    </ul>
+                    <button class="learn-more">
+                        <span class="circle-add-alimento" aria-hidden="true">
+                            <i class=" fa fa-plus"></i>
+                        </span>
+                        <span class="button-text2">Adicionar alimentos</span>
+                    </button>
+                </div>
+            </div>
     </div>
-    <hr>
-    <div class="categoria__baixo">
+}
 
-        <div class="alimentos">
-            <ul class="alimentos__ul">
-                <li>
-                    <input type="checkbox" id="checkboxOne" value="Rainbow Dash">
-                    <div class="alimento-redondo">
-                        <label for="checkboxOne">Branco </label><i class="icon-deleta fas fa-trash"></i>
-                    </div>
-
-                </li>
-                <li>
-                    <input type="checkbox" id="checkbotwo" value="Rainbow Dash">
-                    <div class="alimento-redondo">
-                        <label for="checkbotwo">Integral </label><i class="icon-deleta fas fa-trash"></i>
-                    </div>
-
-                </li>
-                <li>
-                    <input type="checkbox" id="checkboxthree" value="Rainbow Dash">
-                    <div class="alimento-redondo">
-                        <label for="checkboxthree">Verde </label><i class="icon-deleta fas fa-trash"></i>
-                    </div>
-
-                </li>
-                <li>
-                    <input type="checkbox" id="checkboxfour" value="Rainbow Dash">
-                    <div class="alimento-redondo">
-                        <label for="checkboxfour">Carreteiro </label><i class="icon-deleta fas fa-trash"></i>
-                    </div>
-
-                </li>
-            </ul>
-
-            <button class="learn-more">
-                <span class="circle-add-alimento" aria-hidden="true">
-                    <i class=" fa fa-plus"></i>
-
-                </span>
-                <span class="button-text2">Adicionar alimentos</span>
-            </button>
-
-        </div>
-    </div>
-</div>

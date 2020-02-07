@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoAlmoco.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +14,12 @@ namespace ProjetoAlmoco.Web.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Index(Categoria categoria)
+        {
+            return RedirectToAction("Index");
+        }
+
     }
 }

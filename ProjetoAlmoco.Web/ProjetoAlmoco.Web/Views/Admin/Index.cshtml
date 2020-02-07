@@ -1,7 +1,19 @@
-﻿<div class="conteudo">
+﻿
+<div id="myBtn" class="conteudo">
     <div class="conteudo__titulo">
         <h1>Selecione o cardápio do dia.</h1>
-        <h4><a id="myBtn" onclick="insModal('Nova Categoria')" class="addCat" href="#">Adicionar nova categoria</a></h4>
-        @RenderPage("~/Views/Shared/_CardCriaCardapio.cshtml")
+
+        <button onclick="insModal('Nova Categoria', 'Admin/Index', 'CADASTRAR')" class="learn-more">
+            <span class="circle-add" aria-hidden="true">
+                <i class=" fa fa-plus"></i>
+            </span>
+            <span class="button-text">ADD Categoria</span>
+        </button>
+
+        <h4><a class="addCat" href="#">Adicionar nova categoria</a></h4>
+
+        @Html.Partial("_CardCriaCardapio")
+
+        <input class="conteudo liberar-cardapio" type="submit" href="login.html" value="LIBERAR CARDÁPIO">
     </div>
 </div>

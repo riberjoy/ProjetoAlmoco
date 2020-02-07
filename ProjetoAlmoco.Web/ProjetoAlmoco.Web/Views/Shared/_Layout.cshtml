@@ -20,10 +20,9 @@
         }
         else if (controller == "Admin")
         {
-
             @Styles.Render("~/Content/Admin.css")
             @Scripts.Render("~/bundles/modernizr", "~/Scripts/modal.js")
-            @RenderPage("~/Views/Shared/_Topo.cshtml")
+            @Html.Partial("_Topo")
         }
         else
         {

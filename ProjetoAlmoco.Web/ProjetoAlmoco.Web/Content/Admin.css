@@ -16,8 +16,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: fit-content;
-    width: fit-content;
+    height: auto;
+    width: auto;
 }
 
 .topbar__logo {
@@ -41,7 +41,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: fit-content;
+    height: auto;
     text-align: center;
 }
 
@@ -57,16 +57,18 @@
 /* categoria */
 
 .categoria {
+    margin-top: 15px;
     width: 50vw;
     background-color: white;
     border-radius: 30px;
+    padding-bottom: 15px;
 }
 
 .nomeCategoria {
     color: black;
     font-size: 2em;
     font-weight: bold;
-    width: fit-content;
+    width: auto;
 }
 
 .categoria__topo {
@@ -78,90 +80,16 @@
     align-items: center;
 }
 
-/* SWITCH */
-.botao__switch {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.onoffswitch {
-    position: relative;
-    width: 122px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-.onoffswitch-checkbox {
-    display: none;
-}
-
-.onoffswitch-label {
-    display: block;
-    overflow: hidden;
+.liberar-cardapio {
+    margin: 50px;
+    background-color: var(--cor-btn-confirma);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16pt;
+    padding: 8px 30px;
     cursor: pointer;
-    border: 2px solid #FFFFFF;
-    border-radius: 15px;
-}
-
-.onoffswitch-inner {
-    display: block;
-    width: 200%;
-    margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-}
-
-    .onoffswitch-inner:before, .onoffswitch-inner:after {
-        display: block;
-        float: left;
-        width: 50%;
-        height: 33px;
-        padding: 0;
-        line-height: 33px;
-        font-size: 13px;
-        color: white;
-        font-family: Trebuchet, Arial, sans-serif;
-        font-weight: bold;
-        box-sizing: border-box;
-    }
-
-    .onoffswitch-inner:before {
-        content: "SELECIONA";
-        text-align: left;
-        padding-left: 10px;
-        background-color: #00E866;
-        color: #FFFFFF;
-    }
-
-    .onoffswitch-inner:after {
-        content: "DELETA";
-        padding-right: 10px;
-        background-color: #FF5B5B;
-        color: #FFFFFF;
-        text-align: right;
-    }
-
-.onoffswitch-switch {
-    display: block;
-    width: 18px;
-    margin: 7.5px;
-    background: #FFFFFF;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 85px;
-    border: 2px solid #FFFFFF;
-    border-radius: 15px;
-    transition: all 0.3s ease-in 0s;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-    margin-left: 0px;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px;
+    outline: none;
 }
 
 /* ====================== */
@@ -172,17 +100,20 @@
     background-color: var(--cor-btn-cancela);
 }
 
+
 /* AlIMENTOS */
 .alimentos__ul {
     list-style: none;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
     .alimentos__ul li {
         display: inline;
     }
 
-        .alimentos__ul li label {
+
+        .alimentos__ul li .alimento-redondo /*label*/ {
             display: inline-block;
             background-color: rgba(255, 255, 255, 0.9);
             border: 2px solid var(--cor-btn-cancela);
@@ -199,36 +130,69 @@
             transition: all 0.2s;
         }
 
-        .alimentos__ul li label {
-            padding: 8px 12px;
-            cursor: pointer;
+        .alimentos__ul li .alimento-redondo /*label*/ {
+            padding: 2px 2px 2px 8px;
         }
 
-            .alimentos__ul li label::before {
-                display: inline-block;
-                font-style: normal;
-                font-variant: normal;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                font-size: 12px;
-                padding: 2px 6px 2px 2px;
-                content: "\f067";
-                transition: transform 0.3s ease-in-out;
+            .alimentos__ul li .alimento-redondo label {
+                cursor: pointer;
             }
 
-        .alimentos__ul li input[type="checkbox"]:checked + label::before {
+            .alimentos__ul li .alimento-redondo i {
+                color: white;
+                background-color: white;
+                padding: 8px;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: .5s ease-in-out;
+            }
+
+        .alimentos__ul li input[type="checkbox"] + .alimento-redondo:hover i {
+            background-color: var(--cor-deleta);
+            transform: rotateY(360deg);
+            transition: .5s ease-in-out;
+        }
+
+        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo:hover i {
+            background-color: var(--cor-deleta);
+            color: white;
+            transform: rotateY(360deg);
+            transition: .5s ease-in-out;
+        }
+
+        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo i {
+            background-color: var(--cor-btn-confirma);
+            color: var(--cor-btn-confirma);
+            transition: .5s ease-in-out;
+        }
+
+
+        .alimentos__ul li .alimento-redondo label::before {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 12px;
+            padding: 2px 6px 2px 2px;
+            content: "\f067";
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo label::before {
             content: "\f00c";
             transform: rotate(-360deg);
             transition: transform 0.3s ease-in-out;
         }
 
-        .alimentos__ul li input[type="checkbox"]:checked + label {
+        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo /*label*/ {
             border: 2px solid var(--cor-btn-confirma);
             background-color: var(--cor-btn-confirma);
             color: #fff;
-            transition: all 0.2s;
+            transition: all 0.2s ease-in-out;
+            /* padding: 8px 0px 8px 12px ; */
         }
 
         .alimentos__ul li input[type="checkbox"] {
@@ -240,8 +204,6 @@
             opacity: 0;
         }
 
-            .alimentos__ul li input[type="checkbox"]:focus + label {
+            .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo {
                 border: 2px solid var(--cor-btn-confirma);
             }
-
-

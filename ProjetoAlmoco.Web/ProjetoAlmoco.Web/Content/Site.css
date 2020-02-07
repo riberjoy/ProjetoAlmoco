@@ -102,9 +102,11 @@ input[type = "text"], input[type = "password"] {
 
 /* Modal Content/Box */
 .modal-content {
+    display: flex;
+    flex-direction: column;
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #888;
     border-radius: 25px;
     width: 30%; /* Could be more or less, depending on screen size */
@@ -114,8 +116,9 @@ input[type = "text"], input[type = "password"] {
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
+    padding-right:10px;
 }
 
     .close:hover,
@@ -123,4 +126,23 @@ input[type = "text"], input[type = "password"] {
         color: black;
         text-decoration: none;
         cursor: pointer;
+    }
+
+.cadCategoria__link {
+    margin-top: 25px;
+    background-color: var(--cor-btn-confirma);
+    color: white;
+    font-size: 15pt;
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .4s;
+    outline: none;
+}
+
+    .cadCategoria__link:focus {
+        width: 13%;
+        color: var(--cor-btn-confirma)
     }

@@ -46,7 +46,7 @@ body{
 /* PLaceholder */
 
 
-::placeholder{
+input::placeholder{
     color: white;
     padding-left: 0%;
     font-size: 15pt;

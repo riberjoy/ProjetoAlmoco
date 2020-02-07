@@ -243,3 +243,5 @@
             .alimentos__ul li input[type="checkbox"]:focus + label {
                 border: 2px solid var(--cor-btn-confirma);
             }
+
+

@@ -198,6 +198,7 @@ button {
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
+    /* display: block; */
   }
 
   
@@ -219,10 +220,14 @@ button {
       }
           
     
-      button:hover .button-text {
-        color: #fff;
-      } 
 
+}
+
+@media(max-width:600px){
+  
+  button.learn-more .button-text2 {
+    display: none;
+  }
 }
 
   

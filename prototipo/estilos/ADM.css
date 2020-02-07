@@ -94,7 +94,7 @@
 
 /* ====================== */
 
-.categoria hr{
+.categoria hr, .pedido hr{
     width: 80%;
     height: 1px;
     background-color: var(--cor-btn-cancela);
@@ -103,12 +103,12 @@
 
 
  /* AlIMENTOS */
-.alimentos__ul {
+.alimentos__ul,.ul__pedido {
     list-style: none;
     padding: 5px;
     margin-bottom: 10px;
   }
-  .alimentos__ul li {
+  .alimentos__ul li ,.ul__pedido li{
     display: inline;
   }
 
@@ -150,14 +150,14 @@
 
   .alimentos__ul li input[type="checkbox"] + .alimento-redondo:hover i {
     background-color: var(--cor-deleta);
-    transform: rotateY(360deg);
+    transform: rotateY(180deg);
     transition: .5s ease-in-out;
   }
 
   .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo:hover i {
     background-color: var(--cor-deleta);
     color: white;
-    transform: rotateY(360deg);
+    transform: rotateY(180deg);
     transition: .5s ease-in-out;
   }
 
@@ -207,3 +207,123 @@
   .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo  {
     border: 2px solid var(--cor-btn-confirma);
   }
+
+
+  /*===================== LISTA DE PEDIDOS ======================= */
+  .lista-pedido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
+    height: 70vh;
+  }
+
+  .lista-pedido .lista-pedido__botoes{
+    height: 10vh;
+    flex-direction: row;
+  }
+
+  .lista-pedido-btn{
+    justify-content: space-evenly;
+    background-color: var(--cor-btn-cancela);
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 30px;
+    color: white;
+  }
+
+  #azul{
+    background-color: #5BBEFF;
+  }
+
+  #amarelo{
+    background-color: #F5BD4D;
+  }
+
+  #verde{
+    background-color: var(--cor-btn-confirma);
+  }
+
+  .lista-pedido-btn .circle-add-alimento i{
+    font-size: 14pt;
+    background-color: blue;
+    padding: 8px;
+    border-radius: 30px;
+    font-weight: 700;
+  }
+
+  .lista-pedido .lista-pedido-btn i{
+  
+    transition: .5s ease-out;
+  }
+
+  .lista-pedido .lista-pedido-btn:hover i{
+    transform: rotateY(180deg);
+    transition: .5s ease-in-out;
+  }
+
+  /* Pedidos */
+
+  .lista-pedidos__scroll{
+    padding: 30px 80px;
+    margin-top: 30px;
+    background-color: white;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 25px;
+  }
+
+  .pedido{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #E5E4E4;
+    height: auto;
+  }
+
+
+.pedido__superior{
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+  .pedido__superior__botoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+ .p_s_b_add i,.p_s_b_delete i {
+   border-radius: 30px;
+   color: white;
+   padding: 12px;
+   font-size: 20pt;
+   cursor: pointer;
+   margin-left: 20px;
+ }
+
+ .p_s_b_add i{
+   background-color: #5BBEFF;
+ }
+
+ .p_s_b_delete i{
+   background-color: var(--cor-deleta);
+
+ }
+
+/* ========== */
+.ul__pedido{
+  margin-top: 0;
+}
+.ul__pedido li p{
+  display: inline-block;
+  font-size: 14pt;
+  color: var(--cor-btn-cancela);
+  width: fit-content;
+  margin: 10px 20px;
+}

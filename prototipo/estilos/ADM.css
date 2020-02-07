@@ -208,7 +208,8 @@
   }
   
   .alimentos__ul li .alimento-redondo /*label*/ {
-    padding: 8px 10px ;
+    padding:2px 2px  2px 8px;
+
    
   }
   .alimentos__ul li .alimento-redondo label{
@@ -216,7 +217,31 @@
   }
 
   .alimentos__ul li .alimento-redondo i {
-    display: none;
+    color: white;
+    background-color:white;
+    padding:8px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+  }
+
+  .alimentos__ul li input[type="checkbox"] + .alimento-redondo:hover i {
+    background-color: var(--cor-deleta);
+    transform: rotateY(360deg);
+    transition: .5s ease-in-out;
+  }
+
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo:hover i {
+    background-color: var(--cor-deleta);
+    color: white;
+    transform: rotateY(360deg);
+    transition: .5s ease-in-out;
+  }
+
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo i {
+    background-color: var(--cor-btn-confirma);
+    color: var(--cor-btn-confirma);
+    transition: .5s ease-in-out;
   }
 
   
@@ -247,26 +272,37 @@
     transition: all 0.2s ease-in-out;
     /* padding: 8px 0px 8px 12px ; */
   }
-  
-  .alimentos__ul li input[type="checkbox"] {
+
+   .alimentos__ul li input[type="checkbox"] {
     display: absolute;
   }
   .alimentos__ul li input[type="checkbox"] {
     position: absolute;
     opacity: 0;
   }
-  .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo /*label*/ {
+
+  .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo  {
     border: 2px solid var(--cor-btn-confirma);
   }
 
-  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo  i/*label*/ {
-    display: inline;
-    background-color: var(--cor-deleta);
-    padding: 10px;
-    border-radius: 30px;
-    cursor: pointer;
+
+  /* funciona com click */
+  
+  /*
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo  {
+    padding-right: 0;
+    border-right: var(--cor-deleta);
   }
+
+
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo  i {
+    display: inline;
+    transform: rotate(360deg);
+    
+  } */
  
+
+
 
  
 /*   

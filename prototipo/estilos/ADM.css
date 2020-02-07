@@ -217,7 +217,7 @@
     align-items: center;
     height: fit-content;
     text-align: center;
-    height: 70vh;
+    height: 80vh;
   }
 
   .lista-pedido .lista-pedido__botoes{
@@ -270,12 +270,13 @@
     padding: 30px 80px;
     margin-top: 30px;
     background-color: white;
-    height: 50vh;
+    height: 100%;
     width: 50vw;
     border-radius: 25px;
   }
 
   .pedido{
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -326,4 +327,31 @@
   color: var(--cor-btn-cancela);
   width: fit-content;
   margin: 10px 20px;
+}
+
+.scroll4::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+.scroll4::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 20px;
+}
+
+.scroll4::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 20px;
+}
+
+.lista-pedidos__scroll{
+  overflow: auto;
+}
+
+.enviar-pedidos-btn{
+  background-color: var(--cor-btn-confirma);
+  margin-top: 50px;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
 }

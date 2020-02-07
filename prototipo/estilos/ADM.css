@@ -62,6 +62,7 @@
     width: 50vw;
     background-color: white;
     border-radius: 30px;
+    padding-bottom: 15px;
    
 }
 .nomeCategoria{
@@ -79,6 +80,18 @@
     align-items: center;
 }
 
+.liberar-cardapio{
+  margin: 50px;
+  background-color: var(--cor-btn-confirma);
+  border: none;
+  border-radius:30px ;
+  color: white;
+  font-size: 16pt;
+  padding: 8px 30px;
+  cursor: pointer;
+  outline: none;
+}
+
 /* ====================== */
 
 .categoria hr{
@@ -88,102 +101,12 @@
  
 }
 
-/* AlIMENTOS */
-/* .alimentos__ul {
-    list-style: none;
-    padding: 5px;
-  }
-  .alimentos__ul li {
-    display: inline;
-  }
-
-
-  .alimentos__ul li label {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 2px solid var(--cor-btn-cancela);
-    color: #000000;
-    border-radius: 25px;
-    white-space: nowrap;
-    margin: 3px 0px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: all 0.2s;
-  }
-  
-  .alimentos__ul li label {
-    padding: 8px 10px ;
-    cursor: pointer;
-  }
-
-  .alimentos__ul li label i {
-    display: inline;
-  }
-  
-  .alimentos__ul li label::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 12px;
-    padding: 2px 6px 2px 2px;
-    content: "\f067";
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .alimentos__ul li input[type="checkbox"]:checked + label::before {
-    content: "\f00c";
-    transform: rotate(-360deg);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .alimentos__ul li input[type="checkbox"]:checked + label {
-    border: 2px solid var(--cor-btn-confirma);
-    background-color: var(--cor-btn-confirma);
-    color: #fff;
-    transition: all 0.2s ease-in-out;
-    
-  }
-  
-  .alimentos__ul li input[type="checkbox"] {
-    display: absolute;
-  }
-  .alimentos__ul li input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-  }
-  .alimentos__ul li input[type="checkbox"]:focus + label {
-    border: 2px solid var(--cor-btn-confirma);
-  }
- 
-   input[type="checkbox"]:checked +  label  .icon-deleta{
-    background-color: var(--cor-fundo);
-    padding: 10px;
-    border-radius: 30px;
-    color: white;
-    display: inline;
-  }
-
-    label .icon-deleta{
-    display: none !;
-    background-color: var(--cor-deleta);
-    padding: 5px;
-    border-radius: 30px;
-    color: white;
-  } */
-/* ===================== */
 
  /* AlIMENTOS */
 .alimentos__ul {
     list-style: none;
     padding: 5px;
+    margin-bottom: 10px;
   }
   .alimentos__ul li {
     display: inline;
@@ -284,38 +207,3 @@
   .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo  {
     border: 2px solid var(--cor-btn-confirma);
   }
-
-
-  /* funciona com click */
-  
-  /*
-  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo  {
-    padding-right: 0;
-    border-right: var(--cor-deleta);
-  }
-
-
-  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo  i {
-    display: inline;
-    transform: rotate(360deg);
-    
-  } */
- 
-
-
-
- 
-/*   
-  .alimentos__ul li input[type="checkbox"]:focus:checked + label::after {
-    padding-left: 20px;
-    content: "\f1f8";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 16px;
-    background-color: var(--cor-deleta);
-    height: 10px;
-    width: 5px;
-    border-radius: 15px;
-    text-align: center;
-  }
- */

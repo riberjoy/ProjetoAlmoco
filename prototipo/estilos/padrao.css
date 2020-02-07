@@ -74,48 +74,12 @@ input[type = "text"]:focus, input[type = "password"]:focus{
     border-radius: 10px 50px 10px;
 }
 
-
-/* botoes */
-/* .botoes{
-    margin-right: 0;
-}
-
-.botoes__deleta,.botoes__adiciona{
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    font-size: 25px; 
-    cursor: pointer;
-    border-radius: 30px;
-    outline: none;
-    width: fit-content;
-}
-
-.botoes__adiciona{
-    background-color: var(--cor-btn-confirma);
-
-}
-
-.botoes__deleta{
+/* .botoes2{
     display: flex;
-    background-color: var(--cor-deleta);
-    align-items: flex-end;
-}
-
-
-.botoes__deleta:hover{
-    width: 200px;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 1em;
 } */
-
-
-/*
-.botoes__deleta:hover::before{
-    content: "Deletar Categoria  ";
-    font-size: 16pt;
-    width: 200px;
-} */
-
-/* =============== */
 
 button {
     position: relative;
@@ -130,10 +94,7 @@ button {
     font-size: inherit;
     font-family: inherit;
   }
-  button.learn-more {
-    width: 15rem;
-    height: auto;
-  }
+  
 
   button.learn-more .circle {
     -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -147,8 +108,48 @@ button {
     background: var(--cor-deleta);
     border-radius: 1.625rem;
   }
+  button.learn-more .circle-add-alimento {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    /* width: 2rem; */
+    height: 2rem;
+    background: var(--cor-btn-confirma);
+    border-radius: 1.625rem;
+  }
+
+  button.learn-more .circle-add  {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    /* width: 3rem; */
+    height: 3rem;
+    background: var(--cor-btn-confirma);
+    border-radius: 1.625rem;
+    
+  }
+  button.learn-more .circle-add-alimento i{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+    font-size: 13pt;
+    color: white;
+    transition: .5s ease-in-out;
+  }
   
-  button.learn-more .circle i {
+  button.learn-more .circle i, button.learn-more .circle-add i ,
+  button.learn-more .circle-add2 i{
     position: relative;
     display: flex;
     align-items: center;
@@ -159,9 +160,11 @@ button {
     height: 3rem;
     font-size: 18pt;
     color: white;
+    transition: .5s ease-in-out;
   }
   
-  button.learn-more .button-text {
+  
+  button.learn-more .button-text  {
     -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
@@ -178,13 +181,48 @@ button {
     text-transform: uppercase;
   }
 
-  
-  button:hover .circle {
-    width: 100%;
+ 
+  button.learn-more .button-text2  {
+    font-size: 10pt;
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: -25%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 1.5rem 0 0;
+    color: white;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
   }
 
-  button:hover .button-text {
-    color: #fff;
-  } 
- 
+  
+
+@media(min-width:600px){
+    button.learn-more {
+        width: 16rem;
+        height: auto;
+        
+      }
+
+      
+      button:hover .circle {
+        width: 100%;
+      }
+
+      button:hover .circle-add i, button:hover .circle-add-alimento i  {
+       transform: rotate(180deg);
+      }
+          
+    
+      button:hover .button-text {
+        color: #fff;
+      } 
+
+}
+
   

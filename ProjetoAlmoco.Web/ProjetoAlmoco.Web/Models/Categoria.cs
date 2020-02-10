@@ -9,6 +9,5 @@ namespace ProjetoAlmoco.Web.Models
 	{
         public int CategoriaID { get; set; }
         public string Nome { get; set; }
-
     }
 }

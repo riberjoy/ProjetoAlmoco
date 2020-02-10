@@ -1,13 +1,5 @@
 ﻿@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 
-:root {
-    --cor-fundo: #023145;
-    --cor-btn-confirma: #00E866;
-    --cor-btn-cancela: #707070;
-    --cor-input: #395c6d;
-    --cor-deleta: #FF5B5B;
-}
-
 /* ADM home */
 
 .topbar {
@@ -69,6 +61,14 @@
     font-size: 2em;
     font-weight: bold;
     width: auto;
+    text-align: center;
+}
+
+.avisoCategoria {
+    color: black;
+    font-size: 1.3em;
+    width: auto;
+    text-align:center;
 }
 
 .categoria__topo {

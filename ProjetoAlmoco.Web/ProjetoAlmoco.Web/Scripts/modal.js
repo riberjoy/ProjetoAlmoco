@@ -12,7 +12,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks anywhere outside of the modal, close it
 
 
-function CadastroModal(tipoOperacao, caminho, nomeBtn) {
+function CadastroModal(tipoOperacao, caminho, nomeBtn, id) {
     
     $("<div></div>", { id: 'myModal', class: 'modal' }).appendTo("body");
     $("<div></div>", { class: 'modal-content ' }).appendTo("body div.modal");
@@ -109,24 +109,12 @@ function CadastroModal(tipoOperacao, caminho, nomeBtn) {
 
     $("span").click(function () {
         $("div.modal").remove();
-        $("div.modal-content").remove();
-        $("span.close").remove();
-        $("h1.nomeCategoria").remove();
-        $("form.formCategoria").remove();
-        $("input.admin__cadCategoria").remove();
-        $("input.admnCadCategoria__link").remove();
         ativo = false;
     });
 
     $("input.admnCadCategoria__link").click(function () {
         $.post(urlsCadastrar.abrirModalObservacaoItem, { idItem: idItem, editar: false })
         $("div.modal").remove();
-        $("div.modal-content").remove();
-        $("span.close").remove();
-        $("h1.nomeCategoria").remove();
-        $("form.formCategoria").remove();
-        $("input.admin__cadCategoria").remove();
-        $("input.admnCadCategoria__link").remove();
         ativo = false;
     });
 }
@@ -149,9 +137,8 @@ function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso) {
     //<form method="post" novalidate="novalidate">
     $("<form></form>", { class: "formCategoria", method: 'post', action: caminho }).appendTo("body div.modal div.modal-content ");
 
-    
-        $("<h3></h3>", { class: 'nomeCategoria' }).appendTo("body div.modal div.modal-content");
-        $("h3.nomeCategoria").html(aviso.toString());
+    $("<h3></h3>", { class: 'avisoCategoria' }).appendTo("body div.modal div.modal-content form.formCategoria");
+    $("h3.avisoCategoria").html(aviso.toString());
    
     //<input class="login__link" type="submit" value="LOGAR">
     $("<input>", { class: "admnCadCategoria__link", type: "submit", value: nomeBtn }).appendTo("body div.modal div.modal-content form.formCategoria");
@@ -175,24 +162,12 @@ function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso) {
 
     $("span").click(function () {
         $("div.modal").remove();
-        $("div.modal-content").remove();
-        $("span.close").remove();
-        $("h1.nomeCategoria").remove();
-        $("form.formCategoria").remove();
-        $("input.admin__cadCategoria").remove();
-        $("input.admnCadCategoria__link").remove();
         ativo = false;
     });
 
     $("input.admnCadCategoria__link").click(function () {
-        $.post(urlsCadastrar.abrirModalObservacaoItem, { idItem: idItem, editar: false })
+        //$.post(urlsCadastrar.abrirModalObservacaoItem, { idItem: idItem, editar: false })
         $("div.modal").remove();
-        $("div.modal-content").remove();
-        $("span.close").remove();
-        $("h1.nomeCategoria").remove();
-        $("form.formCategoria").remove();
-        $("input.admin__cadCategoria").remove();
-        $("input.admnCadCategoria__link").remove();
         ativo = false;
     });
 }
@@ -202,12 +177,6 @@ window.onclick = function (event) {
     if (ativo ==  true) {        
         if (event.target == myModal) {
             $("div.modal").remove();
-            $("div.modal-content").remove();
-            $("span.close").remove();
-            $("h1.nomeCategoria").remove();
-            $("form.formCategoria").remove();
-            $("input.admin__cadCategoria").remove();
-            $("input.admnCadCategoria__link").remove();
             ativo = false;
         }
     }

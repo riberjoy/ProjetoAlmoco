@@ -9,10 +9,9 @@ namespace ProjetoAlmoco.Web.Controllers
 {
     public class AlimentoController : Controller
     {
-        [HttpPost]
         public ActionResult Index(Alimento alimento)
         {
-            //precisa do banco pra fazer o delete
+            //precisa do banco pra fazer o insert
             return RedirectToAction("Index", "Admin");
         }
 

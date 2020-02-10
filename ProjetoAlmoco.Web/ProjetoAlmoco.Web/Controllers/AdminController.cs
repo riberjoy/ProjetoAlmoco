@@ -46,21 +46,5 @@ namespace ProjetoAlmoco.Web.Controllers
 
             return View();
         }
-
-        public ActionResult Deletar(string op, int id)
-        {
-            if (op.Equals("Alimento"))
-            {
-                //Deleta categoria do db
-            }else if (op.Equals("Alimento"))
-            {
-                //Deleta alimento do db
-            }
-            else if(op.Equals("Cliente"))
-            {
-                //Deleta cliente do db
-            }
-            return RedirectToAction("Index");
-        }
     }
 }

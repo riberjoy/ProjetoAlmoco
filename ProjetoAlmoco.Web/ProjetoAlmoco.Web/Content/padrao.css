@@ -1,15 +1,13 @@
 /* Fonte do site */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-
 :root {
     --cor-fundo: #023145;
     --cor-btn-confirma: #00E866;
     --cor-btn-cancela: #707070;
     --cor-input: #395c6d;
-    --cor-deleta: #FF5B5B
+    --cor-deleta: #FF5B5B;
 }
-
 
 /* Scroll personalizado */
 /* ::-webkit-scrollbar{
@@ -74,7 +72,6 @@ body {
     padding-left: 0%;
     font-size: 15pt;
 }
-
 
 /* inputs */
 input[type = "text"], input[type = "password"] {
@@ -225,8 +222,6 @@ button {
         text-transform: uppercase;
         /* display: block; */
     }
-
-
 
 @media(min-width:600px) {
     button.learn-more {

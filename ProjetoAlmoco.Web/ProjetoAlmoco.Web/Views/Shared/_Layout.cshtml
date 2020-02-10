@@ -9,18 +9,17 @@
     @Styles.Render("~/Content/Site.css", "~/Content/padrao.css", "~/Content/mobile.css")
 </head>
 <body>
-
     @{
         var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
 
         if (controller == "Cadastro" || controller == "Login")
         {
-            @Styles.Render("~/Content/Login.css", "~/Content/Cadastro.css", "~/Content/Site.css", "~/Content/padrao.css", "~/Content/mobile.css")
+            @Styles.Render("~/Content/Login.css", "~/Content/Cadastro.css")
             @Scripts.Render("~/bundles/modernizr")
         }
         else if (controller == "Admin")
         {
-            @Styles.Render("~/Content/Admin.css", "~/Content/Site.css", "~/Content/padrao.css", "~/Content/mobile.css")
+            @Styles.Render("~/Content/Admin.css")
             @Scripts.Render("~/bundles/modernizr", "~/Scripts/modal.js")
             @Html.Partial("_Topo")
         }

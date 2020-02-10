@@ -1,15 +1,6 @@
 ﻿/* Fonte do site */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-
-:root {
-    --cor-fundo: #023145;
-    --cor-btn-confirma: #00E866;
-    --cor-btn-cancela: #707070;
-    --cor-input: #395c6d;
-
-}
-
 /* Scroll personalizado */
 ::-webkit-scrollbar {
     width: 9px

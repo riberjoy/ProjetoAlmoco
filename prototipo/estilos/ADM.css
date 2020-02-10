@@ -267,7 +267,7 @@
   /* Pedidos */
 
   .lista-pedidos__scroll{
-    padding: 30px 80px;
+    padding: 30px 40px;
     margin-top: 30px;
     background-color: white;
     height: 100%;
@@ -303,7 +303,7 @@
    border-radius: 30px;
    color: white;
    padding: 12px;
-   font-size: 20pt;
+   font-size: 14pt;
    cursor: pointer;
    margin-left: 20px;
  }
@@ -323,7 +323,7 @@
 }
 .ul__pedido li p{
   display: inline-block;
-  font-size: 14pt;
+  font-size: 13pt;
   color: var(--cor-btn-cancela);
   width: fit-content;
   margin: 10px 20px;

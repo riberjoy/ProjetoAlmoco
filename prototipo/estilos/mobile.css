@@ -68,5 +68,48 @@
        margin-left: 40px;
     }
 
+    /* ======== */
+    .pedido{
+         width: fit-content;
+    }
+
+    .lista-pedido-btn{
+        margin-top: 4px;
+        font-size: 8pt;
+        padding: 5px 10px;
+    }
+    .lista-pedido-btn .circle-add-alimento i{
+        font-size: 10pt;
+        padding: 6px;
+    }
+
+    .lista-pedido__botoes{
+        flex-direction: column;
+        padding: 0 25%;
+    }
+
+    .lista-pedidos__scroll{
+        margin-top: 80px;
+        width: 70%;
+        padding: 20px;
+    }
+
+    .pedido .pedido__superior h2{
+         font-size: 14pt;
+    }
+
+    .p_s_b_add i,.p_s_b_delete i {
+        border-radius: 30px;
+        color: white;
+        padding: 12px;
+        font-size: 12pt;
+        cursor: pointer;
+        /* margin-left: 20px; */
+      }
+
+      .ul__pedido li p{
+        font-size: 12pt;
+      }
+
 }
 

@@ -4,14 +4,14 @@
     List<ProjetoAlmoco.Web.Models.Alimento> Alimentos = (List<ProjetoAlmoco.Web.Models.Alimento>)ViewBag.CriaAlimentos;
     var aviso1 = ViewBag.AvisoCategoria;
 }
-@foreach (var item in Categorias)
+@foreach (var categoria in Categorias)
 {
-    <div id=@item.CategoriaID class="categoria">
+    <div id=@categoria.CategoriaID class="categoria">
         <div class="categoria__topo">
-            <div class="nomeCategoria"> @item.Nome </div>
+            <div class="nomeCategoria"> @categoria.Nome </div>
             <div class="botoes">
 
-                <button onclick="insModal('Apagar Categoria', 'Admin/Deletar/@item.CategoriaID','delete',  'APAGAR CATEGORIA?', 'Esta categoria será apagada incluindo todos seus pratos cadastrados' , '', '', '', @item.CategoriaID)" class="learn-more">
+                <button onclick="DeleteModal('Apagar Categoria ?', 'Categoria/Deletar/@categoria.CategoriaID','APAGAR', 'Esta categoria será apagada incluindo todos seus pratos cadastrados' )" class="learn-more">
                     <span class="circle" aria-hidden="true">
                         <i class="trash fa fa-trash"></i>
                     </span>
@@ -24,15 +24,15 @@
             <div class="alimentos">
                 <ul class="alimentos__ul">
 
-                    @foreach (var itemA in Alimentos)
+                    @foreach (var alimento in Alimentos)
                     {
-                        if (itemA.CategoriaID.Equals(item.CategoriaID))
+                        if (alimento.CategoriaID.Equals(categoria.CategoriaID))
                         {
                             <li>
-                                <input type="checkbox" id='@itemA.CategoriaID.ToString()-@itemA.AlimentotID.ToString()' value="Rainbow Dash">
+                                <input type="checkbox" id='@alimento.CategoriaID.ToString()-@alimento.AlimentotID.ToString()' value="Rainbow Dash">
                                 <div class="alimento-redondo">
-                                    <label for='@itemA.CategoriaID.ToString()-@itemA.AlimentotID.ToString()'>@itemA.Nome </label>
-                                    <i onclick="insModal('Apagar Alimento', 'Admin/Deletar/@item.Nome-@itemA.AlimentotID', 'delete', 'APAGAR ALIMENTO','','','','','' )" class="icon-deleta fas fa-trash"></i>
+                                    <label for='@alimento.CategoriaID.ToString()-@alimento.AlimentotID.ToString()'>@alimento.Nome </label>
+                                    <i onclick="insModal('Apagar Alimento ?', 'Alimento/Deletar/@alimento.AlimentotID')" class="icon-deleta fas fa-trash"></i>
                                 </div>
                             </li>
                         }

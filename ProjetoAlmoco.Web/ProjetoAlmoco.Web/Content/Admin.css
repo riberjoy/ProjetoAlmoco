@@ -94,7 +94,7 @@
 
 /* ====================== */
 
-.categoria hr {
+.categoria hr, .pedido hr {
     width: 80%;
     height: 1px;
     background-color: var(--cor-btn-cancela);
@@ -102,13 +102,13 @@
 
 
 /* AlIMENTOS */
-.alimentos__ul {
+.alimentos__ul, .ul__pedido {
     list-style: none;
     padding: 5px;
     margin-bottom: 10px;
 }
 
-    .alimentos__ul li {
+    .alimentos__ul li, .ul__pedido li {
         display: inline;
     }
 
@@ -147,20 +147,20 @@
                 transition: .5s ease-in-out;
             }
 
-        .alimentos__ul li input[type='checkbox'] + .alimento-redondo:hover i {
+        .alimentos__ul li input[type="checkbox"] + .alimento-redondo:hover i {
             background-color: var(--cor-deleta);
-            transform: rotateY(360deg);
+            transform: rotateY(180deg);
             transition: .5s ease-in-out;
         }
 
-        .alimentos__ul li input[type='checkbox']:checked + .alimento-redondo:hover i {
+        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo:hover i {
             background-color: var(--cor-deleta);
             color: white;
-            transform: rotateY(360deg);
+            transform: rotateY(180deg);
             transition: .5s ease-in-out;
         }
 
-        .alimentos__ul li input[type='checkbox']:checked + .alimento-redondo i {
+        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo i {
             background-color: var(--cor-btn-confirma);
             color: var(--cor-btn-confirma);
             transition: .5s ease-in-out;
@@ -181,13 +181,13 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .alimentos__ul li input[type='checkbox']:checked + .alimento-redondo label::before {
+        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo label::before {
             content: "\f00c";
             transform: rotate(-360deg);
             transition: transform 0.3s ease-in-out;
         }
 
-        .alimentos__ul li input[type='checkbox']:checked + .alimento-redondo /*label*/ {
+        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo /*label*/ {
             border: 2px solid var(--cor-btn-confirma);
             background-color: var(--cor-btn-confirma);
             color: #fff;
@@ -195,15 +195,162 @@
             /* padding: 8px 0px 8px 12px ; */
         }
 
-        .alimentos__ul li input[type='checkbox'] {
+        .alimentos__ul li input[type="checkbox"] {
             display: absolute;
         }
 
-        .alimentos__ul li input[type='checkbox'] {
+        .alimentos__ul li input[type="checkbox"] {
             position: absolute;
             opacity: 0;
         }
 
-            .alimentos__ul li input[type='checkbox']:focus + .alimento-redondo {
+            .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo {
                 border: 2px solid var(--cor-btn-confirma);
             }
+
+
+/*===================== LISTA DE PEDIDOS ======================= */
+.lista-pedido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    height: 80vh;
+}
+
+    .lista-pedido .lista-pedido__botoes {
+        height: 10vh;
+        flex-direction: row;
+    }
+
+.lista-pedido-btn {
+    justify-content: space-evenly;
+    background-color: var(--cor-btn-cancela);
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 30px;
+    color: white;
+}
+
+#azul {
+    background-color: #5BBEFF;
+}
+
+#amarelo {
+    background-color: #F5BD4D;
+}
+
+#verde {
+    background-color: var(--cor-btn-confirma);
+}
+
+.lista-pedido-btn .circle-add-alimento i {
+    font-size: 14pt;
+    background-color: blue;
+    padding: 8px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+.lista-pedido .lista-pedido-btn i {
+    transition: .5s ease-out;
+}
+
+.lista-pedido .lista-pedido-btn:hover i {
+    transform: rotateY(180deg);
+    transition: .5s ease-in-out;
+}
+
+/* Pedidos */
+
+.lista-pedidos__scroll {
+    padding: 30px 40px;
+    margin-top: 30px;
+    background-color: white;
+    height: 100%;
+    width: 50vw;
+    border-radius: 25px;
+}
+
+.pedido {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #E5E4E4;
+    height: auto;
+}
+
+
+.pedido__superior {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pedido__superior__botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p_s_b_add i, .p_s_b_delete i {
+    border-radius: 30px;
+    color: white;
+    padding: 12px;
+    font-size: 14pt;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.p_s_b_add i {
+    background-color: #5BBEFF;
+}
+
+.p_s_b_delete i {
+    background-color: var(--cor-deleta);
+}
+
+/* ========== */
+.ul__pedido {
+    margin-top: 0;
+}
+
+    .ul__pedido li p {
+        display: inline-block;
+        font-size: 13pt;
+        color: var(--cor-btn-cancela);
+        width: auto;
+        margin: 10px 20px;
+    }
+
+.scroll4::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll4::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 20px;
+}
+
+.scroll4::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 20px;
+}
+
+.lista-pedidos__scroll {
+    overflow: auto;
+}
+
+.enviar-pedidos-btn {
+    background-color: var(--cor-btn-confirma);
+    margin-top: 50px;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}

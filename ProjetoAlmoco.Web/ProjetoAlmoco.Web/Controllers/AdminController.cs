@@ -16,8 +16,9 @@ namespace ProjetoAlmoco.Web.Controllers
         // GET: Admin
         public ActionResult Index()
         {
+            
             Categorias = new List<Categoria>();
-
+            //Categoria = **lista obtida por select do banco
             Categorias.Add(new Categoria{ CategoriaID=1, Nome = "Categoria 1"});
             Categorias.Add(new Categoria { CategoriaID = 2, Nome = "Categoria 2" });
             Categorias.Add(new Categoria { CategoriaID = 3, Nome = "Categoria 3" });

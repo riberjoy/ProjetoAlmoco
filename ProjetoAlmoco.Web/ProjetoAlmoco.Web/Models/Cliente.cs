@@ -9,7 +9,7 @@ namespace ProjetoAlmoco.Web.Models
     public class Cliente
     {
         [Required(ErrorMessage ="Necessário inserir o nome do cliente!")]
-        public string NomeCliente { get; set; }
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "Necessário inserir um nome de usuário válido!")]
         [MaxLength(10, ErrorMessage = "Máximo de 20 caracteres")]

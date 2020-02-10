@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/Content/Img/logo-smn-fav.png" rel="shortcut icon" type="image/x-icon" />
     <title>SMN Almoço</title>
-    @Styles.Render("~/Content/Site.css", "~/Content/padrao.css")
+    @Styles.Render("~/Content/Site.css", "~/Content/padrao.css", "~/Content/mobile.css")
 </head>
 <body>
 
@@ -15,12 +15,12 @@
 
         if (controller == "Cadastro" || controller == "Login")
         {
-            @Styles.Render("~/Content/Login.css", "~/Content/Cadastro.css")
+            @Styles.Render("~/Content/Login.css", "~/Content/Cadastro.css", "~/Content/Site.css", "~/Content/padrao.css", "~/Content/mobile.css")
             @Scripts.Render("~/bundles/modernizr")
         }
         else if (controller == "Admin")
         {
-            @Styles.Render("~/Content/Admin.css")
+            @Styles.Render("~/Content/Admin.css", "~/Content/Site.css", "~/Content/padrao.css", "~/Content/mobile.css")
             @Scripts.Render("~/bundles/modernizr", "~/Scripts/modal.js")
             @Html.Partial("_Topo")
         }

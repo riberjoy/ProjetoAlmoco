@@ -27,6 +27,8 @@ namespace ProjetoAlmoco.Web
                       "~/Content/Login.css",
                       "~/Content/Cadastro.css",
                       "~/Content/Admin.css",
+                      "~/Content/mobile.css",
+                      "~/Content/padrao.css",
                       "~/Content/Site.css"));
         }
     }

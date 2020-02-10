@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CadastroController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PedidoController.cs" />
@@ -141,6 +142,7 @@
     <Content Include="Content\Img\logo-smn-fav.png" />
     <Content Include="Content\Img\logo-smn.png" />
     <Content Include="Content\Img\logout.png" />
+    <Content Include="Content\mobile.css" />
     <Content Include="Content\padrao.css" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Cadastro.css" />
@@ -148,14 +150,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\contadorAlimentos.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -179,14 +180,12 @@
     <Content Include="Views\Teste.cshtml" />
     <Content Include="Views\Shared\_Topo.cshtml" />
     <Content Include="Views\Shared\_CardCriaCardapio.cshtml" />
-    <Content Include="Views\Shared\_Popups.cshtml" />
     <Content Include="Views\Shared\_CardCardapio.cshtml" />
     <Content Include="Views\Shared\_CardPedido.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Alimento\" />
     <Folder Include="Views\Categoria\" />
     <Folder Include="Views\Cliente\" />
     <Folder Include="Views\Pedido\" />
@@ -197,8 +196,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

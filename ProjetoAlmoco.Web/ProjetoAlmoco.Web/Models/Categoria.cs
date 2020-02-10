@@ -7,9 +7,8 @@ namespace ProjetoAlmoco.Web.Models
 {
 	public class Categoria
 	{
-        public Categoria()
-        { }
-
+        public int CategoriaID { get; set; }
         public string Nome { get; set; }
+
     }
 }

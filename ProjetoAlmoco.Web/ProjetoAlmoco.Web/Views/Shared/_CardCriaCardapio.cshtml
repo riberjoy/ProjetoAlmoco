@@ -1,36 +1,52 @@
 ﻿@{
-    List<string> Categorias = (List<string>)ViewBag.CriaCategorias;
-}
+    List<ProjetoAlmoco.Web.Models.Categoria> Categorias = (List<ProjetoAlmoco.Web.Models.Categoria>)ViewBag.CriaCategorias;
 
+    List<ProjetoAlmoco.Web.Models.Alimento> Alimentos = (List<ProjetoAlmoco.Web.Models.Alimento>)ViewBag.CriaAlimentos;
+    var aviso1 = ViewBag.AvisoCategoria;
+}
 @foreach (var item in Categorias)
 {
-    <div class="categoria">
+    <div id=@item.CategoriaID class="categoria">
         <div class="categoria__topo">
-            <div class="nomeCategoria"> @item </div>
+            <div class="nomeCategoria"> @item.Nome </div>
             <div class="botoes">
 
-                <button class="learn-more">
+                <button onclick="insModal('Apagar Categoria', 'Admin/Deletar/@item.CategoriaID','delete',  'APAGAR CATEGORIA?', 'Esta categoria será apagada incluindo todos seus pratos cadastrados' , '', '', '', @item.CategoriaID)" class="learn-more">
                     <span class="circle" aria-hidden="true">
                         <i class="trash fa fa-trash"></i>
                     </span>
-                    <span class="button-text">Apagar Categoria</span>
+                    <span  class="button-text">Apagar Categoria</span>
                 </button>
             </div>
         </div>
         <hr>
         <div class="categoria__baixo">
-                <div class="alimentos">
-                    <ul class="alimentos__ul">
-                        @Html.Partial("_Alimentos")
-                    </ul>
-                    <button class="learn-more">
-                        <span class="circle-add-alimento" aria-hidden="true">
-                            <i class=" fa fa-plus"></i>
-                        </span>
-                        <span class="button-text2">Adicionar alimentos</span>
-                    </button>
-                </div>
+            <div class="alimentos">
+                <ul class="alimentos__ul">
+
+                    @foreach (var itemA in Alimentos)
+                    {
+                        if (itemA.CategoriaID.Equals(item.CategoriaID))
+                        {
+                            <li>
+                                <input type="checkbox" id='@itemA.CategoriaID.ToString()-@itemA.AlimentotID.ToString()' value="Rainbow Dash">
+                                <div class="alimento-redondo">
+                                    <label for='@itemA.CategoriaID.ToString()-@itemA.AlimentotID.ToString()'>@itemA.Nome </label>
+                                    <i onclick="insModal('Apagar Alimento', 'Admin/Deletar/@item.Nome-@itemA.AlimentotID', 'delete', 'APAGAR ALIMENTO','','','','','' )" class="icon-deleta fas fa-trash"></i>
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+                <button onclick="insModal('Adicionar Alimento', 'Admin/Index','post', 'CADASTRAR')" class="learn-more">
+                    <span class="circle-add-alimento" aria-hidden="true">
+                        <i class=" fa fa-plus"></i>
+                    </span>
+                    <span  class="button-text2">Adicionar alimentos</span>
+                </button>
             </div>
+        </div>
     </div>
 }
+
 

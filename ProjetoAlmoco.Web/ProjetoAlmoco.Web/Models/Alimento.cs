@@ -7,7 +7,7 @@ namespace ProjetoAlmoco.Web.Models
 {
     public class Alimento
     {
-        public int NomeID { get; set; }
+        public int AlimentotID { get; set; }
         public string Nome { get; set; }
         public int CategoriaID { get; set; }
         public char Ativo { get; set; }

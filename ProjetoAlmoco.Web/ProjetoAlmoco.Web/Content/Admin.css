@@ -147,20 +147,20 @@
                 transition: .5s ease-in-out;
             }
 
-        .alimentos__ul li input[type="checkbox"] + .alimento-redondo:hover i {
+        .alimentos__ul li input[type='checkbox'] + .alimento-redondo:hover i {
             background-color: var(--cor-deleta);
             transform: rotateY(360deg);
             transition: .5s ease-in-out;
         }
 
-        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo:hover i {
+        .alimentos__ul li input[type='checkbox']:checked + .alimento-redondo:hover i {
             background-color: var(--cor-deleta);
             color: white;
             transform: rotateY(360deg);
             transition: .5s ease-in-out;
         }
 
-        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo i {
+        .alimentos__ul li input[type='checkbox']:checked + .alimento-redondo i {
             background-color: var(--cor-btn-confirma);
             color: var(--cor-btn-confirma);
             transition: .5s ease-in-out;
@@ -181,13 +181,13 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo label::before {
+        .alimentos__ul li input[type='checkbox']:checked + .alimento-redondo label::before {
             content: "\f00c";
             transform: rotate(-360deg);
             transition: transform 0.3s ease-in-out;
         }
 
-        .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo /*label*/ {
+        .alimentos__ul li input[type='checkbox']:checked + .alimento-redondo /*label*/ {
             border: 2px solid var(--cor-btn-confirma);
             background-color: var(--cor-btn-confirma);
             color: #fff;
@@ -195,15 +195,15 @@
             /* padding: 8px 0px 8px 12px ; */
         }
 
-        .alimentos__ul li input[type="checkbox"] {
+        .alimentos__ul li input[type='checkbox'] {
             display: absolute;
         }
 
-        .alimentos__ul li input[type="checkbox"] {
+        .alimentos__ul li input[type='checkbox'] {
             position: absolute;
             opacity: 0;
         }
 
-            .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo {
+            .alimentos__ul li input[type='checkbox']:focus + .alimento-redondo {
                 border: 2px solid var(--cor-btn-confirma);
             }

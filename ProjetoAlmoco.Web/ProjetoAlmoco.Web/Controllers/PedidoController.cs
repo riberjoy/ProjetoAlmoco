@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace ProjetoAlmoco.Web.Controllers
 {
-    public class ClienteController : Controller
+    public class PedidoController : Controller
     {
         [HttpPost]
         public ActionResult Cadastrar()

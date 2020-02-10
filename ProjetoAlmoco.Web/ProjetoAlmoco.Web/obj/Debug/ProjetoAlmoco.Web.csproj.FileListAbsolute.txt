@@ -119,8 +119,8 @@ C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\p
 C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csprojAssemblyReference.cache
 C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csproj.CoreCompileInputs.cache
 C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csproj.CopyComplete
 C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.dll
 C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.pdb
+C:\Users\riber\Desktop\Projeto Almoço\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csprojAssemblyReference.cache

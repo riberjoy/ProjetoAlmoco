@@ -32,17 +32,17 @@
                                 <input type="checkbox" id='@alimento.CategoriaID.ToString()-@alimento.AlimentotID.ToString()' value="Rainbow Dash">
                                 <div class="alimento-redondo">
                                     <label for='@alimento.CategoriaID.ToString()-@alimento.AlimentotID.ToString()'>@alimento.Nome </label>
-                                    <i onclick="insModal('Apagar Alimento ?', 'Alimento/Deletar/@alimento.AlimentotID')" class="icon-deleta fas fa-trash"></i>
+                                    <i onclick="DeleteModal('Apagar Alimento ?', 'Alimento/Deletar/@alimento.AlimentotID','APAGAR', 'O alimento será deletado permanentemente!')" class="icon-deleta fas fa-trash"></i>
                                 </div>
                             </li>
                         }
                     }
                 </ul>
-                <button onclick="insModal('Adicionar Alimento', 'Admin/Index','post', 'CADASTRAR')" class="learn-more">
+                <button onclick="insModal('Adicionar Alimento', 'Admin/Index', 'CADASTRAR')" class="learn-more">
                     <span class="circle-add-alimento" aria-hidden="true">
                         <i class=" fa fa-plus"></i>
                     </span>
-                    <span  class="button-text2">Adicionar alimentos</span>
+                    <span  class="button-text2" >Adicionar alimentos</span>
                 </button>
             </div>
         </div>

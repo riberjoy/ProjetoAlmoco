@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AlimentoController.cs" />
     <Compile Include="Controllers\CadastroController.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
@@ -186,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Alimento\" />
     <Folder Include="Views\Categoria\" />
     <Folder Include="Views\Cliente\" />
     <Folder Include="Views\Pedido\" />

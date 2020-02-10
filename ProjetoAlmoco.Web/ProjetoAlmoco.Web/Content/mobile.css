@@ -34,7 +34,7 @@
     }
 
     button.learn-more {
-        width: none;
+        width: 0;
     }
 
     /* alimentos */
@@ -69,7 +69,7 @@
 
     /* ======== */
     .pedido {
-        width: fit-content;
+        width: auto;
     }
 
     .lista-pedido-btn {

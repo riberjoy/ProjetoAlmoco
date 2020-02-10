@@ -196,7 +196,7 @@
         }
 
         .alimentos__ul li input[type="checkbox"] {
-            display: absolute;
+            display: flex;
         }
 
         .alimentos__ul li input[type="checkbox"] {
@@ -226,7 +226,7 @@
     }
 
 .lista-pedido-btn {
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: var(--cor-btn-cancela);
     text-transform: uppercase;
     padding: 8px 16px;

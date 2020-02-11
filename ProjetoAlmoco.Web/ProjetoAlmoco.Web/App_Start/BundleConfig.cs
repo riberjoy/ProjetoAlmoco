@@ -10,7 +10,8 @@ namespace ProjetoAlmoco.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/modal.js"));
+                        "~/Scripts/modal.js",
+                        "~/Scripts/insereCardapio.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));

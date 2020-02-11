@@ -11,7 +11,7 @@
             <div class="nomeCategoria"> @categoria.Nome </div>
             <div class="botoes">
 
-                <button onclick="DeleteModal('Apagar Categoria ?', 'Categoria/Deletar/@categoria.CategoriaID','APAGAR', 'Esta categoria será apagada incluindo todos seus pratos cadastrados' )" class="learn-more">
+                <button onclick="DeleteModal('Apagar Categoria?', 'Categoria/Deletar/@categoria.CategoriaID','APAGAR', 'Esta categoria será apagada incluindo todos seus pratos cadastrados')" class="learn-more">
                     <span class="circle" aria-hidden="true">
                         <i class="trash fa fa-trash"></i>
                     </span>
@@ -28,17 +28,18 @@
                     {
                         if (alimento.CategoriaID.Equals(categoria.CategoriaID))
                         {
-                            <li>
-                                <input type="checkbox" id='@alimento.CategoriaID.ToString()-@alimento.AlimentotID.ToString()' value="Rainbow Dash">
+                  
+                            <li onclick="insereCardapio(@alimento.CategoriaID.ToString()-@alimento.AlimentotID.ToString())">
+                                <input type="checkbox"  id='@alimento.CategoriaID.ToString()-@alimento.AlimentotID.ToString()' value="Rainbow Dash">
                                 <div class="alimento-redondo">
                                     <label for='@alimento.CategoriaID.ToString()-@alimento.AlimentotID.ToString()'>@alimento.Nome </label>
-                                    <i onclick="DeleteModal('Apagar Alimento ?', 'Alimento/Deletar/@alimento.AlimentotID','APAGAR', 'O alimento será deletado permanentemente!')" class="icon-deleta fas fa-trash"></i>
+                                    <i onclick="DeleteModal('Apagar Alimento?', 'Alimento/Deletar/@alimento.AlimentotID','APAGAR', 'O alimento será deletado permanentemente!')" class="icon-deleta fas fa-trash"></i>
                                 </div>
                             </li>
                         }
                     }
                 </ul>
-                <button onclick="CadastroModal('Novo Alimento', 'Alimento/Index/@categoria.CategoriaID', 'CADASTRAR', '@categoria.CategoriaID')" class="learn-more">
+                <button onclick="CadastroModal('Novo Alimento', 'Alimento/Index', 'CADASTRAR', @categoria.CategoriaID)" class="learn-more">
                     <span class="circle-add-alimento" aria-hidden="true">
                         <i class=" fa fa-plus"></i>
                     </span>

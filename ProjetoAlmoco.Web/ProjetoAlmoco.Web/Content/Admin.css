@@ -81,7 +81,9 @@
 }
 
 .liberar-cardapio {
-    margin: 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: var(--cor-btn-confirma);
     border: none;
     border-radius: 30px;

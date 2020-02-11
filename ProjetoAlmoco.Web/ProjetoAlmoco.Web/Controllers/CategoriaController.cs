@@ -10,7 +10,7 @@ namespace ProjetoAlmoco.Web.Controllers
     public class CategoriaController : Controller
     {
         public ActionResult Index(Categoria categoria)
-        {
+         {
             //precisa do banco pra fazer o insert
             return RedirectToAction("Index", "Admin");
         }

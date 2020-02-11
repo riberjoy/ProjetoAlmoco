@@ -98,10 +98,10 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                 {
                     SqlDataReader dados = contexto.ExecutaComandoRetorno(cmd);
 
+                    var alimentos = new List<Alimento>();
+
                     while (dados.Read())
                     {
-                        var alimentos = new List<Alimento>();
-
                         var alimento = new Alimento
                         {
                             Num_IDAlimento = Convert.ToInt32(dados["Num_IDAlimento"]),
@@ -111,10 +111,8 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                         };
 
                         alimentos.Add(alimento);
-
-                        return alimentos;
                     }
-                        return null;
+                    return alimentos;
                 }
             }
         }

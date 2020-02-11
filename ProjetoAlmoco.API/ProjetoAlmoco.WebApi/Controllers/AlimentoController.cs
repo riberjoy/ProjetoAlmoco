@@ -35,8 +35,5 @@ namespace ProjetoAlmoco.WebApi.Controllers
         }
         [HttpGet, Route(template: "api/alimento/editarcardapio")]
         public IHttpActionResult EditarCardapio() => Ok(_alimentoService.EditarCardapio());
-        public IHttpActionResult Get() => Ok(_alimentoRepository.Get());
-        [HttpGet, Route(template: "api/alimento/getativos")]
-        public IHttpActionResult GetAtivos() => Ok(_alimentoRepository.GetAtivos());
     }
 }

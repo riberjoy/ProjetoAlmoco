@@ -27,38 +27,40 @@ namespace ProjetoAlmoco.Domain
 
             var categoriaAlimento = new List<string>();
 
-            var pedidoAux = pedidos[0];
-
-            foreach(Pedido pedido in pedidos)
+            if (pedidos != null)
             {
-                if(pedidoAux.Num_IDCliente != pedido.Num_IDCliente)
+                var pedidoAux = pedidos[0];
+
+                foreach (Pedido pedido in pedidos)
                 {
-                    var pedidoCliente = new PedidoCliente
+                    if (pedidoAux.Num_IDCliente != pedido.Num_IDCliente)
                     {
-                        Num_IDCliente = pedidoAux.Num_IDCliente,
-                        Nom_Cliente = pedidoAux.Nom_Cliente,
-                        CategoriaAlimento = categoriaAlimento
-                    };
+                        var pedidoCliente = new PedidoCliente
+                        {
+                            Num_IDCliente = pedidoAux.Num_IDCliente,
+                            Nom_Cliente = pedidoAux.Nom_Cliente,
+                            CategoriaAlimento = categoriaAlimento
+                        };
 
-                    pedidosSeparados.Add(pedidoCliente);
+                        pedidosSeparados.Add(pedidoCliente);
 
-                    categoriaAlimento.Clear();
+                        categoriaAlimento.Clear();
+                    }
+
+                    categoriaAlimento.Add(pedido.Nom_Categoria + ": " + pedido.Nom_Alimento);
+
+                    pedidoAux = pedido;
                 }
-                
-                categoriaAlimento.Add(pedido.Nom_Categoria + ": " + pedido.Nom_Alimento);
 
-                pedidoAux = pedido;
+                var pedidocliente = new PedidoCliente
+                {
+                    Num_IDCliente = pedidoAux.Num_IDCliente,
+                    Nom_Cliente = pedidoAux.Nom_Cliente,
+                    CategoriaAlimento = categoriaAlimento
+                };
+
+                pedidosSeparados.Add(pedidocliente);
             }
-
-            var pedidocliente = new PedidoCliente
-            {
-                Num_IDCliente = pedidoAux.Num_IDCliente,
-                Nom_Cliente = pedidoAux.Nom_Cliente,
-                CategoriaAlimento = categoriaAlimento
-            };
-
-            pedidosSeparados.Add(pedidocliente);
-
             return pedidosSeparados;
         }
 

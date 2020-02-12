@@ -80,7 +80,7 @@ CREATE PROCEDURE [dbo].[AltAlimento](
 							0 - Processado OK
 							1 - Erro ao excluir
 							Tipo alimento:
-							0 - Desativo;
+							0 - Inativo;
 							1 - Ativo;
 		Ex................: EXEC AltAlimento 1, '0'
 	*/

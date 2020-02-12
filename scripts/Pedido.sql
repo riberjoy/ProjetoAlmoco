@@ -3,7 +3,6 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[InsPedido]
 GO 
 
 CREATE PROCEDURE [dbo].[InsPedido](
-	@Dat_DataPedido		date,
 	@Num_IDCliente		int,
 	@Num_IDAlimento		int
 	)
@@ -19,12 +18,12 @@ CREATE PROCEDURE [dbo].[InsPedido](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao inserir
-		Ex:...............: EXEC InsPedido '03-02-2020', 5, 1
+		Ex:...............: EXEC InsPedido 5, 1
 	*/
 
 	BEGIN
 		INSERT  INTO Pedido (Dat_DataPedido, Num_IDCliente, Num_IDAlimento)
-			VALUES (@Dat_DataPedido, @Num_IDCliente, @Num_IDAlimento)
+			VALUES (getDate(), @Num_IDCliente, @Num_IDAlimento)
 		RETURN 0
 	END 
 GO
@@ -135,16 +134,22 @@ CREATE PROCEDURE [dbo].[SelPedido](
 				INNER JOIN Cliente cl ON pd.Num_IDCliente = cl.Num_IDCliente
 				INNER JOIN Alimento al ON pd.Num_IDAlimento = al.Num_IDAlimento
 				INNER JOIN Categoria ct ON al.Num_IDCategoria = ct.Num_IDCategoria
-				WHERE Dat_DataPedido = getDate() ORDER BY cl.Nom_Cliente ASC
+				WHERE cast(Dat_DataPedido as date) = cast(getDate() as date) ORDER BY cl.Nom_Cliente ASC
 			END
 		ELSE
 			BEGIN
-				SELECT Num_IDPedido,
-					Dat_DataPedido,
-					Num_IDCliente, 
-					Num_IDAlimento
-				FROM Pedido pd WITH(NOLOCK)
-				WHERE pd.Num_IDCliente = @Num_id
+				SELECT pd.Num_IDPedido,
+					pd.Dat_DataPedido,
+					pd.Num_IDCliente, 
+					cl.Nom_Cliente,
+					pd.Num_IDAlimento,
+					al.Nom_Alimento,
+					ct.Nom_Categoria
+				FROM Pedido pd WITH(NOLOCK) 
+				INNER JOIN Cliente cl ON pd.Num_IDCliente = cl.Num_IDCliente
+				INNER JOIN Alimento al ON pd.Num_IDAlimento = al.Num_IDAlimento
+				INNER JOIN Categoria ct ON al.Num_IDCategoria = ct.Num_IDCategoria
+				WHERE cast(Dat_DataPedido as date) = cast(getDate() as date) and pd.Num_IDCliente = @Num_id ORDER BY cl.Nom_Cliente ASC
 			END
 
 		RETURN 0

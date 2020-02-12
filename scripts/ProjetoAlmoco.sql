@@ -5,7 +5,7 @@ USE db_ProjetoAlmoco
 CREATE TABLE Cliente(
 	Num_IDCliente	int				identity,
 	Nom_Cliente		varchar(150)	NOT NULL,
-	Nom_Usuario		varchar(10)		NOT NULL,
+	Nom_Usuario		varchar(10)		NOT NULL unique,
 	Num_Senha		varchar(20)		NOT NULL
 
 	CONSTRAINT PK_Num_IDCliente PRIMARY KEY (Num_IDCliente)

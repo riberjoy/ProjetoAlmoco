@@ -74,7 +74,7 @@ body{
 
 
 /* inputs */
-input[type = "text"],input[type = "password"]{
+.login__input,.cadastro__input{
     margin-top: 10px;
     width: 70%;
     height: 20px;

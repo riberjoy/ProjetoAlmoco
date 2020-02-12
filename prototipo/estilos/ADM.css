@@ -219,6 +219,10 @@
     text-align: center;
     height: 80vh;
   }
+  
+  .lista-pedido h1{
+    color: white;
+  }
 
   .lista-pedido .lista-pedido__botoes{
     height: 10vh;
@@ -248,7 +252,7 @@
 
   .lista-pedido-btn .circle-add-alimento i{
     font-size: 14pt;
-    background-color: blue;
+    /* background-color: blue; */
     padding: 8px;
     border-radius: 30px;
     font-weight: 700;
@@ -306,7 +310,15 @@
    font-size: 14pt;
    cursor: pointer;
    margin-left: 20px;
+   transition: .5s ease-in-out;
  }
+
+ .p_s_b_add:hover i,.p_s_b_delete:hover i {
+  transform: rotateY(180deg);
+  transition: .5s ease-in-out;
+ }
+
+
 
  .p_s_b_add i{
    background-color: #5BBEFF;
@@ -351,6 +363,14 @@
   background-color: var(--cor-btn-confirma);
   margin-top: 50px;
   padding: 10px 30px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.voltar-btn{
+  background-color: var(--cor-btn-cancela);
+  margin-top: 50px;
+  padding: 10px 80px;
   color: white;
   border-radius: 30px;
   cursor: pointer;

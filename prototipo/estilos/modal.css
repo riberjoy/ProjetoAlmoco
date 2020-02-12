@@ -55,12 +55,14 @@
 }
 
 .modal input[type = "text"]{
+    width: 100%;
     background-color: white;
+    padding: 15px 20px;
     border:solid 1px rgb(121, 121, 121) ;
     border-radius: 30px;
-    width: auto;
     color: black;
-    padding-left: 10%;
+    outline: none;
+    margin-left: -10%;
 }
 
 .modal input[type = "text"]::placeholder{

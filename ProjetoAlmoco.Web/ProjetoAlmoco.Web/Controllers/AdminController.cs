@@ -1,4 +1,5 @@
 ﻿using ProjetoAlmoco.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -9,7 +10,6 @@ namespace ProjetoAlmoco.Web.Controllers
         public List<Categoria> Categorias = new List<Categoria>();
         public List<Alimento> Alimentos = new List<Alimento>();
         public List<Cliente> Clientes = new List<Cliente>();
-        public List<int> AlimentosCardapio = new List<int>();
 
         // GET: Admin
         public ActionResult Index()
@@ -38,24 +38,14 @@ namespace ProjetoAlmoco.Web.Controllers
             return View();
         }
         
-        public ActionResult LiberarCardapio(int id)
+        public ActionResult LiberarCardapio(string[] id)
         {
-            //atualiza banco de dados de acordo com os ids de alimentos na lista de AlimentosCardapio
-            return View();
-        }
-
-        public ActionResult InsereAlimentos(int id)
-        {
-            if (AlimentosCardapio.Contains(id))
+            foreach(string idAlimento in id)
             {
-                AlimentosCardapio.Remove(id);
-            }
-            else
-            {
-                AlimentosCardapio.Add(id);
+                //Int32.Parse(idAlimento))
+                //Alterar estes alimntos no banco como ativos
             }
             return RedirectToAction("Index", "Admin");
-        } 
+        }
     }
-     
 }

@@ -2,7 +2,7 @@
 
 @Styles.Render("~/Content/Login.css","~/Content/Site.css")
 <div class="flex">
-    @*@ViewBag.selectedUser*@
+    @ViewBag.selectedUser
     <form method="post">
         @Html.ValidationSummary(true, "", new { @class = "texto" })
         <div class="login ">

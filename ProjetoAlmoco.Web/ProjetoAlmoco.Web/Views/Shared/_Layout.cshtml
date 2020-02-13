@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/Content/Img/logo-smn-fav.png" rel="shortcut icon" type="image/x-icon" />
     <title>SMN Almoço</title>
-    @Styles.Render("~/Content/Site.css", "~/Content/padrao.css")
+    @Styles.Render("~/Content/Site.css", "~/Content/padrao.css", "~/Content/mobile.css")
 </head>
 <body>
-
     @{
         var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
 
@@ -18,20 +17,12 @@
             @Styles.Render("~/Content/Login.css", "~/Content/Cadastro.css")
             @Scripts.Render("~/bundles/modernizr")
         }
-        else if (controller == "Admin")
-        {
-
-            @Styles.Render("~/Content/Admin.css")
-            @Scripts.Render("~/bundles/modernizr", "~/Scripts/modal.js")
-            @RenderPage("~/Views/Shared/_Topo.cshtml")
-        }
         else
         {
-            @Styles.Render("~/Content/Cliente.css")
-            @Scripts.Render("~/bundles/modernizr")
-            @RenderPage("~/Views/Shared/_Topo.cshtml")
+            @Styles.Render("~/Content/Admin.css")
+            @Scripts.Render("~/bundles/modernizr", "~/Scripts/modal.js", "~/Scripts/insereCardapio.js")
+            @Html.Partial("_Topo")
         }
-
     }
 
     @RenderBody()

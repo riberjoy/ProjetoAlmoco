@@ -15,9 +15,10 @@ namespace ProjetoAlmoco.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                /*var userInfo = "Usuario: "+usuario.NomeUsuario+" -- Senha: "+usuario.Senha;
-                ViewBag.selectedUser = userInfo;*/
-                return RedirectToAction("Index","Admin");
+                //var userInfo = "Usuario: "+usuario.NomeUsuario+" -- Senha: "+usuario.Senha;
+                //ViewBag.selectedUser = userInfo;
+                return RedirectToAction("Index","Cliente");
+                //return View();
             }
 
             return View(usuario);

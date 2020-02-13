@@ -1,1 +1,27 @@
-﻿
+﻿@{
+    List<ProjetoAlmoco.Web.Models.Pedido> Pedidos = (List<ProjetoAlmoco.Web.Models.Pedido>)ViewBag.ListaPedidos;
+}
+
+@foreach (var pedido in Pedidos)
+{
+    <div class="pedido">
+        <div class="pedido__superior">
+            <h2>@pedido.Nom_Cliente</h2>
+            <div class="pedido__superior__botoes">
+                <buttom class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                <buttom onclick="DeleteModal('Apagar Alimento?', 'Pedido/Deletar/@pedido.Num_IDCliente','APAGAR', 'O alimento será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
+            </div>
+        </div>
+        <hr>
+        <div class="pedido__inferior">
+            <ul class="ul__pedido">
+                @foreach (string alimento in pedido.CategoriaAlimento)
+                {
+                    <li>
+                        <p class="pedido__nomeInfo">@alimento</p>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+}

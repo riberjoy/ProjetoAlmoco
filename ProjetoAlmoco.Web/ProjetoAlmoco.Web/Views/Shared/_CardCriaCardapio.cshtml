@@ -1,39 +1,50 @@
-﻿
+﻿@{
+    List<ProjetoAlmoco.Web.Models.Categoria> Categorias = (List<ProjetoAlmoco.Web.Models.Categoria>)ViewBag.CriaCategorias;
 
-<div class="categoria">
-    <div class="categoria__topo">
-        <div class="nomeCategoria">Arroz</div>
-        <div class="botoes">
+    List<ProjetoAlmoco.Web.Models.Alimento> Alimentos = (List<ProjetoAlmoco.Web.Models.Alimento>)ViewBag.CriaAlimentos;
+    var aviso1 = ViewBag.AvisoCategoria;
+}
+@foreach (var categoria in Categorias)
+{
+    <div class="categoria">
+        <div class="categoria__topo">
+            <div class="nomeCategoria"> @categoria.Nome </div>
+            <div class="botoes">
 
-            <button class="learn-more">
-                <span class="circle" aria-hidden="true">
-                    <i class="trash fa fa-trash"></i>
-                </span>
-                <span class="button-text">Apagar Categoria</span>
-            </button>
-            <!-- <button class="botoes__adiciona"><i class="fa fa-plus"></i></button> -->
-            <!-- <button class="botoes__deleta"></button> -->
-        </div>
-    </div>
-    <hr>
-    <div class="categoria__baixo">
-        <!-- <div class="botao__switch">
-            <div class="onoffswitch">
-                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                <label class="onoffswitch-label" for="myonoffswitch">
-                    <span class="onoffswitch-inner"></span>
-                    <span class="onoffswitch-switch"></span>
-                </label>
+                <button onclick="DeleteModal('Apagar Categoria?', 'Categoria/Deletar/@categoria.CategoriaID','APAGAR', 'Esta categoria será apagada incluindo todos seus pratos cadastrados')" class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <i class="trash fa fa-trash"></i>
+                    </span>
+                    <span  class="button-text">Apagar Categoria</span>
+                </button>
             </div>
-        </div> -->
-        <div class="alimentos">
-            <ul class="alimentos__ul">
-                <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne">Branco</label></li>
-                <li><input type="checkbox" id="checkboxTwo" value="Cotton Candy"><label for="checkboxTwo">Integral</label></li>
-                <li><input type="checkbox" id="checkboxThree" value="Rarity"><label for="checkboxThree">Verde</label></li>
-                <li><input type="checkbox" id="checkboxFour" value="Moondancer"><label for="checkboxFour">Carreteiro</label></li>
+        </div>
+        <hr>
+        <div class="categoria__baixo">
+            <div class="alimentos">
+                <ul class="alimentos__ul">
 
-            </ul>
+                    @foreach (var alimento in Alimentos)
+                    {
+                        if (alimento.CategoriaID.Equals(categoria.CategoriaID))
+                        {
+                            <li>
+                                <input type="checkbox"  id='@alimento.AlimentotID.ToString()' value="Rainbow Dash">
+                                <div class="alimento-redondo">
+                                    <label for='@alimento.AlimentotID.ToString()'>@alimento.Nome </label>
+                                    <i onclick="DeleteModal('Apagar Alimento?', 'Alimento/Deletar/@alimento.AlimentotID','APAGAR', 'O alimento será deletado permanentemente!')" class="icon-deleta fas fa-trash"></i>
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+                <button onclick="CadastroModal('Novo Alimento', 'Alimento/Index', 'CADASTRAR', @categoria.CategoriaID)" class="learn-more">
+                    <span class="circle-add-alimento" aria-hidden="true">
+                        <i class=" fa fa-plus"></i>
+                    </span>
+                    <span  class="button-text2" >Adicionar alimentos</span>
+                </button>
+            </div>
         </div>
     </div>
-</div>
+}

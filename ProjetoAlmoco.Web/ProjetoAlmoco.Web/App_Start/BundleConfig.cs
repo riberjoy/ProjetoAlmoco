@@ -10,7 +10,8 @@ namespace ProjetoAlmoco.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/modal.js"));
+                        "~/Scripts/modal.js",
+                        "~/Scripts/insereCardapio.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -20,13 +21,12 @@ namespace ProjetoAlmoco.Web
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-           // bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-           //           "~/Scripts/bootstrap.js"));
-
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/Login.css",
                       "~/Content/Cadastro.css",
                       "~/Content/Admin.css",
+                      "~/Content/mobile.css",
+                      "~/Content/padrao.css",
                       "~/Content/Site.css"));
         }
     }

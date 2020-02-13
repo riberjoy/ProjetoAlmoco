@@ -1,15 +1,6 @@
 ﻿/* Fonte do site */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-
-:root {
-    --cor-fundo: #023145;
-    --cor-btn-confirma: #00E866;
-    --cor-btn-cancela: #707070;
-    --cor-input: #395c6d;
-
-}
-
 /* Scroll personalizado */
 ::-webkit-scrollbar {
     width: 9px
@@ -76,16 +67,17 @@ input[type = "text"], input[type = "password"] {
     margin: 0;
     padding: 0;
     color: whitesmoke;
-    position: absolute; 
-    margin:0;
+    position: absolute;
+    margin: 0;
     padding: 0;
     margin-left: 2%;
     font-size: 16pt;
     align-items: center;
 }
 
-
-
+.ajusteTexto{
+    margin-right:12px;
+}
 /* The Modal (background) */
 .modal {
     display: block; /* Hidden by default */
@@ -104,7 +96,7 @@ input[type = "text"], input[type = "password"] {
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #888;
     border-radius: 25px;
     width: 30%; /* Could be more or less, depending on screen size */
@@ -114,8 +106,9 @@ input[type = "text"], input[type = "password"] {
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
+    padding-right: 10px;
 }
 
     .close:hover,
@@ -123,4 +116,23 @@ input[type = "text"], input[type = "password"] {
         color: black;
         text-decoration: none;
         cursor: pointer;
+    }
+
+.cadCategoria__link {
+    margin-top: 25px;
+    background-color: var(--cor-btn-confirma);
+    color: white;
+    font-size: 15pt;
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .4s;
+    outline: none;
+}
+
+    .cadCategoria__link:focus {
+        width: 13%;
+        color: var(--cor-btn-confirma)
     }

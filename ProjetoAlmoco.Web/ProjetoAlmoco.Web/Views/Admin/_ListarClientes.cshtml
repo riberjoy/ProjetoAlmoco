@@ -1,0 +1,22 @@
+﻿@{
+    List<ProjetoAlmoco.Web.Models.Cliente> Cliente = (List<ProjetoAlmoco.Web.Models.Cliente>)ViewBag.BuscaClientes;
+}
+
+<div class="lista-pedido">
+    <h1>Lista de Clientes Cadastrados</h1>
+    <div class="lista-pedidos__scroll">
+        @foreach (var cliente in Cliente)
+         {
+            <div class="pedido">
+                <div class="pedido__superior">
+                    <h2>@cliente.Nome</h2>
+                    <div class="pedido__superior__botoes">
+                        <buttom class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                        <buttom class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
+                    </div>
+                </div>
+            </div>
+         }
+        </div>
+    <button onclick="location.href='../Admin/ListarPedidos';" class="voltar-btn"> VOLTAR</button>
+</div>

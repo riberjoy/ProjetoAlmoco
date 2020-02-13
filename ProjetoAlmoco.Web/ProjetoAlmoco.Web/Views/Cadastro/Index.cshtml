@@ -13,9 +13,9 @@
 
             <div class="cadastro__form">
                 <div class="cadastro__form__Item">
-                    @Html.EditorFor(model => model.NomeCliente, new { htmlAttributes = new { autocomplete = "off", @class = "cadastro__input", placeholder = "NOME" } })
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { autocomplete = "off", @class = "cadastro__input", placeholder = "NOME" } })
                     <p>
-                        @Html.ValidationMessageFor(model => model.NomeCliente, "", new { @class = "texto" })
+                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "texto" })
                     </p>
                 </div>
 
@@ -42,7 +42,6 @@
 
                 <input type="submit" value="CADASTRAR" class="cadastro__link">
                 @Html.ActionLink("CANCELAR", "Index", "Login", null, new { @class = "cadastro__link cancelar" })
-
             </div>
         </form>
 

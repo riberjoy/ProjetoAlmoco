@@ -1,12 +1,6 @@
 ﻿
-:root {
-    --cor-fundo: #023145;
-    --cor-btn-confirma: #00E866;
-    --cor-btn-cancela: #707070;
-    --cor-input: #395c6d;
-}
-
 /* ======== LOGIN ========= */
+
 .login {
     display: flex;
     flex-direction: column;

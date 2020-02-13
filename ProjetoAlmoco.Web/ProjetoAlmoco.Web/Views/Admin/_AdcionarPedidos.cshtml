@@ -1,0 +1,11 @@
+﻿@{
+    List<ProjetoAlmoco.Web.Models.Cliente> Clientes = (List<ProjetoAlmoco.Web.Models.Cliente>)ViewBag.BuscaClientes;
+}
+<div id="myBtn" class="conteudo">
+    @Html.DropDownList("Clientes", new SelectList(Clientes), "Select Gender", new { @class = "form-control" })
+    <div class="conteudo__titulo">
+        <h1>Monte seu prato do dia.</h1>
+        @Html.Partial("_CardCardapio")
+        <input id="liberarCardapio" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ENVIAR PEDIDO">
+    </div>
+</div>

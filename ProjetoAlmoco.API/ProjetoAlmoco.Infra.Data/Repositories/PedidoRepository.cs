@@ -15,7 +15,6 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
             using (cmd = new SqlCommand())
             {
                     cmd.CommandText = "InsPedido";
-                    cmd.Parameters.AddWithValue("@Dat_DataPedido", pedido.Dat_DataPedido);
                     cmd.Parameters.AddWithValue("@Num_IDCliente", pedido.Num_IDCliente);
                     cmd.Parameters.AddWithValue("@Num_IDAlimento", pedido.Num_IDAlimento);
 

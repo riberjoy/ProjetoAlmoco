@@ -73,8 +73,7 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                         {
                             Num_IDCliente = Convert.ToInt32(dados["Num_IDCliente"]),
                             Nom_Cliente = dados["Nom_Cliente"].ToString(),
-                            Nom_Usuario = dados["Nom_Usuario"].ToString(),
-                            Num_Senha = dados["Num_Senha"].ToString()
+                            Nom_Usuario = dados["Nom_Usuario"].ToString()
                         };
 
                         clientes.Add(cliente);

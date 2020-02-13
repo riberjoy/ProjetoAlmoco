@@ -19,21 +19,9 @@ namespace ProjetoAlmoco.Web.Controllers
             return RedirectToAction("Index", "Cliente");
         }
 
-        public ActionResult DeletarPedidoAdm(int id)
-        {
-            //deletar pedido do banco!
-            //string urlAnterior = System.Web.HttpContext.Current.Request.UrlReferrer.ToString();
-            //Redirect(urlAnterior);
-            //Redireciona pra url anterior.
 
-            return RedirectToAction("ListarPedidos", "Admin");
-        }
 
-        public ActionResult MudarCardapio()
-        {
-            //Deletar cardapio do banco 
-            return RedirectToAction("Index", "Admin");
-        }
+       
 
         public ActionResult EditarPedidoAdm()
         {

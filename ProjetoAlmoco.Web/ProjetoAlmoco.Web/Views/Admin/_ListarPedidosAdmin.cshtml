@@ -1,23 +1,57 @@
-﻿@{ Layout = null;}
+﻿@{ 
+    Layout = null;
+    var action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
+    string caminho = "";
+}
 <div class="lista-pedido">
     <div class="lista-pedido__botoes">
         <div class="lista-pedido__btn">
             <!--  -->
-            <button onclick="location.href='../Pedido/MudarCardapio';" class="lista-pedido-btn">
+            @{
+                if (action == "ListarPedidos")
+                {
+                    caminho = "../Admin/MudarCardapio";
+                }
+                if (action == "PedidoAdd")
+                {
+                    caminho = "../MudarCardapio";
+                }
+            }
+            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
                 <span class="circle-add-alimento " aria-hidden="true">
                     <i class=" fas fa-pencil-alt" id="azul"></i>
                 </span>
                 <span class="button-text2">Editar Cardápio</span>
             </button>
             <!--  -->
-            <button onclick="location.href='../Admin/ListarClientes';" class="lista-pedido-btn">
+            @{
+                if (action == "ListarPedidos")
+                {
+                    caminho = "../Admin/ListarClientes";
+                }
+                if (action == "PedidoAdd")
+                {
+                    caminho = "../ListarClientes";
+                }
+            }
+            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
                 <span class="circle-add-alimento " aria-hidden="true">
                     <i class="  fas fa-pencil-alt" id="amarelo"></i>
                 </span>
                 <span class="button-text2">Editar Clientes</span>
             </button>
             <!--  -->
-            <button onclick="location.href='../Admin/AdcionarPedidos';" class="lista-pedido-btn">
+            @{
+                if (action == "ListarPedidos")
+                {
+                    caminho = "../Admin/AdcionarPedidos";
+                }
+                if (action == "PedidoAdd")
+                {
+                    caminho = "../AdcionarPedidos";
+                }
+            }
+            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
                 <span class="circle-add-alimento">
                     <i class=" fa fa-plus" id="verde"></i>
                 </span>

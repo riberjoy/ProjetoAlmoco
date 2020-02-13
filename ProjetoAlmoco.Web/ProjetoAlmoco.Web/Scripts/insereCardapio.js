@@ -1,14 +1,25 @@
 ﻿var parametros = [];
 var id;
+var caminho;
 
-$("#liberarCardapio").click(function () {
+$(document).ready(function () {
+    if ($("#clientes").val() == "") {
+        caminho = "../Admin/ListarPedidos";
+    }else {
+        caminho = "../PedidoAdd";
+    }
+    console.log(caminho);
+});
+
+
+$("#liberarCardapio").click(function (op) {
     $("input:checked").each(function () {
         parametros.push($(this).attr("id"));
     });
     if (parametros.length > 0) {
         GravaPedidos();
     }
-    
+
 });
 
 function GravaPedidos() {
@@ -18,6 +29,8 @@ function GravaPedidos() {
             datatype: 'json',
             contentType: "application/json; charset=utf-8",
             type: "POST",
+            cache: false,
+            async: true,
             data: JSON.stringify(parametros),
             success: function (data) {
                 $(".conteudo").html(data);
@@ -35,6 +48,8 @@ function GravaPedidos() {
             datatype: 'json',
             contentType: "application/json; charset=utf-8",
             type: "POST",
+            cache: false,
+            async: true,
             data: JSON.stringify(parametros),
             success: function (data) {
                 $(".conteudo").html(data);
@@ -50,14 +65,15 @@ function GravaPedidos() {
             parametros.push($('#clientes').val());
             id = $('#clientes').val();
             $.ajax({
-                url: '../Admin/PedidoAdd',
+                url: caminho,
                 datatype: 'json',
+                cache: false,
+                async: true,
                 contentType: "application/json; charset=utf-8",
                 type: "POST",
                 data: JSON.stringify(parametros),
                 success: function (data) {
                     $(".conteudo").html(data);
-                    //alert("Dados enviados com sucesso!")
                 },
                 error: function (error) {
                     alert("Erro ao enviar os dados")

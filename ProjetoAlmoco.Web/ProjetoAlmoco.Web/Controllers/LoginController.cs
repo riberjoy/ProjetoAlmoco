@@ -10,6 +10,11 @@ namespace ProjetoAlmoco.Web.Controllers
             return View();
         }
 
+        public ActionResult Logout()
+        {
+            return RedirectToAction("Index","Login");
+        }
+
         [HttpPost]
         public ActionResult Index(Usuario usuario)
         {
@@ -17,7 +22,7 @@ namespace ProjetoAlmoco.Web.Controllers
             {
                 //var userInfo = "Usuario: "+usuario.NomeUsuario+" -- Senha: "+usuario.Senha;
                 //ViewBag.selectedUser = userInfo;
-                return RedirectToAction("Index","Cliente");
+                return RedirectToAction("Index","Admin");
                 //return View();
             }
 

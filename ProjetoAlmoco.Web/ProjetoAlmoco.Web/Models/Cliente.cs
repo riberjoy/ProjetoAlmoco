@@ -6,7 +6,6 @@ using System.Web;
 
 namespace ProjetoAlmoco.Web.Models
 {
-    public List<Pedido> Pedidos;
 
     public class Cliente
     {

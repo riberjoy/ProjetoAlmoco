@@ -8,19 +8,24 @@ namespace ProjetoAlmoco.Web.Controllers
 {
     public class PedidoController : Controller
     {
-        
-        public ActionResult ListarPedidos()
+
+        public ActionResult DeletarPedidoCliente(int id)
         {
-            return View();
+            //deletar pedido do banco!
+            //string urlAnterior = System.Web.HttpContext.Current.Request.UrlReferrer.ToString();
+            //Redirect(urlAnterior);
+            //Redireciona pra url anterior.
+
+            return RedirectToAction("Index", "Cliente");
         }
 
-        public ActionResult ListaPedido(string op)
+        public ActionResult DeletarPedidoAdm(int id)
         {
-            return View();
-        }
+            //deletar pedido do banco!
+            //string urlAnterior = System.Web.HttpContext.Current.Request.UrlReferrer.ToString();
+            //Redirect(urlAnterior);
+            //Redireciona pra url anterior.
 
-        public ActionResult Deletar(int id)
-        {
             return RedirectToAction("ListarPedidos", "Admin");
         }
 
@@ -28,6 +33,17 @@ namespace ProjetoAlmoco.Web.Controllers
         {
             //Deletar cardapio do banco 
             return RedirectToAction("Index", "Admin");
+        }
+
+        public ActionResult EditarPedidoAdm()
+        {
+            //Deletar cardapio do banco 
+            return RedirectToAction("EditarPedidos", "Admin");
+        }
+
+        public ActionResult EditarPedidoCliente()
+        {
+            return RedirectToAction("Index", "Cliente");
         }
 
     }

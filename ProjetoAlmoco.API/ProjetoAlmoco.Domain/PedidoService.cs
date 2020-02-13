@@ -27,7 +27,7 @@ namespace ProjetoAlmoco.Domain
 
             var categoriaAlimento = new List<string>();
 
-            if (pedidos != null)
+            if (pedidos.Count > 0)
             {
                 var pedidoAux = pedidos[0];
 

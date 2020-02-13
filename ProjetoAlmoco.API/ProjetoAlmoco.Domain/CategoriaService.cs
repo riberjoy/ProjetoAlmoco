@@ -17,17 +17,14 @@ namespace ProjetoAlmoco.Domain
             _alimentoRepository = alimentoRepository;
         }
 
-        public IEnumerable<Categoria> SepararAlimentosAtivos() => SepararAlimentosCategoria(_alimentoRepository.GetAtivos());
-        public IEnumerable<Categoria> SepararTodosAlimentos() => SepararAlimentosCategoria(_alimentoRepository.Get());
-
-        public IEnumerable<Categoria> SepararAlimentosCategoria(IEnumerable<Alimento> alimentos)
+        public IEnumerable<Categoria> SepararAlimentosAtivos() 
         {
             var categoriasValidas = new List<Categoria>();
             var categorias = _categoriaRepository.Get().ToList();
+            var alimentos = _alimentoRepository.GetAtivos();
 
             if (alimentos != null)
             {
-
                 for (int i = 0; i < categorias.Count; i++)
                 {
                     categorias[i].Alimentos = new List<Alimento>();
@@ -37,11 +34,27 @@ namespace ProjetoAlmoco.Domain
                             categorias[i].Alimentos.Add(alimento);
                 }
             }
-            foreach(Categoria categoria in categorias)
+            foreach (Categoria categoria in categorias)
                 if (categoria.Alimentos.Count > 0)
                     categoriasValidas.Add(categoria);
 
             return categoriasValidas;
+        }
+        public IEnumerable<Categoria> SepararTodosAlimentos()
+        {
+            var categorias = _categoriaRepository.Get().ToList();
+            var alimentos = _alimentoRepository.Get();
+
+            for (int i = 0; i < categorias.Count; i++)
+            {
+                categorias[i].Alimentos = new List<Alimento>();
+
+                foreach (Alimento alimento in alimentos)
+                    if (alimento.Num_IDCategoria == categorias[i].Num_IDCategoria)
+                        categorias[i].Alimentos.Add(alimento);
+            }
+            
+            return categorias;
         }
     }
 }

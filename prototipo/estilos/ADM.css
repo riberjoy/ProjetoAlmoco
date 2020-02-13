@@ -1,3 +1,5 @@
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
 :root{
     --cor-fundo:#023145;
     --cor-btn-confirma:#00E866;
@@ -56,41 +58,320 @@
 /* categoria */
 
 .categoria{
-    
+    margin-top: 15px;
+    width: 50vw;
     background-color: white;
     border-radius: 30px;
+    padding-bottom: 15px;
    
 }
 .nomeCategoria{
     color: black;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     width: fit-content;
 }
 .categoria__topo{
     padding: 1em;
+    padding-left: 8%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
 }
 
-.botoes{
-    display: flex;
-    flex-direction:row ;
+.liberar-cardapio{
+  margin: 50px;
+  background-color: var(--cor-btn-confirma);
+  border: none;
+  border-radius:30px ;
+  color: white;
+  font-size: 16pt;
+  padding: 8px 30px;
+  cursor: pointer;
+  outline: none;
 }
 
-#icone2{
-    width: 10%;
-    height: 10%;
+/* ====================== */
+
+.categoria hr, .pedido hr{
+    width: 80%;
+    height: 1px;
+    background-color: var(--cor-btn-cancela);
+ 
 }
 
-.adicionarCat{
+
+ /* AlIMENTOS */
+.alimentos__ul,.ul__pedido {
+    list-style: none;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .alimentos__ul li ,.ul__pedido li{
+    display: inline;
+  }
+
+
+  .alimentos__ul li .alimento-redondo /*label*/ {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--cor-btn-cancela);
+    color: #000000;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.2s;
+  }
+  
+  .alimentos__ul li .alimento-redondo /*label*/ {
+    padding:2px 2px  2px 8px;
+
+   
+  }
+  .alimentos__ul li .alimento-redondo label{
+    cursor: pointer;
+  }
+
+  .alimentos__ul li .alimento-redondo i {
+    color: white;
+    background-color:white;
+    padding:8px;
     border-radius: 30px;
-    background-color: var(--cor-btn-confirma);
-}
+    cursor: pointer;
+    transition: .5s ease-in-out;
+  }
 
-.apagaCat{
-    border-radius: 30px;
+  .alimentos__ul li input[type="checkbox"] + .alimento-redondo:hover i {
     background-color: var(--cor-deleta);
+    transform: rotateY(180deg);
+    transition: .5s ease-in-out;
+  }
+
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo:hover i {
+    background-color: var(--cor-deleta);
+    color: white;
+    transform: rotateY(180deg);
+    transition: .5s ease-in-out;
+  }
+
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo i {
+    background-color: var(--cor-btn-confirma);
+    color: var(--cor-btn-confirma);
+    transition: .5s ease-in-out;
+  }
+
+  
+  .alimentos__ul li .alimento-redondo label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    content: "\f067";
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo label::before {
+    content: "\f00c";
+    transform: rotate(-360deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .alimentos__ul li input[type="checkbox"]:checked + .alimento-redondo /*label*/ {
+    border: 2px solid var(--cor-btn-confirma);
+    background-color: var(--cor-btn-confirma);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    /* padding: 8px 0px 8px 12px ; */
+  }
+
+   .alimentos__ul li input[type="checkbox"] {
+    display: absolute;
+  }
+  .alimentos__ul li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .alimentos__ul li input[type="checkbox"]:focus + .alimento-redondo  {
+    border: 2px solid var(--cor-btn-confirma);
+  }
+
+
+  /*===================== LISTA DE PEDIDOS ======================= */
+  .lista-pedido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
+    height: 80vh;
+  }
+  
+  .lista-pedido h1{
+    color: white;
+  }
+
+  .lista-pedido .lista-pedido__botoes{
+    height: 10vh;
+    flex-direction: row;
+  }
+
+  .lista-pedido-btn{
+    justify-content: space-evenly;
+    background-color: var(--cor-btn-cancela);
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 30px;
+    color: white;
+  }
+
+  #azul{
+    background-color: #5BBEFF;
+  }
+
+  #amarelo{
+    background-color: #F5BD4D;
+  }
+
+  #verde{
+    background-color: var(--cor-btn-confirma);
+  }
+
+  .lista-pedido-btn .circle-add-alimento i{
+    font-size: 14pt;
+    /* background-color: blue; */
+    padding: 8px;
+    border-radius: 30px;
+    font-weight: 700;
+  }
+
+  .lista-pedido .lista-pedido-btn i{
+  
+    transition: .5s ease-out;
+  }
+
+  .lista-pedido .lista-pedido-btn:hover i{
+    transform: rotateY(180deg);
+    transition: .5s ease-in-out;
+  }
+
+  /* Pedidos */
+
+  .lista-pedidos__scroll{
+    padding: 30px 40px;
+    margin-top: 30px;
+    background-color: white;
+    height: 100%;
+    width: 50vw;
+    border-radius: 25px;
+  }
+
+  .pedido{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #E5E4E4;
+    height: auto;
+  }
+
+
+.pedido__superior{
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+  .pedido__superior__botoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+ .p_s_b_add i,.p_s_b_delete i {
+   border-radius: 30px;
+   color: white;
+   padding: 12px;
+   font-size: 14pt;
+   cursor: pointer;
+   margin-left: 20px;
+   transition: .5s ease-in-out;
+ }
+
+ .p_s_b_add:hover i,.p_s_b_delete:hover i {
+  transform: rotateY(180deg);
+  transition: .5s ease-in-out;
+ }
+
+
+
+ .p_s_b_add i{
+   background-color: #5BBEFF;
+ }
+
+ .p_s_b_delete i{
+   background-color: var(--cor-deleta);
+
+ }
+
+/* ========== */
+.ul__pedido{
+  margin-top: 0;
+}
+.ul__pedido li p{
+  display: inline-block;
+  font-size: 13pt;
+  color: var(--cor-btn-cancela);
+  width: fit-content;
+  margin: 10px 20px;
+}
+
+.scroll4::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+.scroll4::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 20px;
+}
+
+.scroll4::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 20px;
+}
+
+.lista-pedidos__scroll{
+  overflow: auto;
+}
+
+.enviar-pedidos-btn{
+  background-color: var(--cor-btn-confirma);
+  margin-top: 50px;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.voltar-btn{
+  background-color: var(--cor-btn-cancela);
+  margin-top: 50px;
+  padding: 10px 80px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
 }

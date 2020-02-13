@@ -1,115 +1,113 @@
-@media (max-width:600px){
+﻿@media (max-width:600px) {
     /* login */
-    .login__form{
+    .login__form {
         width: 80%;
         display: flex;
         align-items: center;
         align-content: center;
         flex-direction: column;
     }
-    .login__logo{
+
+    .login__logo {
         height: 40%;
         width: 40%;
     }
 
-    
+
     /* Cadastro */
-    .cadastro__form{
+    .cadastro__form {
         width: 80%;
         display: flex;
         align-items: center;
         align-content: center;
         flex-direction: column;
     }
-    .cadastro__logo{
+
+    .cadastro__logo {
         height: 40%;
         width: 40%;
     }
 
     /* botoes */
-    .button-text{
+    .button-text {
         display: none;
     }
-    button.learn-more{
-        width: none;
-      }
+
+    button.learn-more {
+        width: 0;
+    }
 
     /* alimentos */
     .alimentos__ul li label {
         padding: 4px 8px;
     }
-      
-      .alimentos__ul li label::before {
-        font-size: 8px;
-        padding: 2px 6px 2px 2px;
-       
-      }
+
+        .alimentos__ul li label::before {
+            font-size: 8px;
+            padding: 2px 6px 2px 2px;
+        }
 
     /* categoria */
-    .categoria{
+    .categoria {
         width: 90vw;
-        
-       
     }
 
-    .topbar__logo{
+    .topbar__logo {
         height: 12%;
         width: 12%;
     }
-    
-    .topbar__logout{
+
+    .topbar__logout {
         width: 9%;
         height: 9%;
-        
     }
-    
-    .topbar__mensagem h2{
-       font-size: 18pt;
-       margin-left: 40px;
+
+    .topbar__mensagem h2 {
+        font-size: 18pt;
+        margin-left: 40px;
     }
 
     /* ======== */
-    .pedido{
-         width: fit-content;
+    .pedido {
+        width: auto;
     }
 
-    .lista-pedido-btn{
+    .lista-pedido-btn {
         margin-top: 4px;
         font-size: 8pt;
         padding: 5px 10px;
     }
-    .lista-pedido-btn .circle-add-alimento i{
-        font-size: 10pt;
-        padding: 6px;
-    }
 
-    .lista-pedido__botoes{
+        .lista-pedido-btn .circle-add-alimento i {
+            font-size: 10pt;
+            padding: 6px;
+        }
+
+    .lista-pedido__botoes {
         flex-direction: column;
         padding: 0 25%;
     }
 
-    .lista-pedidos__scroll{
+    .lista-pedidos__scroll {
         margin-top: 80px;
         width: 70%;
         padding: 20px;
     }
 
-    .pedido .pedido__superior h2{
-         font-size: 14pt;
+    .pedido .pedido__superior h2 {
+        font-size: 14pt;
     }
 
-    .p_s_b_add i,.p_s_b_delete i {
+    .p_s_b_add i, .p_s_b_delete i {
         border-radius: 30px;
         color: white;
         padding: 12px;
         font-size: 12pt;
         cursor: pointer;
         /* margin-left: 20px; */
-      }
+    }
 
-      .ul__pedido li p{
+    .ul__pedido li p {
         font-size: 12pt;
-      }
-
+    }
 }
-

@@ -1,0 +1,50 @@
+﻿@{
+    List<ProjetoAlmoco.Web.Models.Categoria> Categorias = (List<ProjetoAlmoco.Web.Models.Categoria>)ViewBag.CriaCategorias;
+
+    List<ProjetoAlmoco.Web.Models.Alimento> Alimentos = (List<ProjetoAlmoco.Web.Models.Alimento>)ViewBag.CriaAlimentos;
+    var aviso1 = ViewBag.AvisoCategoria;
+}
+@foreach (var categoria in Categorias)
+{
+    <div class="categoria">
+        <div class="categoria__topo">
+            <div class="nomeCategoria"> @categoria.Nome </div>
+            <div class="botoes">
+
+                <button onclick="DeleteModal('Apagar Categoria?', 'Categoria/Deletar/@categoria.CategoriaID','APAGAR', 'Esta categoria será apagada incluindo todos seus pratos cadastrados')" class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <i class="trash fa fa-trash"></i>
+                    </span>
+                    <span  class="button-text">Apagar Categoria</span>
+                </button>
+            </div>
+        </div>
+        <hr>
+        <div class="categoria__baixo">
+            <div class="alimentos">
+                <ul class="alimentos__ul">
+
+                    @foreach (var alimento in Alimentos)
+                    {
+                        if (alimento.CategoriaID.Equals(categoria.CategoriaID))
+                        {
+                            <li>
+                                <input type="checkbox"  id='@alimento.AlimentotID.ToString()' value="Rainbow Dash">
+                                <div class="alimento-redondo">
+                                    <label for='@alimento.AlimentotID.ToString()'>@alimento.Nome </label>
+                                    <i onclick="DeleteModal('Apagar Alimento?', 'Alimento/Deletar/@alimento.AlimentotID','APAGAR', 'O alimento será deletado permanentemente!')" class="icon-deleta fas fa-trash"></i>
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+                <button onclick="CadastroModal('Novo Alimento', 'Alimento/Index', 'CADASTRAR', @categoria.CategoriaID)" class="learn-more">
+                    <span class="circle-add-alimento" aria-hidden="true">
+                        <i class=" fa fa-plus"></i>
+                    </span>
+                    <span  class="button-text2" >Adicionar alimentos</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}

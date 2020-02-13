@@ -26,9 +26,5 @@ namespace ProjetoAlmoco.Web.Controllers
             return View(cliente);
         }
 
-        public ActionResult Teste()
-        {
-            return View();
-        }
     }
 }

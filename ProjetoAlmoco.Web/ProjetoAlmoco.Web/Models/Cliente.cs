@@ -6,10 +6,12 @@ using System.Web;
 
 namespace ProjetoAlmoco.Web.Models
 {
+    public List<Pedido> Pedidos;
+
     public class Cliente
     {
         [Required(ErrorMessage ="Necessário inserir o nome do cliente!")]
-        public string NomeCliente { get; set; }
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "Necessário inserir um nome de usuário válido!")]
         [MaxLength(10, ErrorMessage = "Máximo de 20 caracteres")]
@@ -21,7 +23,6 @@ namespace ProjetoAlmoco.Web.Models
         [MinLength(5, ErrorMessage = "Mínimo de 5 caracteres")]
         public string Senha { get; set; }
 
-        [MinLength(5, ErrorMessage = "Mínimo de 5 caracteres")]
         [Compare(nameof(Senha), ErrorMessage = "Senhas não coincidem!")]
         public string ConfirmaSenha { get; set; }
 

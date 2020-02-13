@@ -1,0 +1,34 @@
+﻿@{
+    List<ProjetoAlmoco.Web.Models.Categoria> Categorias = (List<ProjetoAlmoco.Web.Models.Categoria>)ViewBag.CriaCategorias;
+
+    List<ProjetoAlmoco.Web.Models.Alimento> Alimentos = (List<ProjetoAlmoco.Web.Models.Alimento>)ViewBag.CriaAlimentos;
+    var aviso1 = ViewBag.AvisoCategoria;
+}
+
+@foreach (var categoria in Categorias)
+{
+    <div class="categoria">
+        <div class="categoria__topo">
+            <div class="nomeCategoria"> @categoria.Nome</div>
+        </div>
+        <hr>
+        <div class="categoria__baixo">
+            <div class="alimentos">
+                <ul class="alimentos__ul alimentos__ul__Cliente">
+                    @foreach (var alimento in Alimentos)
+                    {
+                        if (alimento.CategoriaID.Equals(categoria.CategoriaID))
+                        {
+                            <li>
+                                <input type="checkbox" id='@alimento.AlimentotID.ToString()' value="Rainbow Dash">
+                                <div class="alimento-redondo ">
+                                    <label for='@alimento.AlimentotID.ToString()'>@alimento.Nome </label>
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+}

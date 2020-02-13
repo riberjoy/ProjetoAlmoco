@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1813645B-4C29-4502-AAF5-4095C8EAEC4C}</ProjectGuid>
+    <ProjectGuid>{67237D86-6E54-46E5-B80D-9D066BF9E02B}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -120,29 +120,41 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AlimentoController.cs" />
     <Compile Include="Controllers\CadastroController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alimento.cs" />
+    <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin.css" />
+    <Content Include="Content\Cadastro.css" />
     <Content Include="Content\Img\bin.png" />
     <Content Include="Content\Img\logo-smn-fav.png" />
     <Content Include="Content\Img\logo-smn.png" />
     <Content Include="Content\Img\logout.png" />
     <Content Include="Content\Login.css" />
-    <Content Include="Content\Cadastro.css" />
+    <Content Include="Content\mobile.css" />
+    <Content Include="Content\padrao.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\controladores.js" />
+    <Content Include="Scripts\insereCardapio.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -152,6 +164,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modal.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -164,9 +177,20 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Cadastro\Index.cshtml" />
-    <Content Include="Views\Teste.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_CardCardapio.cshtml" />
+    <Content Include="Views\Shared\_CardCriaCardapio.cshtml" />
+    <Content Include="Views\Shared\_CardPedido.cshtml" />
+    <Content Include="Views\Shared\_Topo.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Pedido.cshtml" />
+    <Content Include="Views\Admin\_ListarPedidosAdmin.cshtml" />
+    <Content Include="Views\Admin\_ListarPedidos.cshtml" />
+    <Content Include="Views\Admin\_ListarClientes.cshtml" />
+    <Content Include="Views\Admin\_AdcionarPedidos.cshtml" />
+    <Content Include="Views\Cliente\PedidoCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -196,9 +220,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60935</DevelopmentServerPort>
+          <DevelopmentServerPort>54282</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:60935/</IISUrl>
+          <IISUrl>http://localhost:54282/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

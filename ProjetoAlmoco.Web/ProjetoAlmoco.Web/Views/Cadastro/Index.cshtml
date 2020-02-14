@@ -1,4 +1,4 @@
-﻿@model ProjetoAlmoco.Web.Models.Cliente
+﻿@model ProjetoAlmoco.Application.Models.Cliente
 
 @Styles.Render("~/Content/Cadastro.css", "~/Content/Site.css")
 
@@ -13,23 +13,23 @@
 
             <div class="cadastro__form">
                 <div class="cadastro__form__Item">
-                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { autocomplete = "off", @class = "cadastro__input", placeholder = "NOME" } })
+                    @Html.EditorFor(model => model.Nom_Cliente, new { htmlAttributes = new { autocomplete = "off", @class = "cadastro__input", placeholder = "NOME" } })
                     <p>
-                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "texto" })
+                        @Html.ValidationMessageFor(model => model.Nom_Cliente, "", new { @class = "texto" })
                     </p>
                 </div>
 
                 <div class="cadastro__form__Item">
-                    @Html.EditorFor(model => model.Usuario, new { htmlAttributes = new { @class = "cadastro__input", placeholder = "LOGIN", autocomplete = "off" } })
+                    @Html.EditorFor(model => model.Nom_Usuario, new { htmlAttributes = new { @class = "cadastro__input", placeholder = "LOGIN", autocomplete = "off" } })
                     <p>
-                        @Html.ValidationMessageFor(model => model.Usuario, "", new { @class = "texto" })
+                        @Html.ValidationMessageFor(model => model.Nom_Usuario, "", new { @class = "texto" })
                     </p>
                 </div>
 
                 <div class="cadastro__form__Item">
-                    @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "cadastro__input", placeholder = "SENHA", autocomplete = "off", type = "password" } })
+                    @Html.EditorFor(model => model.Num_Senha, new { htmlAttributes = new { @class = "cadastro__input", placeholder = "SENHA", autocomplete = "off", type = "password" } })
                     <p>
-                        @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "texto" })
+                        @Html.ValidationMessageFor(model => model.Num_Senha, "", new { @class = "texto" })
                     </p>
                 </div>
 

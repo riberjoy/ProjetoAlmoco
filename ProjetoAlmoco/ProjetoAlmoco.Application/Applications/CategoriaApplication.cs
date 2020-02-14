@@ -30,6 +30,14 @@ namespace ProjetoAlmoco.Application.Applications
                 return contexto.RequestGet(URL);
             }
         }
+        public HttpResponseMessage GetAtivos()
+        {
+            using (contexto = new Context())
+            {
+                string URL = URLBase + "/getativos";
+                return contexto.RequestGet(URL);
+            }
+        }
         public HttpResponseMessage GetById(int Num_IDCategoria)
         {
             using (contexto = new Context())

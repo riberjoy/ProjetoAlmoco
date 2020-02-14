@@ -45,7 +45,7 @@ namespace ProjetoAlmoco.Application.Applications
                 return contexto.RequestGet(URL);
             }
         }
-        public HttpResponseMessage ConsLogin(Cliente usuario)
+        public HttpResponseMessage ConsLogin(Usuario usuario)
         {
             using (contexto = new Context())
             {

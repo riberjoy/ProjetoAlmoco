@@ -37,10 +37,7 @@ namespace ProjetoAlmoco.WebApi.Controllers
                 cliente.Num_Senha = null;
                 return Ok(cliente);
             }
-            else if (retorno == 1)
-                return Ok("Senha incorreta");
-            else
-                return Ok("Usuário não encontrado");
+            else return Ok();
         }
     }
 }

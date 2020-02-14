@@ -1,4 +1,5 @@
-﻿using ProjetoAlmoco.Web.Models;
+﻿using ProjetoAlmoco.Application.Applications;
+using ProjetoAlmoco.Application.Models;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -6,7 +7,7 @@ namespace ProjetoAlmoco.Web.Controllers
 {
     public class CadastroController : Controller
     {
-        
+        private readonly ClienteApplication clienteApp = new ClienteApplication();
 
         // GET: Cadastro
         public ActionResult Index()
@@ -20,9 +21,9 @@ namespace ProjetoAlmoco.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                clienteApp.Post(cliente);
                 return RedirectToAction("Index", "Login");
             }
-
             return View(cliente);
         }
 

@@ -1,7 +1,6 @@
 ﻿@{
-    List<ProjetoAlmoco.Web.Models.Categoria> Categorias = (List<ProjetoAlmoco.Web.Models.Categoria>)ViewBag.CriaCategorias;
+    List<ProjetoAlmoco.Application.Models.Categoria> Categorias = (List<ProjetoAlmoco.Application.Models.Categoria>)ViewBag.CriaCategorias;
 
-    List<ProjetoAlmoco.Web.Models.Alimento> Alimentos = (List<ProjetoAlmoco.Web.Models.Alimento>)ViewBag.CriaAlimentos;
     var aviso1 = ViewBag.AvisoCategoria;
 }
 
@@ -9,23 +8,20 @@
 {
     <div class="categoria">
         <div class="categoria__topo">
-            <div class="nomeCategoria"> @categoria.Nome</div>
+            <div class="nomeCategoria"> @categoria.Nom_Categoria</div>
         </div>
         <hr>
         <div class="categoria__baixo">
             <div class="alimentos">
                 <ul class="alimentos__ul alimentos__ul__Cliente">
-                    @foreach (var alimento in Alimentos)
+                    @foreach (var alimento in categoria.Alimentos)
                     {
-                        if (alimento.CategoriaID.Equals(categoria.CategoriaID))
-                        {
                             <li>
-                                <input type="checkbox" id='@alimento.AlimentotID.ToString()' value="Rainbow Dash">
+                                <input type="checkbox" id='@alimento.Num_IDAlimento.ToString()' value="Rainbow Dash">
                                 <div class="alimento-redondo ">
-                                    <label for='@alimento.AlimentotID.ToString()'>@alimento.Nome </label>
+                                    <label for='@alimento.Num_IDAlimento.ToString()'>@alimento.Nom_Alimento </label>
                                 </div>
                             </li>
-                        }
                     }
                 </ul>
             </div>

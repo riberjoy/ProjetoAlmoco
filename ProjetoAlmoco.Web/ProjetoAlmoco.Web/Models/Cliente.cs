@@ -6,8 +6,6 @@ using System.Web;
 
 namespace ProjetoAlmoco.Web.Models
 {
-    public List<Pedido> Pedidos;
-
     public class Cliente
     {
         [Required(ErrorMessage ="Necessário inserir o nome do cliente!")]

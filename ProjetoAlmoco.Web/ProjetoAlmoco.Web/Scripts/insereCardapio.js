@@ -11,9 +11,6 @@ $(document).ready(function () {
     console.log(caminho);
 });
 
-function enviarPedido() {
-
-}
 
 $("#liberarCardapio").click(function (op) {
     $("input:checked").each(function () {
@@ -43,11 +40,17 @@ function GravaPedidos() {
                 alert("Erro ao enviar os dados")
             }
         });
+<<<<<<< HEAD
 
     }
     if ($("#liberarCardapio").val() == "LIBERAR CARDÁPIO") {
         
 
+=======
+
+    }
+    if ($("#liberarCardapio").val() == "LIBERAR CARDÁPIO") {
+>>>>>>> origin/FRONT003-2020
         $.ajax({
             url: 'Admin/ListarPedidos',
             datatype: 'json',

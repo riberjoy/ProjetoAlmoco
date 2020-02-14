@@ -11,7 +11,7 @@ namespace ProjetoAlmoco.Web.Controllers
     {
         public List<Categoria> Categorias = new List<Categoria>();
         public List<Alimento> Alimentos = new List<Alimento>();
-        public List<Cliente> Pedido = new List<Cliente>();
+        public List<Pedido> Pedidos = new List<Pedido>();
 
         private readonly CategoriaApplication categoriaApp = new CategoriaApplication();
         private readonly PedidoApplication pedidoApp = new PedidoApplication();
@@ -53,6 +53,7 @@ namespace ProjetoAlmoco.Web.Controllers
                 ViewBag.ListaPedidos = pedidoApp.GetById(idCliente).Content.ReadAsAsync<List<Pedido>>().Result;
                 return View("PedidoCliente");
             }
+            ListaDePedidos();
             return View("Pedido");
         }
 
@@ -61,6 +62,29 @@ namespace ProjetoAlmoco.Web.Controllers
             ViewBag.Cliente = TempData["Cliente"];
             TempData.Keep("Cliente");
             return View();
+        }
+
+        public void ListaDePedidos()
+        {
+            Pedidos = new List<Pedido>();
+            List<string> list;
+
+            list = new List<string>() { "Arroz: Branco", "Feijão: Caldo", "Carne: Frango assado" };
+            Pedidos.Add(new Pedido { Num_IDCliente = 1, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 1", });
+
+            list = new List<string>() { "Arroz: Branco", "Feijão: Preto", "Carne: Frango assado" };
+            Pedidos.Add(new Pedido { Num_IDCliente = 2, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 2", });
+
+            list = new List<string>() { "Arroz: Branco", "Feijão: Tropeiro", "Carne: Frango assado" };
+            Pedidos.Add(new Pedido { Num_IDCliente = 3, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 3", });
+
+            ViewBag.ListaPedidos = Pedidos;
+        }
+
+        public ActionResult EditarPedido(int id)
+        {
+            //busca no banco os elementos marcados previamente
+            return View("Pedido");
         }
     }
 }

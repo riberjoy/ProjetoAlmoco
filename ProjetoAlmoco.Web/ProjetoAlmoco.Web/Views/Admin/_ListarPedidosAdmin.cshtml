@@ -17,7 +17,11 @@
                     caminho = "../MudarCardapio";
                 }
             }
+<<<<<<< HEAD
             <button onclick="location.href='@caminho'; atualizaEstado();" class="lista-pedido-btn">
+=======
+            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
+>>>>>>> origin/FRONT003-2020
                 <span class="circle-add-alimento " aria-hidden="true">
                     <i class=" fas fa-pencil-alt" id="azul"></i>
                 </span>
@@ -44,11 +48,19 @@
             @{
                 if (action == "ListarPedidos")
                 {
+<<<<<<< HEAD
                     caminho = "../Admin/NovoPedido";
                 }
                 if (action == "PedidoAdd")
                 {
                     caminho = "../NovoPedido";
+=======
+                    caminho = "../Admin/AdcionarPedidos";
+                }
+                if (action == "PedidoAdd")
+                {
+                    caminho = "../AdcionarPedidos";
+>>>>>>> origin/FRONT003-2020
                 }
             }
             <button onclick="location.href='@caminho';" class="lista-pedido-btn">

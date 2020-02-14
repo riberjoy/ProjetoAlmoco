@@ -148,6 +148,7 @@
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\ModeloDropDow.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

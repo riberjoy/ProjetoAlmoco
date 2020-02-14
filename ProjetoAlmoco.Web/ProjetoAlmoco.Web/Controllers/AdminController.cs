@@ -157,5 +157,22 @@ namespace ProjetoAlmoco.Web.Controllers
             //Alterar o cliente no banco!
             return RedirectToAction("ListarClientes", "Admin");
         }
+
+        public void ListaDePedidos()
+        {
+            Pedidos = new List<Pedido>();
+            List<string> list;
+            list = new List<string>() { "Arroz: Branco", "Feijão: Caldo", "Carne: Frango assado" };
+            Pedidos.Add(new Pedido { Num_IDCliente = 1, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 1", });
+
+            list = new List<string>() { "Arroz: Branco", "Feijão: Preto", "Carne: Frango assado" };
+            Pedidos.Add(new Pedido { Num_IDCliente = 2, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 2", });
+
+            list = new List<string>() { "Arroz: Branco", "Feijão: Tropeiro", "Carne: Frango assado" };
+            Pedidos.Add(new Pedido { Num_IDCliente = 3, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 3", });
+
+            ViewBag.ListaPedidos = Pedidos;
+        }
+
     }
 }

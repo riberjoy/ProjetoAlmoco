@@ -14,11 +14,12 @@ namespace ProjetoAlmoco.Domain
         {
             _pedidoRepository = pedidoRepository;
         }
-        public IEnumerable<Pedido> EditarPedido(int Num_IDCliente)
+        public IEnumerable<PedidoCliente> EditarPedido(int Num_IDCliente)
         {
             var pedidos = _pedidoRepository.GetById(Num_IDCliente);
+            var pedidosCliente = SepararPedidos(pedidos.ToList());
             _pedidoRepository.Delete(Num_IDCliente);
-            return pedidos;
+            return pedidosCliente;
         }
 
         public IEnumerable<PedidoCliente> SepararPedidos(List<Pedido> pedidos)
@@ -26,6 +27,8 @@ namespace ProjetoAlmoco.Domain
             var pedidosSeparados = new List<PedidoCliente>();
 
             var categoriaAlimento = new List<string>();
+
+            var IDAlimentos = new List<int>();
 
             if (pedidos.Count > 0)
             {
@@ -39,15 +42,18 @@ namespace ProjetoAlmoco.Domain
                         {
                             Num_IDCliente = pedidoAux.Num_IDCliente,
                             Nom_Cliente = pedidoAux.Nom_Cliente,
-                            CategoriaAlimento = categoriaAlimento
+                            CategoriaAlimento = categoriaAlimento,
+                            Num_IDAlimentos = IDAlimentos
                         };
 
                         pedidosSeparados.Add(pedidoCliente);
 
                         categoriaAlimento.Clear();
+                        IDAlimentos.Clear();
                     }
 
                     categoriaAlimento.Add(pedido.Nom_Categoria + ": " + pedido.Nom_Alimento);
+                    IDAlimentos.Add(pedido.Num_IDAlimento);
 
                     pedidoAux = pedido;
                 }
@@ -56,7 +62,8 @@ namespace ProjetoAlmoco.Domain
                 {
                     Num_IDCliente = pedidoAux.Num_IDCliente,
                     Nom_Cliente = pedidoAux.Nom_Cliente,
-                    CategoriaAlimento = categoriaAlimento
+                    CategoriaAlimento = categoriaAlimento,
+                    Num_IDAlimentos = IDAlimentos
                 };
 
                 pedidosSeparados.Add(pedidocliente);

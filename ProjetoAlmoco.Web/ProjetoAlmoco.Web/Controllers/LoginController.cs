@@ -35,10 +35,8 @@ namespace ProjetoAlmoco.Web.Controllers
                 else { }
                 //var userInfo = "Usuario: "+usuario.NomeUsuario+" -- Senha: "+usuario.Senha;
                 //ViewBag.selectedUser = userInfo;
-<<<<<<< HEAD
-=======
+
                 return RedirectToAction("Index","Admin");
->>>>>>> origin/FRONT003-2020
                 //return View();
             }
 

@@ -52,7 +52,7 @@ namespace ProjetoAlmoco.Web.Controllers
                 {
                     if(cl.Num_IDCliente == pd.Num_IDCliente)
                     {
-                        pedidos = pedidos +pd.Num_IDAlimento;
+                        //pedidos = pedidos +pd.Num_IDAlimento;
                     }
                 }
             }

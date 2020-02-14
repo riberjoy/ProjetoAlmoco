@@ -6,7 +6,7 @@ namespace ProjetoAlmoco.Domain.Interfaces.Service
     public interface IPedidoService
     {
         string TxtPedidos();
-        IEnumerable<Pedido> EditarPedido(int Num_IDCliente);
+        IEnumerable<PedidoCliente> EditarPedido(int Num_IDCliente);
         IEnumerable<PedidoCliente> SepararPedidos(List<Pedido> pedidos);
     }
 }

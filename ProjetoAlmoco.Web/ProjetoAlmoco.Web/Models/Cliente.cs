@@ -6,10 +6,6 @@ using System.Web;
 
 namespace ProjetoAlmoco.Web.Models
 {
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/FRONT003-2020
     public class Cliente
     {
         [Required(ErrorMessage ="Necessário inserir o nome do cliente!")]

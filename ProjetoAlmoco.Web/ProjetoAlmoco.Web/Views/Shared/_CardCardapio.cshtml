@@ -16,12 +16,46 @@
                 <ul class="alimentos__ul alimentos__ul__Cliente">
                     @foreach (var alimento in categoria.Alimentos)
                     {
+                        var ver = false;
+                        if (ViewBag.Pedido != null)
+                        {
+                            var pedidos = ViewBag.Pedido;
+                            foreach (var alimentoPedido in pedidos.Num_IDAlimentos)
+                            {
+                                if (alimentoPedido == alimento.Num_IDAlimento)
+                                {
+                                     ver = true;
+                                }
+                            }
+                            if (ver)
+                            {
+                                <li>
+                                    <input type="checkbox" id='@alimento.Num_IDAlimento.ToString()' checked name='@alimento.Num_IDAlimento.ToString()' value="Rainbow Dash">
+                                    <div class="alimento-redondo ">
+                                        <label for='@alimento.Num_IDAlimento.ToString()'>@alimento.Nom_Alimento </label>
+                                    </div>
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <input type="checkbox" id='@alimento.Num_IDAlimento.ToString()' name='@alimento.Num_IDAlimento.ToString()' value="Rainbow Dash">
+                                    <div class="alimento-redondo ">
+                                        <label for='@alimento.Num_IDAlimento.ToString()'>@alimento.Nom_Alimento </label>
+                                    </div>
+                                </li>
+                                ver = false;
+                            }
+                        }
+                        else
+                        {
                             <li>
-                                <input type="checkbox" id='@alimento.Num_IDAlimento.ToString()' value="Rainbow Dash">
+                                <input type="checkbox" id='@alimento.Num_IDAlimento.ToString()' name='@alimento.Num_IDAlimento.ToString()' value="Rainbow Dash">
                                 <div class="alimento-redondo ">
                                     <label for='@alimento.Num_IDAlimento.ToString()'>@alimento.Nom_Alimento </label>
                                 </div>
                             </li>
+                        }
                     }
                 </ul>
             </div>

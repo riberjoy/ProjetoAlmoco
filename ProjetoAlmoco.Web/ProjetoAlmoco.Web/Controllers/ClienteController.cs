@@ -21,6 +21,9 @@ namespace ProjetoAlmoco.Web.Controllers
             ViewBag.Cliente = TempData["Cliente"];
             TempData.Keep("Cliente");
 
+            ViewBag.Pedido = TempData["Pedido"];
+            TempData.Keep("Pedido");
+
             var categorias = categoriaApp.GetAtivos().Content.ReadAsAsync<List<Categoria>>().Result;
             if (categorias.Count> 0)
             {
@@ -36,6 +39,7 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult EnviarPedido(string[] idAlimentos)
         {
+            ViewBag.ControleRota = 0;
             ViewBag.Cliente = TempData["Cliente"];
             TempData.Keep("Cliente");
             int idCliente = ViewBag.Cliente.Num_IDCliente;
@@ -66,17 +70,17 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public void ListaDePedidos()
         {
-            Pedidos = new List<Pedido>();
-            List<string> list;
+            //Pedidos = new List<Pedido>();
+            //List<string> list;
 
-            list = new List<string>() { "Arroz: Branco", "Feijão: Caldo", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 1, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 1", });
+            //list = new List<string>() { "Arroz: Branco", "Feijão: Caldo", "Carne: Frango assado" };
+            //Pedidos.Add(new Pedido { Num_IDCliente = 1, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 1", });
 
-            list = new List<string>() { "Arroz: Branco", "Feijão: Preto", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 2, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 2", });
+            //list = new List<string>() { "Arroz: Branco", "Feijão: Preto", "Carne: Frango assado" };
+            //Pedidos.Add(new Pedido { Num_IDCliente = 2, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 2", });
 
-            list = new List<string>() { "Arroz: Branco", "Feijão: Tropeiro", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 3, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 3", });
+            //list = new List<string>() { "Arroz: Branco", "Feijão: Tropeiro", "Carne: Frango assado" };
+            //Pedidos.Add(new Pedido { Num_IDCliente = 3, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 3", });
 
             ViewBag.ListaPedidos = Pedidos;
         }

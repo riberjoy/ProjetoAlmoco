@@ -11,8 +11,9 @@
                 <div class="pedido__superior">
                     <h2>@cliente.Nome</h2>
                     <div class="pedido__superior__botoes">
-                        <buttom class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
-                        <buttom class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
+                        @*CadastroCliente(tipoOperacao, caminho, nomeBtn, id, nome, user)*@
+                        <buttom onclick="CadastroCliente('Alterar usuário', '../Admin/AlterarClienteAdm','CADASTRAR', 0 , '@cliente.Nome', '@cliente.Usuario')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                        <buttom onclick="DeleteModal('Apagar Cliente?', '../Admin/DeletarClienteAdm/@cliente.Usuario','APAGAR', 'O cliente será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
                     </div>
                 </div>
             </div>

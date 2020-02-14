@@ -91,7 +91,46 @@ namespace ProjetoAlmoco.Web.Controllers
             return View("_AdcionarPedidos");
         }
 
+        public ActionResult DeletarPedidoAdm(int id)
+        {
+            //deletar pedido do banco!
+            //string urlAnterior = System.Web.HttpContext.Current.Request.UrlReferrer.ToString();
+            //Redirect(urlAnterior);
+            //Redireciona pra url anterior.
 
+            return RedirectToAction("ListarPedidos", "Admin");
+        }
+
+        public ActionResult DeletarClienteAdm(string id)
+        {
+            //deletar pedido do banco!
+            //string urlAnterior = System.Web.HttpContext.Current.Request.UrlReferrer.ToString();
+            //Redirect(urlAnterior);
+            //Redireciona pra url anterior.
+
+            return RedirectToAction("ListarClientes", "Admin");
+        }
+
+        public ActionResult AlterarClienteAdm(Cliente cliente)
+        {
+            //deletar pedido do banco!
+            //string urlAnterior = System.Web.HttpContext.Current.Request.UrlReferrer.ToString();
+            //Redirect(urlAnterior);
+            //Redireciona pra url anterior.
+
+            return RedirectToAction("ListarClientes", "Admin");
+        }
+
+        public ActionResult MudarCardapio()
+        {
+            //Deletar cardapio do banco 
+            return RedirectToAction("Index", "Admin");
+        }
+
+
+
+
+        //----------------------------------------------------------------------------------------------------
 
         public void ListaCategoria()
         {
@@ -138,22 +177,6 @@ namespace ProjetoAlmoco.Web.Controllers
             Pedidos.Add(new Pedido { Num_IDCliente = 3, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 3", });
 
             ViewBag.ListaPedidos = Pedidos;
-        }
-
-        public ActionResult DeletarPedidoAdm(int id)
-        {
-            //deletar pedido do banco!
-            //string urlAnterior = System.Web.HttpContext.Current.Request.UrlReferrer.ToString();
-            //Redirect(urlAnterior);
-            //Redireciona pra url anterior.
-
-            return RedirectToAction("ListarPedidos", "Admin");
-        }
-
-        public ActionResult MudarCardapio()
-        {
-            //Deletar cardapio do banco 
-            return RedirectToAction("Index", "Admin");
         }
 
     }

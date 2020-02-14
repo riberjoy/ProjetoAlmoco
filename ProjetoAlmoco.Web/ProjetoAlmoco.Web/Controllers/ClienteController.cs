@@ -22,15 +22,16 @@ namespace ProjetoAlmoco.Web.Controllers
             TempData.Keep("Cliente");
 
             var categorias = categoriaApp.GetAtivos().Content.ReadAsAsync<List<Categoria>>().Result;
-            if (categorias != null)
+            if (categorias.Count> 0)
             {
+                ViewBag.ControleCardapio = true;
                 ViewBag.CriaCategorias = categorias;
-                return View();
             }
             else
             {
-                return View(); //Tela para dizer que cardapio não foi liberado
+                ViewBag.ControleCardapio = false;
             }
+            return View();
         }
 
         public ActionResult EnviarPedido(string[] idAlimentos)

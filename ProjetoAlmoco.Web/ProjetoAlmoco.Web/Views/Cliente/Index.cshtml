@@ -1,17 +1,26 @@
 ﻿@{
     string Nom_Nome = ViewBag.Cliente.Nom_Cliente;
     int Num_IDCliente = ViewBag.Cliente.Num_IDCliente;
+    var controleC = ViewBag.ControleCardapio;
 }
 <div id="myBtn" class="conteudo">
     <div class="conteudo__titulo">
-        <div id="cardapioIndisponivel">
-            <h1>Cardápio indisponível no momento!</h1>
-            <h2> Aguarde até a liberação do cardápio</h2>
-        </div>
-        <div id="cardapioDisponivel">
-            <h1>Monte seu prato do dia.</h1>
-            @Html.Partial("_CardCardapio")
-            <input id="liberarCardapio" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ENVIAR PEDIDO">
-        </div>
+        @{
+            if (controleC == true)
+            {
+                <div id="cardapioDisponivel">
+                    <h1>Monte seu prato do dia.</h1>
+                    @Html.Partial("_CardCardapio")
+                    <input id="liberarCardapio" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ENVIAR PEDIDO">
+                </div>
+            }
+            else
+            {
+                <div id="cardapioIndisponivel">
+                    <h1>Cardápio indisponível no momento!</h1>
+                    <h2> Aguarde até a liberação do cardápio</h2>
+                </div>
+            }
+        }
     </div>
 </div>

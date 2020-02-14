@@ -255,3 +255,7 @@ D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\b
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Net.Http.Extensions.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Net.Http.Primitives.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csprojAssemblyReference.cache
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.csproj.CoreCompileInputs.cache
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.pdb

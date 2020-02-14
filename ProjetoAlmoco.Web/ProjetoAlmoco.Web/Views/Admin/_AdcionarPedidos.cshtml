@@ -1,11 +1,41 @@
-﻿@{
-    List<ProjetoAlmoco.Web.Models.Cliente> Clientes = (List<ProjetoAlmoco.Web.Models.Cliente>)ViewBag.BuscaClientes;
+﻿@model ProjetoAlmoco.Application.Models.Pedido
+@{
+    List<ProjetoAlmoco.Application.Models.Cliente> Clientes = (List<ProjetoAlmoco.Application.Models.Cliente>)ViewBag.BuscaClientes;
+    string nomeCliente = ViewBag.Cliente;
+
 }
 <div id="myBtn" class="conteudo">
-    @Html.DropDownList("Clientes", new SelectList(Clientes), "Select Gender", new { @class = "form-control" })
     <div class="conteudo__titulo">
-        <h1>Monte seu prato do dia.</h1>
+        <h1>Montar prato.</h1>
+        <label id="label__EscolheCliente" for="clientes">Cliente:</label>
+        <select id="clientes" name="clientes">
+            @if (nomeCliente == "")
+            {
+                <option id="clientes__op" value=""></option>
+                foreach (var client in Clientes)
+                {
+                    <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                }
+            }
+            else
+            {
+                foreach (var client in Clientes)
+                {
+                    if (client.Nom_Cliente.Equals(nomeCliente))
+                    {
+                        <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                    }
+                }
+                foreach (var client in Clientes)
+                {
+                    if (!client.Nom_Cliente.Equals(nomeCliente))
+                    {
+                        <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                    }
+                }
+            }
+        </select>
         @Html.Partial("_CardCardapio")
-        <input id="liberarCardapio" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ENVIAR PEDIDO">
+        <input id="liberarCardapio" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ADICIONAR PEDIDO">
     </div>
 </div>

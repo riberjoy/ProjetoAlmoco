@@ -10,3 +10,16 @@ D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Applicati
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.pdb
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.Extensions.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\ProjetoAlmoco.Application.dll.config
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\ProjetoAlmoco.Application.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\ProjetoAlmoco.Application.pdb
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\Newtonsoft.Json.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\Newtonsoft.Json.xml
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.csprojAssemblyReference.cache
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.csproj.CoreCompileInputs.cache
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.csproj.CopyComplete
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.dll
+C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.pdb

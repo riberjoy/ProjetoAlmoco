@@ -1,5 +1,5 @@
 ﻿@{
-    List<ProjetoAlmoco.Web.Models.Cliente> Cliente = (List<ProjetoAlmoco.Web.Models.Cliente>)ViewBag.BuscaClientes;
+    List<ProjetoAlmoco.Application.Models.Cliente> Cliente = (List<ProjetoAlmoco.Application.Models.Cliente>)ViewBag.BuscaClientes;
 }
 
 <div class="lista-pedido">
@@ -9,10 +9,11 @@
          {
             <div class="pedido">
                 <div class="pedido__superior">
-                    <h2>@cliente.Nome</h2>
+                    <h2>@cliente.Nom_Cliente</h2>
                     <div class="pedido__superior__botoes">
-                        <buttom class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
-                        <buttom class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
+                        @*CadastroCliente(tipoOperacao, caminho, nomeBtn, id, nome, user)*@
+                        <buttom onclick="CadastroCliente('Alterar usuário', '../Admin/AlterarClienteAdm','CADASTRAR', 0 , '@cliente.Nom_Cliente', '@cliente.Nom_Usuario')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                        <buttom onclick="DeleteModal('Apagar Cliente?', '../Admin/DeletarClienteAdm/@cliente.Nom_Usuario','APAGAR', 'O cliente será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
                     </div>
                 </div>
             </div>

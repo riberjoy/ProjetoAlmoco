@@ -1,27 +1,92 @@
 ﻿@{
     List<ProjetoAlmoco.Application.Models.Pedido> Pedidos = (List<ProjetoAlmoco.Application.Models.Pedido>)ViewBag.ListaPedidos;
+    int cliente = ViewBag.IdCliente;
+
+    string actionDeletar, actionEditar;
+
+    if (cliente == 0)
+    {
+        actionDeletar = "DeletarPedidoAdm";
+        actionEditar = "EditarPedidoAdm";
+    }
+    else
+    {
+        actionDeletar = "DeletarPedidoCliente";
+        actionEditar = "EditarPedidoCliente";
+    }
+    int controleRota = ViewBag.ControleRota;
 }
 
 @foreach (var pedido in Pedidos)
 {
-    <div class="pedido">
-        <div class="pedido__superior">
-            <h2>@pedido.Nom_Cliente</h2>
-            <div class="pedido__superior__botoes">
-                <buttom class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
-                <buttom onclick="DeleteModal('Apagar Alimento?', 'Pedido/Deletar/@pedido.Num_IDCliente','APAGAR', 'O alimento será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
+    if (cliente == 0)
+    {
+        string caminho = "";
+
+        <div class="pedido">
+            <div class="pedido__superior">
+                <h2>@pedido.Nom_Cliente</h2>
+                <div class="pedido__superior__botoes">
+                    @{
+                        if (controleRota == 0)
+                        {
+                            caminho = "../Admin/EditarPedidos";
+                        }
+                        else
+                        {
+                            caminho = "../EditarPedidos";
+                        }
+                    }
+
+                    <buttom onclick="location.href ='@caminho/@pedido.Nom_Cliente';" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                    @{
+                        if (controleRota == 0)
+                        {
+                            caminho = "../Admin/" + @actionDeletar;
+                        }
+                        else
+                        {
+                            caminho = "../" + @actionDeletar;
+                        }
+                    }
+
+                    <buttom onclick="DeleteModal('Apagar Pedido?', '@caminho/@pedido.Num_IDCliente','APAGAR', 'O pedido será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
+                </div>
+            </div>
+            <hr>
+            <div class="pedido__inferior">
+                <ul class="ul__pedido">
+                    @foreach (string alimento in pedido.CategoriaAlimento)
+                    {
+                        <li>
+                            <p class="pedido__nomeInfo">@alimento</p>
+                        </li>
+                    }
+                </ul>
             </div>
         </div>
-        <hr>
-        <div class="pedido__inferior">
-            <ul class="ul__pedido">
-                @foreach (string alimento in pedido.CategoriaAlimento)
-                {
-                    <li>
-                        <p class="pedido__nomeInfo">@alimento</p>
-                    </li>
-                }
-            </ul>
+    }
+    else if (cliente == pedido.Num_IDCliente)
+    {
+        <div class="pedido">
+            <div class="pedido__superior">
+                <h2>@pedido.Nom_Cliente</h2>
+                <div class="pedido__superior__botoes">
+                    <buttom onclick="location.href='../Pedido/@actionEditar';" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                    <buttom onclick="DeleteModal('Apagar Pedido?', 'Pedido/@actionDeletar/@pedido.Num_IDCliente','APAGAR', 'O pedido será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
+                </div>
+            </div>
+            <hr>
+            <div class="pedido__inferior">
+                <ul class="ul__pedido">
+                    @foreach (string alimento in pedido.CategoriaAlimento)
+                    {
+                        <li>
+                            <p class="pedido__nomeInfo">@alimento</p>
+                        </li>
+                    }
+                </ul>
+            </div>
         </div>
-    </div>
+    }
 }

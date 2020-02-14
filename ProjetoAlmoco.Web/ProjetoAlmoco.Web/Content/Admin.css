@@ -18,8 +18,9 @@
 }
 
 .topbar__logout {
-    width: 3%;
-    height: 3%;
+    width: 2%;
+    height: 2%;
+    cursor: pointer;
 }
 
 .topbar__mensagem {
@@ -282,6 +283,10 @@
     border-radius: 25px;
 }
 
+.lista-pedido__cliente {
+    height: auto;
+}
+
 .pedido {
     margin-top: 15px;
     display: flex;
@@ -374,4 +379,41 @@
     color: white;
     border-radius: 30px;
     cursor: pointer;
+}
+
+#label__EscolheCliente {
+    font-size: 26pt;
+    margin-right: 2%;
+}
+
+#clientes {
+    font-size: 24pt;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: solid;
+    color: white;
+    border-radius: 10px;
+}
+
+    #clientes::selection {
+        text-decoration: none;
+    }
+
+#clientes__op {
+    
+    font-size: 24pt;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: solid;
+    color: black;
+    border-image: initial;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    background-color: transparent;
 }

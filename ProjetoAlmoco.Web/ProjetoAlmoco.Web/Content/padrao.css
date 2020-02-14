@@ -13,7 +13,7 @@
 /* ::-webkit-scrollbar{
     width:9px
 }
-
+    
 ::-webkit-scrollbar-track{
     background:#cccccc;
     border-radius:30px
@@ -72,6 +72,13 @@ body {
     padding-left: 0%;
     font-size: 15pt;
 }
+
+#admin__cadCategoria:placeholder-shown { /* Default */
+    color: orange;
+    padding-left: 0%;
+    font-size: 15pt;
+}
+
 
 /* inputs */
 input[type = "text"], input[type = "password"] {

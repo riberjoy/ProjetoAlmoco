@@ -16,73 +16,124 @@ namespace ProjetoAlmoco.Web.Controllers
         public List<Pedido> Pedidos;
 
         private readonly CategoriaApplication categoriaApp = new CategoriaApplication();
+        private readonly ClienteApplication clienteApp = new ClienteApplication();
+        private readonly PedidoApplication pedidoApp = new PedidoApplication();
 
         // GET: Admin
         public ActionResult Index()
         {
             ViewBag.Cliente = TempData["Cliente"];
+
             TempData.Keep("Cliente");
 
             var categorias = categoriaApp.Get().Content.ReadAsAsync<List<Categoria>>().Result;
-
             ViewBag.CriaCategorias = categorias;
             return View();
         }
 
+        public ActionResult MudarCardapio()
+        {
+            //Deleta cardapio disponivel 
+            return RedirectToAction("Index", "Admin");
+        }
+
+        //------------------------------------------------------------------------------------------------------------
 
         public ActionResult ListarPedidos(string[] id)
         {
-            if(id != null)
+            ViewBag.ControleRota = 0;
+            ViewBag.IdCliente = 0;
+            if (id != null)
             {
-                foreach(string idAlimento in id)
+                foreach (string idAlimento in id)
                 {
                     //Int32.Parse(idAlimento))
                     //Alterar estes alimntos no banco como ativos
                 }
-                ListaDePedidos();
+                //Retornar todos clientes!
+                ViewBag.ListaPedidos = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
                 return View("_ListarPedidosAdmin");
             }
-            ListaDePedidos();
+            //Retornar todos clientes!
+            ViewBag.ListaPedidos = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
             return View("_ListarPedidos");
         }
-            
-        public void ListaDePedidos()
+
+        public ActionResult PedidoAdd(string[] idAlimentos)
         {
-            Pedidos = new List<Pedido>();
-            List<string> list;
-            list = new List<string>() { "Arroz: Branco", "Feijão: Caldo", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 1, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente ="Cliente 1", });
+            int idCliente = Int32.Parse(idAlimentos[idAlimentos.Length - 1]);
+            ViewBag.IdCliente = 0;
+            ViewBag.ControleRota = 1;
 
-            list = new List<string>() { "Arroz: Branco", "Feijão: Preto", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 2, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 2", });
+            Pedido pedido = new Pedido();
+            pedido.Num_IDCliente = idCliente;
 
-            list = new List<string>() { "Arroz: Branco", "Feijão: Tropeiro", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 3, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 3", });
-
-            ViewBag.ListaPedidos = Pedidos;
+            if (idAlimentos != null)
+            {
+                foreach (string idAlimento in idAlimentos)
+                {
+                    pedido.Num_IDAlimento = Int32.Parse(idAlimento);
+                    pedidoApp.Post(pedido);
+                }
+                ViewBag.ListaPedidos = pedidoApp.GetById(idCliente).Content.ReadAsAsync<List<Pedido>>().Result;
+                return View("_ListarPedidosAdmin");
+            }
+            ViewBag.ListaPedidos = pedidoApp.GetById(idCliente).Content.ReadAsAsync<List<Pedido>>().Result;
+            return View("_ListarPedidos");
         }
 
-        public ActionResult ListarClientes()
+        public ActionResult NovoPedido()
         {
-            ListaDeClientes();
-            return View("_ListarClientes");
-        }
+            ViewBag.CriaAlimentos = Alimentos;
+            ViewBag.Cliente = "";
 
-        public ActionResult AdcionarPedidos()
-        {
-            ListaDeClientes();
+            var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
+            ViewBag.BuscaClientes = clientes;
+
+            var categorias = categoriaApp.Get().Content.ReadAsAsync<List<Categoria>>().Result;
+            ViewBag.CriaCategorias = categorias;
+
             return View("_AdcionarPedidos");
         }
 
-        public void ListaDeClientes()
+        public ActionResult EditarPedidos(string id)
         {
-            //Clientes = new List<Cliente>();
-            ////Categoria = **lista obtida por select do banco
-            //Clientes.Add(new Cliente { Nome = "Cliente 1", Usuario = "User 1", Senha = "123" });
-            //Clientes.Add(new Cliente { Nome = "Cliente 2", Usuario = "User 2", Senha = "123" });
-            //Clientes.Add(new Cliente { Nome = "Cliente 3", Usuario = "User 2", Senha = "123" });
+            var categorias = categoriaApp.Get().Content.ReadAsAsync<List<Categoria>>().Result;
+            ViewBag.CriaCategorias = categorias;
 
-            ViewBag.BuscaClientes = Clientes;
+            var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
+            ViewBag.BuscaClientes = clientes;
+
+            ViewBag.Cliente = id;
+            return View("_AdcionarPedidos");
+        }
+
+        public ActionResult DeletarPedidoAdm(int id)
+        {
+            //Apaga pedido do banco!
+            return RedirectToAction("ListarPedidos", "Admin");
+        }
+
+
+        //----------------------------------------------------------------------------------------------------------------
+
+        public ActionResult ListarClientes()
+        {
+            var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
+            ViewBag.BuscaClientes = clientes;
+            return View("_ListarClientes");
+        }
+
+        public ActionResult DeletarClienteAdm(string id)
+        {
+            //Apaga cliente do banco!
+             return RedirectToAction("ListarClientes", "Admin");
+        }
+
+        public ActionResult AlterarClienteAdm(Cliente cliente)
+        {
+            //Alterar o cliente no banco!
+            return RedirectToAction("ListarClientes", "Admin");
         }
     }
 }

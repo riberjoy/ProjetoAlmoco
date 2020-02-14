@@ -11,6 +11,11 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks anywhere outside of the modal, close it
 
+function atualizaEstado() {
+    $("#cardapioDisponivel").css("display", "none");
+    $("#cardapioIndisponivel").css("display", "flex");
+}
+
 
 function CadastroModal(tipoOperacao, caminho, nomeBtn, id) {
     

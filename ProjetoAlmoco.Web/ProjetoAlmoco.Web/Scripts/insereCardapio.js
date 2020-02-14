@@ -11,6 +11,9 @@ $(document).ready(function () {
     console.log(caminho);
 });
 
+function enviarPedido() {
+
+}
 
 $("#liberarCardapio").click(function (op) {
     $("input:checked").each(function () {
@@ -43,6 +46,8 @@ function GravaPedidos() {
 
     }
     if ($("#liberarCardapio").val() == "LIBERAR CARDÁPIO") {
+        
+
         $.ajax({
             url: 'Admin/ListarPedidos',
             datatype: 'json',
@@ -54,6 +59,8 @@ function GravaPedidos() {
             success: function (data) {
                 $(".conteudo").html(data);
                 //alert("Dados enviados com sucesso!")
+                $("#cardapioDisponivel").css("display", "flex");
+                $("#cardapioIndisponivel").css("display", "none");
             },
             error: function (error) {
                 alert("Erro ao enviar os dados")

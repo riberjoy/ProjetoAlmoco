@@ -17,7 +17,7 @@
                     caminho = "../MudarCardapio";
                 }
             }
-            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
+            <button onclick="location.href='@caminho'; atualizaEstado();" class="lista-pedido-btn">
                 <span class="circle-add-alimento " aria-hidden="true">
                     <i class=" fas fa-pencil-alt" id="azul"></i>
                 </span>
@@ -63,7 +63,7 @@
         @Html.Partial("_CardPedido")
     </div>
 
-    <button class="enviar-pedidos-btn"> ENVIAR PEDIDOS</button>
+    <button onclick="enviarPedidos()" class="enviar-pedidos-btn"> ENVIAR PEDIDOS</button>
 
 </div>
 

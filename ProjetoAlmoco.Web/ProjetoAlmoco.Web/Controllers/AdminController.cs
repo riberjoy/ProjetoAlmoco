@@ -37,6 +37,28 @@ namespace ProjetoAlmoco.Web.Controllers
             return RedirectToAction("Index", "Admin");
         }
 
+        public void realizaPedidos()
+        {
+            string pedidos;
+            pedidos = "Pedidos do dia:%0D";
+
+            var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
+            ViewBag.BuscaClientes = clientes;
+
+            var pedidosClientes  = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
+            foreach(var cl in clientes) {
+                pedidos = pedidos + "%0D" + cl.Nom_Cliente + ": ";
+                foreach (var pd in pedidosClientes)
+                {
+                    if(cl.Num_IDCliente == pd.Num_IDCliente)
+                    {
+                        pedidos = pedidos +pd.Num_IDAlimento;
+                    }
+                }
+            }
+            //https://api.whatsapp.com/send?phone=${5535998368852}&text=@Pedidos
+        }
+
         //------------------------------------------------------------------------------------------------------------
 
         public ActionResult ListarPedidos(string[] id)
@@ -50,11 +72,9 @@ namespace ProjetoAlmoco.Web.Controllers
                     //Int32.Parse(idAlimento))
                     //Alterar estes alimntos no banco como ativos
                 }
-                //Retornar todos clientes!
                 ViewBag.ListaPedidos = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
                 return View("_ListarPedidosAdmin");
             }
-            //Retornar todos clientes!
             ViewBag.ListaPedidos = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
             return View("_ListarPedidos");
         }
@@ -82,6 +102,7 @@ namespace ProjetoAlmoco.Web.Controllers
             return View("_ListarPedidos");
         }
 
+        //Apenas encaminha para view
         public ActionResult NovoPedido()
         {
             ViewBag.CriaAlimentos = Alimentos;
@@ -96,6 +117,7 @@ namespace ProjetoAlmoco.Web.Controllers
             return View("_AdcionarPedidos");
         }
 
+        //Apenas encaminha para view
         public ActionResult EditarPedidos(string id)
         {
             var categorias = categoriaApp.Get().Content.ReadAsAsync<List<Categoria>>().Result;

@@ -6,7 +6,7 @@ $(document).ready(function () {
     if ($("#clientes").val() == "") {
         caminho = "../Admin/ListarPedidos";
     }else {
-        caminho = "../PedidoAdd";
+        caminho = "../Admin/PedidoAdd";
     }
     console.log(caminho);
 });
@@ -60,8 +60,8 @@ function GravaPedidos() {
         });
     }
     if ($("#liberarCardapio").val() == "ADICIONAR PEDIDO") {
+        console.log(parametros);
         if ($('#clientes').val() != "") {
-            parametros.push($('#clientes').val());
             id = $('#clientes').val();
             $.ajax({
                 url: caminho,
@@ -75,6 +75,7 @@ function GravaPedidos() {
                     $(".conteudo").html(data);
                 },
                 error: function (error) {
+                    console.log(error);
                     alert("Erro ao enviar os dados")
                 }
             });

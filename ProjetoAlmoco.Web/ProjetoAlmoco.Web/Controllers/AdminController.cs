@@ -18,12 +18,12 @@ namespace ProjetoAlmoco.Web.Controllers
         private readonly CategoriaApplication categoriaApp = new CategoriaApplication();
         private readonly ClienteApplication clienteApp = new ClienteApplication();
         private readonly PedidoApplication pedidoApp = new PedidoApplication();
+        private readonly AlimentoApplication alimentoApp = new AlimentoApplication();
 
         // GET: Admin
         public ActionResult Index()
         {
             ViewBag.Cliente = TempData["Cliente"];
-
             TempData.Keep("Cliente");
 
             var categorias = categoriaApp.Get().Content.ReadAsAsync<List<Categoria>>().Result;
@@ -37,7 +37,7 @@ namespace ProjetoAlmoco.Web.Controllers
             return RedirectToAction("Index", "Admin");
         }
 
-        public void realizaPedidos()
+        public void realizaPedidos() // Mandar para o whatsApp
         {
             string pedidos;
             pedidos = "Pedidos do dia:%0D";
@@ -63,15 +63,23 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult ListarPedidos(string[] id)
         {
+            ViewBag.Cliente = TempData["Cliente"];
+            TempData.Keep("Cliente");
+
+            var alimentos = new List<Alimento>();
+            var alimento = new Alimento();
+
             ViewBag.ControleRota = 0;
             ViewBag.IdCliente = 0;
             if (id != null)
             {
                 foreach (string idAlimento in id)
                 {
-                    //Int32.Parse(idAlimento))
-                    //Alterar estes alimntos no banco como ativos
+                    alimento.Num_IDAlimento = Convert.ToInt32(idAlimento);
+                    alimentos.Add(alimento);
                 }
+                alimentoApp.SalvarCardapio(alimentos);
+
                 ViewBag.ListaPedidos = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
                 return View("_ListarPedidosAdmin");
             }
@@ -81,6 +89,9 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult PedidoAdd(string[] idAlimentos)
         {
+            ViewBag.Cliente = TempData["Cliente"];
+            TempData.Keep("Cliente");
+
             int idCliente = Int32.Parse(idAlimentos[idAlimentos.Length - 1]);
             ViewBag.IdCliente = 0;
             ViewBag.ControleRota = 1;
@@ -95,7 +106,7 @@ namespace ProjetoAlmoco.Web.Controllers
                     pedido.Num_IDAlimento = Int32.Parse(idAlimento);
                     pedidoApp.Post(pedido);
                 }
-                ViewBag.ListaPedidos = pedidoApp.GetById(idCliente).Content.ReadAsAsync<List<Pedido>>().Result;
+                ViewBag.ListaPedidos = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
                 return View("_ListarPedidosAdmin");
             }
             ViewBag.ListaPedidos = pedidoApp.GetById(idCliente).Content.ReadAsAsync<List<Pedido>>().Result;
@@ -105,13 +116,14 @@ namespace ProjetoAlmoco.Web.Controllers
         //Apenas encaminha para view
         public ActionResult NovoPedido()
         {
+            ViewBag.Cliente = TempData["Cliente"];
+            TempData.Keep("Cliente");
             ViewBag.CriaAlimentos = Alimentos;
-            ViewBag.Cliente = "";
 
             var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
             ViewBag.BuscaClientes = clientes;
 
-            var categorias = categoriaApp.Get().Content.ReadAsAsync<List<Categoria>>().Result;
+            var categorias = categoriaApp.GetAtivos().Content.ReadAsAsync<List<Categoria>>().Result;
             ViewBag.CriaCategorias = categorias;
 
             return View("_AdcionarPedidos");
@@ -141,6 +153,8 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult ListarClientes()
         {
+            ViewBag.Cliente = TempData["Cliente"];
+            TempData.Keep("Cliente");
             var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
             ViewBag.BuscaClientes = clientes;
             return View("_ListarClientes");

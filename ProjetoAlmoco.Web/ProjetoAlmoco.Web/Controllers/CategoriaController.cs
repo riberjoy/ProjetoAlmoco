@@ -1,4 +1,5 @@
-﻿using ProjetoAlmoco.Web.Models;
+﻿using ProjetoAlmoco.Application.Applications;
+using ProjetoAlmoco.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,26 @@ namespace ProjetoAlmoco.Web.Controllers
 {
     public class CategoriaController : Controller
     {
+        private readonly CategoriaApplication categoriaApp = new CategoriaApplication();
         public ActionResult Index(Categoria categoria)
          {
-            //precisa do banco pra fazer o insert
+            var Categoria = new ProjetoAlmoco.Application.Models.Categoria();
+
+            ViewBag.Cliente = TempData["Cliente"];
+            TempData.Keep("Cliente");
+
+            if(categoria != null)
+            {
+                Categoria.Nom_Categoria = categoria.Nome;
+                categoriaApp.Post(Categoria);
+            }
             return RedirectToAction("Index", "Admin");
         }
 
         public ActionResult Deletar(int id)
         {
-            //precisa do banco pra fazer o delete
+            categoriaApp.Delete(id);
+
             return RedirectToAction("Index","Admin");
         }
     }

@@ -3,75 +3,67 @@
     var action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
     string caminho = "";
 }
-<div class="lista-pedido">
-    <div class="lista-pedido__botoes">
-        <div class="lista-pedido__btn">
-            <!--  -->
-            @{
-                if (action == "ListarPedidos")
-                {
-                    caminho = "../Admin/MudarCardapio";
+    <div class="lista-pedido">
+        <div class="lista-pedido__botoes">
+            <div class="lista-pedido__btn">
+                <!--  -->
+                @{
+                    if (action == "ListarPedidos")
+                    {
+                        caminho = "../Admin/MudarCardapio";
+                    }
+                    if (action == "PedidoAdd")
+                    {
+                        caminho = "../Admin/MudarCardapio";
+                    }
                 }
-                if (action == "PedidoAdd")
-                {
-                    caminho = "../MudarCardapio";
+                <button onclick="location.href='@caminho';" class="lista-pedido-btn">
+                    <span class="circle-add-alimento " aria-hidden="true">
+                        <i class=" fas fa-pencil-alt" id="azul"></i>
+                    </span>
+                    <span class="button-text2">Editar Cardápio</span>
+                </button>
+                <!--  -->
+                @{
+                    if (action == "ListarPedidos")
+                    {
+                        caminho = "../Admin/ListarClientes";
+                    }
+                    if (action == "PedidoAdd")
+                    {
+                        caminho = "../Admin/ListarClientes";
+                    }
                 }
-            }
-            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
-                <span class="circle-add-alimento " aria-hidden="true">
-                    <i class=" fas fa-pencil-alt" id="azul"></i>
-                </span>
-                <span class="button-text2">Editar Cardápio</span>
-            </button>
-            <!--  -->
-            @{
-                if (action == "ListarPedidos")
-                {
-                    caminho = "../Admin/ListarClientes";
+                <button onclick="location.href='@caminho';" class="lista-pedido-btn">
+                    <span class="circle-add-alimento " aria-hidden="true">
+                        <i class="  fas fa-pencil-alt" id="amarelo"></i>
+                    </span>
+                    <span class="button-text2">Editar Clientes</span>
+                </button>
+                <!--  -->
+                @{
+                    if (action == "ListarPedidos")
+                    {
+                        caminho = "../Admin/NovoPedido";
+                    }
+                    if (action == "PedidoAdd")
+                    {
+                        caminho = "../Admin/NovoPedido";
+                    }
                 }
-                if (action == "PedidoAdd")
-                {
-                    caminho = "../ListarClientes";
-                }
-            }
-            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
-                <span class="circle-add-alimento " aria-hidden="true">
-                    <i class="  fas fa-pencil-alt" id="amarelo"></i>
-                </span>
-                <span class="button-text2">Editar Clientes</span>
-            </button>
-            <!--  -->
-            @{
-                if (action == "ListarPedidos")
-                {
-<<<<<<< HEAD
-                    caminho = "../Admin/NovoPedido";
-                }
-                if (action == "PedidoAdd")
-                {
-                    caminho = "../NovoPedido";
-=======
-                    caminho = "../Admin/AdcionarPedidos";
-                }
-                if (action == "PedidoAdd")
-                {
-                    caminho = "../AdcionarPedidos";
->>>>>>> origin/FRONT003-2020
-                }
-            }
-            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
-                <span class="circle-add-alimento">
-                    <i class=" fa fa-plus" id="verde"></i>
-                </span>
-                <span class="button-text2">Adicionar Pedido</span>
-            </button>
+                <button onclick="location.href='@caminho';" class="lista-pedido-btn">
+                    <span class="circle-add-alimento">
+                        <i class=" fa fa-plus" id="verde"></i>
+                    </span>
+                    <span class="button-text2">Adicionar Pedido</span>
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="lista-pedidos__scroll">
-        @Html.Partial("_CardPedido")
-    </div>
+        <div class="lista-pedidos__scroll">
+            @Html.Partial("_CardPedido")
+        </div>
 
-    <button onclick="enviarPedidos()" class="enviar-pedidos-btn"> ENVIAR PEDIDOS</button>
+        <button onclick="location.href='../Admin/realizaPedidos';" class="enviar-pedidos-btn"> ENVIAR PEDIDOS</button>
 
-</div>
+    </div>
 

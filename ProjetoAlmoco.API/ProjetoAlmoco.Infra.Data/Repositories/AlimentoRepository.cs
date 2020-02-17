@@ -39,6 +39,7 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                     {
                         contexto.ExecutaComando(cmd);
                     }
+                    cmd.Parameters.Clear();
                 }
             }
         }

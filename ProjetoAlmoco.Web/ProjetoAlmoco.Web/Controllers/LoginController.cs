@@ -28,7 +28,7 @@ namespace ProjetoAlmoco.Web.Controllers
                 {
                     TempData["Cliente"] = cliente;
                     if (cliente.Num_IDCliente == 3)
-                        return RedirectToAction("Index", "Admin");
+                        return RedirectToAction("ListarPedidos", "Admin");
                     else
                         return RedirectToAction("Index", "Cliente");
                 }

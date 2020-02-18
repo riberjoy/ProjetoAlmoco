@@ -1,6 +1,5 @@
 ﻿@{
-    List<ProjetoAlmoco.Application.Models.Pedido> Pedidos = (List<ProjetoAlmoco.Application.Models.Pedido>)ViewBag.ListaPedidos;
-
+    
     int cliente = ViewBag.Cliente.Num_IDCliente;
 
     string actionDeletar, actionEditar;
@@ -18,7 +17,7 @@
     int controleRota = ViewBag.ControleRota;
 }
 
-@foreach (var pedido in Pedidos)
+@foreach (var pedido in ViewBag.ListaPedidos)
 {
     if (cliente == 0)
     {
@@ -35,10 +34,10 @@
                         }
                         else
                         {
-                            caminho = "../EditarPedidos";
+                            caminho = "../Admin/EditarPedidos";
                         }
                     }                    
-                    <buttom onclick="location.href ='@caminho/@pedido.Nom_Cliente';" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                    <buttom onclick="location.href ='@caminho/@pedido.Num_IDCliente';" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
                     @{ 
                         if (controleRota == 0)
                         {
@@ -46,7 +45,7 @@
                         }
                         else
                         {
-                            caminho = "../"+@actionDeletar;
+                            caminho = "../Admin/"+@actionDeletar;
                         }
                     }
                     

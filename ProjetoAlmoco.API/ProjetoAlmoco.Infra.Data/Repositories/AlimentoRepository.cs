@@ -27,9 +27,9 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
         }
         public void Put(IEnumerable<Alimento> alimentos, int Ind_Ativo)
         {
-            using (cmd = new SqlCommand())
+            foreach (Alimento alimento in alimentos)
             {
-                foreach (Alimento alimento in alimentos)
+                using (cmd = new SqlCommand())
                 {
                     cmd.CommandText = "AltAlimento";
                     cmd.Parameters.AddWithValue("@Num_IDAlimento", alimento.Num_IDAlimento);
@@ -39,7 +39,6 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                     {
                         contexto.ExecutaComando(cmd);
                     }
-                    cmd.Parameters.Clear();
                 }
             }
         }

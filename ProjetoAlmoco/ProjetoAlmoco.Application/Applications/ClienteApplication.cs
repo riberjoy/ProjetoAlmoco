@@ -45,6 +45,14 @@ namespace ProjetoAlmoco.Application.Applications
                 return contexto.RequestGet(URL);
             }
         }
+        public HttpResponseMessage GetById(int Num_IDCliente)
+        {
+            using (contexto = new Context())
+            {
+                string URL = URLBase + "?Num_IDCliente=" + Num_IDCliente.ToString();
+                return contexto.RequestGet(URL);
+            }
+        }
         public HttpResponseMessage ConsLogin(Usuario usuario)
         {
             using (contexto = new Context())

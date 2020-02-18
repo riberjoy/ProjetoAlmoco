@@ -109,5 +109,31 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                 }
             }
         }
+        public Cliente GetById(int Num_IDCliente)
+        {
+            using (cmd = new SqlCommand())
+            {
+                cmd.CommandText = "SelClienteId";
+                cmd.Parameters.AddWithValue("@Num_IDCliente", Num_IDCliente);
+
+                using (contexto = new Context())
+                {
+                    SqlDataReader dados = contexto.ExecutaComandoRetorno(cmd);
+
+                    if (dados.Read())
+                    {
+                        var cliente = new Cliente
+                        {
+                            Num_IDCliente = Convert.ToInt32(dados["Num_IDCliente"]),
+                            Nom_Cliente = dados["Nom_Cliente"].ToString(),
+                            Nom_Usuario = dados["Nom_Usuario"].ToString(),
+                            Num_Senha = dados["Num_Senha"].ToString()
+                        };
+                        return cliente;
+                    }
+                    return null;
+                }
+            }
+        }
     }
 }

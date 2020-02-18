@@ -26,6 +26,9 @@ namespace ProjetoAlmoco.Web.Controllers
             ViewBag.Cliente = TempData["Cliente"];
             TempData.Keep("Cliente");
 
+            ViewBag.AlimentosAtivos = TempData["Alimentos"];
+            TempData.Keep("Alimentos");
+
             var categorias = categoriaApp.Get().Content.ReadAsAsync<List<Categoria>>().Result;
             ViewBag.CriaCategorias = categorias;
             return View();
@@ -33,7 +36,19 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult MudarCardapio()
         {
-            //Deleta cardapio disponivel 
+            var categoriasAtivas = categoriaApp.EditarCardapio().Content.ReadAsAsync<List<Categoria>>().Result;
+            var alimentos = new List<Alimento>();
+
+            foreach(var cat in categoriasAtivas)
+            {
+                foreach(var alim in cat.Alimentos)
+                {
+                    alimentos.Add(alim);
+                }
+            }
+
+            TempData["Alimentos"] = alimentos;
+
             return RedirectToAction("Index", "Admin");
         }
 
@@ -61,21 +76,22 @@ namespace ProjetoAlmoco.Web.Controllers
 
         //------------------------------------------------------------------------------------------------------------
 
-        public ActionResult ListarPedidos(string[] id)
+        public ActionResult ListarPedidos(string[] ids)
         {
             ViewBag.Cliente = TempData["Cliente"];
             TempData.Keep("Cliente");
 
             var alimentos = new List<Alimento>();
-            var alimento = new Alimento();
 
             ViewBag.ControleRota = 0;
-            ViewBag.IdCliente = 0;
-            if (id != null)
+            ViewBag.Cliente.Num_IDCliente = 0;
+            if (ids != null)
             {
-                foreach (string idAlimento in id)
+                for (int id=0; id < ids.Length; id++)
                 {
-                    alimento.Num_IDAlimento = Convert.ToInt32(idAlimento);
+                    var alimento = new Alimento { 
+                        Num_IDAlimento = Convert.ToInt32(ids[id])
+                    };
                     alimentos.Add(alimento);
                 }
                 alimentoApp.SalvarCardapio(alimentos);
@@ -93,17 +109,18 @@ namespace ProjetoAlmoco.Web.Controllers
             TempData.Keep("Cliente");
 
             int idCliente = Int32.Parse(idAlimentos[idAlimentos.Length - 1]);
-            ViewBag.IdCliente = 0;
+            ViewBag.Cliente.Num_IDCliente = 0;
             ViewBag.ControleRota = 1;
-
-            Pedido pedido = new Pedido();
-            pedido.Num_IDCliente = idCliente;
 
             if (idAlimentos != null)
             {
-                foreach (string idAlimento in idAlimentos)
+
+                for (int i=0; i < idAlimentos.Length - 1; i++)
                 {
-                    pedido.Num_IDAlimento = Int32.Parse(idAlimento);
+                    var pedido = new Pedido {
+                        Num_IDCliente = idCliente,
+                        Num_IDAlimento = Convert.ToInt32(idAlimentos[i])
+                    };
                     pedidoApp.Post(pedido);
                 }
                 ViewBag.ListaPedidos = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
@@ -132,19 +149,28 @@ namespace ProjetoAlmoco.Web.Controllers
         //Apenas encaminha para view
         public ActionResult EditarPedidos(string id)
         {
-            var categorias = categoriaApp.Get().Content.ReadAsAsync<List<Categoria>>().Result;
+            ViewBag.Cliente = TempData["Cliente"];
+            TempData.Keep("Cliente");
+
+            ViewBag.Nom_Cliente = "";
+
+            var categorias = categoriaApp.GetAtivos().Content.ReadAsAsync<List<Categoria>>().Result;
             ViewBag.CriaCategorias = categorias;
 
-            var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
-            ViewBag.BuscaClientes = clientes;
+            Cliente cliente = clienteApp.GetById(Convert.ToInt32(id)).Content.ReadAsAsync<Cliente>().Result;
+            List<Cliente> Cliente = new List<Cliente>();
+            Cliente.Add(cliente);
+            ViewBag.BuscaClientes = Cliente;
 
-            ViewBag.Cliente = id;
             return View("_AdcionarPedidos");
         }
 
         public ActionResult DeletarPedidoAdm(int id)
         {
-            //Apaga pedido do banco!
+            ViewBag.Cliente = TempData["Cliente"];
+            TempData.Keep("Cliente");
+
+            pedidoApp.Delete(id);
             return RedirectToAction("ListarPedidos", "Admin");
         }
 
@@ -171,22 +197,5 @@ namespace ProjetoAlmoco.Web.Controllers
             //Alterar o cliente no banco!
             return RedirectToAction("ListarClientes", "Admin");
         }
-
-        public void ListaDePedidos()
-        {
-            Pedidos = new List<Pedido>();
-            List<string> list;
-            list = new List<string>() { "Arroz: Branco", "Feijão: Caldo", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 1, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 1", });
-
-            list = new List<string>() { "Arroz: Branco", "Feijão: Preto", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 2, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 2", });
-
-            list = new List<string>() { "Arroz: Branco", "Feijão: Tropeiro", "Carne: Frango assado" };
-            Pedidos.Add(new Pedido { Num_IDCliente = 3, CategoriaAlimento = list.AsEnumerable(), Nom_Cliente = "Cliente 3", });
-
-            ViewBag.ListaPedidos = Pedidos;
-        }
-
     }
 }

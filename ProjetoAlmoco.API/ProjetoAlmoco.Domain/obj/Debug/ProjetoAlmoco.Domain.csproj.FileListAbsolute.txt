@@ -3,14 +3,14 @@ D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAl
 D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.csprojAssemblyReference.cache
 D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.pdb
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\bin\Debug\ProjetoAlmoco.Domain.dll
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\bin\Debug\ProjetoAlmoco.Domain.pdb
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.csprojAssemblyReference.cache
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.dll
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.pdb
 C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\bin\Debug\ProjetoAlmoco.Domain.dll
 C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\bin\Debug\ProjetoAlmoco.Domain.pdb
 C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.csprojAssemblyReference.cache
 C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.csproj.CoreCompileInputs.cache
 C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.dll
 C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.pdb
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\bin\Debug\ProjetoAlmoco.Domain.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\bin\Debug\ProjetoAlmoco.Domain.pdb
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.csprojAssemblyReference.cache
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.Domain\obj\Debug\ProjetoAlmoco.Domain.pdb

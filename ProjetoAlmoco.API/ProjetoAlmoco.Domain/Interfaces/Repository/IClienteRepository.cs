@@ -10,5 +10,6 @@ namespace ProjetoAlmoco.Domain.Interfaces.Repository
         void Delete(int Num_IDCliente);
         IEnumerable<Cliente> Get();
         Cliente GetById(string Nom_Usuario);
+        Cliente GetById(int Num_IDCliente);
     }
 }

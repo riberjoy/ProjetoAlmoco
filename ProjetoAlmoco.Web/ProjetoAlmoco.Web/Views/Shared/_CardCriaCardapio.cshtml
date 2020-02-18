@@ -25,20 +25,57 @@
 
                     @foreach (var alimento in categoria.Alimentos)
                     {
+                        var ver = false;
+                        if (ViewBag.AlimentosAtivos != null)
+                        {
+                            var alimentos = ViewBag.AlimentosAtivos;
+                            foreach (var alim in alimentos)
+                            {
+                                if (alim.Num_IDAlimento == alimento.Num_IDAlimento)
+                                {
+                                    ver = true;
+                                }
+                            }
+
+                            if (ver)
+                            {
                             <li>
-                                <input type="checkbox"  id='@alimento.Num_IDAlimento.ToString()' value="Rainbow Dash">
+                                <input type="checkbox" id='@alimento.Num_IDAlimento.ToString()' checked value="Rainbow Dash">
                                 <div class="alimento-redondo">
                                     <label for='@alimento.Num_IDAlimento.ToString()'>@alimento.Nom_Alimento </label>
                                     <i onclick="DeleteModal('Apagar Alimento?', 'Alimento/Deletar/@alimento.Num_IDAlimento','APAGAR', 'O alimento será deletado permanentemente!')" class="icon-deleta fas fa-trash"></i>
                                 </div>
                             </li>
-                    }
+                            }
+                            else
+                            {
+                            <li>
+                                <input type="checkbox" id='@alimento.Num_IDAlimento.ToString()' value="Rainbow Dash">
+                                <div class="alimento-redondo">
+                                    <label for='@alimento.Num_IDAlimento.ToString()'>@alimento.Nom_Alimento </label>
+                                    <i onclick="DeleteModal('Apagar Alimento?', 'Alimento/Deletar/@alimento.Num_IDAlimento','APAGAR', 'O alimento será deletado permanentemente!')" class="icon-deleta fas fa-trash"></i>
+                                </div>
+                            </li>
+                                ver = false;
+                            }
+                        }
+                        else
+                        {
+                            <li>
+                                <input type="checkbox" id='@alimento.Num_IDAlimento.ToString()' value="Rainbow Dash">
+                                <div class="alimento-redondo">
+                                    <label for='@alimento.Num_IDAlimento.ToString()'>@alimento.Nom_Alimento </label>
+                                    <i onclick="DeleteModal('Apagar Alimento?', 'Alimento/Deletar/@alimento.Num_IDAlimento','APAGAR', 'O alimento será deletado permanentemente!')" class="icon-deleta fas fa-trash"></i>
+                                </div>
+                            </li>
+                        }
+                     }
                 </ul>
                 <button onclick="CadastroModal('Novo Alimento', 'Alimento/Index', 'CADASTRAR', @categoria.Num_IDCategoria)" class="learn-more">
-                    <span class="circle-add-alimento" aria-hidden="true">
-                        <i class=" fa fa-plus"></i>
-                    </span>
-                    <span  class="button-text2" >Adicionar alimentos</span>
+                <span class="circle-add-alimento" aria-hidden="true">
+                    <i class=" fa fa-plus"></i>
+                </span>
+                <span  class="button-text2" >Adicionar alimentos</span>
                 </button>
             </div>
         </div>

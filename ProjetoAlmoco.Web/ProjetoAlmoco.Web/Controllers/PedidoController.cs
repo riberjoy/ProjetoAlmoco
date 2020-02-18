@@ -23,6 +23,8 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult EditarPedidoAdm()
         {
+            ViewBag.Cliente = TempData["Cliente"];
+            TempData.Keep("Cliente");
             //Reencaminha para outra action
             return RedirectToAction("EditarPedidos", "Admin");
         }

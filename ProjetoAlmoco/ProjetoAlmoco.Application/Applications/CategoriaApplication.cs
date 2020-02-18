@@ -46,5 +46,13 @@ namespace ProjetoAlmoco.Application.Applications
                 return contexto.RequestGet(URL);
             }
         }
+        public HttpResponseMessage EditarCardapio()
+        {
+            using (contexto = new Context())
+            {
+                string URL = URLBase + "/editarcardapio";
+                return contexto.RequestGet(URL);
+            }
+        }
     }
 }

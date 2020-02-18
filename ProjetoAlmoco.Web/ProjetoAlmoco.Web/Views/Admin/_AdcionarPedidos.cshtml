@@ -14,7 +14,7 @@
                 <option id="clientes__op" value=""></option>
                 foreach (var client in Clientes)
                 {
-                    <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                    <option id="clientes__op" value="@client.Num_IDCliente">@client.Nom_Cliente</option>
                 }
             }
             else
@@ -23,14 +23,14 @@
                 {
                     if (client.Nom_Cliente.Equals(nomeCliente))
                     {
-                        <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                        <option id="clientes__op" value="@client.Num_IDCliente">@client.Nom_Cliente</option>
                     }
                 }
                 foreach (var client in Clientes)
                 {
                     if (!client.Nom_Cliente.Equals(nomeCliente))
                     {
-                        <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                        <option id="clientes__op" value="@client.Num_IDCliente">@client.Nom_Cliente</option>
                     }
                 }
             }

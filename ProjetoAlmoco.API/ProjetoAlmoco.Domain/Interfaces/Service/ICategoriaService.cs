@@ -7,5 +7,6 @@ namespace ProjetoAlmoco.Domain.Interfaces.Service
     {
         IEnumerable<Categoria> SepararAlimentosAtivos();
         IEnumerable<Categoria> SepararTodosAlimentos();
+        IEnumerable<Categoria> EditarCardapio();
     }
 }

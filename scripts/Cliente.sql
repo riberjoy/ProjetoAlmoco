@@ -143,3 +143,49 @@ CREATE PROCEDURE [dbo].[SelCliente](
 		RETURN 0
 	END
 GO
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[SelClienteId]') AND objectproperty(id, N'IsPROCEDURE')=1)
+	DROP PROCEDURE [dbo].[SelClienteId] 
+GO 
+
+CREATE PROCEDURE [dbo].[SelClienteId](
+	@Num_IDCliente	int )
+
+	AS
+	/*
+		Documentação
+		Arquivo Fonte.....: Cliente.sql
+		Objetivo..........: Seleciona clientes pelo ID
+		Autor.............: Alexandre Higino
+ 		Data..............: 18/02/2020
+		Comentários.......: Parâmetro Status :
+							0 - Processado OK
+							1 - Erro ao selecionar
+		Ex................: EXEC SelCliente '05'
+
+
+	*/
+
+	BEGIN
+		IF @Num_IDCliente = '0'
+			BEGIN
+				SELECT Num_IDCliente,
+					Nom_Cliente,
+					Nom_Usuario,
+					Num_Senha
+
+				FROM Cliente WITH(NOLOCK)
+			END
+		ELSE
+			BEGIN
+				SELECT Num_IDCliente,
+					Nom_Cliente,
+					Nom_Usuario,
+					Num_Senha
+				FROM Cliente cl WITH(NOLOCK)
+				WHERE cl.Num_IDCliente = @Num_IDCliente
+			END
+
+		RETURN 0
+	END
+GO

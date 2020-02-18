@@ -60,9 +60,10 @@ function GravaPedidos() {
         });
     }
     if ($("#liberarCardapio").val() == "ADICIONAR PEDIDO") {
-        console.log(parametros);
         if ($('#clientes').val() != "") {
+            parametros.push($('#clientes').val());
             id = $('#clientes').val();
+            console.log(parametros);
             $.ajax({
                 url: caminho,
                 datatype: 'json',

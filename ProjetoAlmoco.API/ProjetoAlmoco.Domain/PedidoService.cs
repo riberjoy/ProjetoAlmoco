@@ -48,8 +48,8 @@ namespace ProjetoAlmoco.Domain
 
                         pedidosSeparados.Add(pedidoCliente);
 
-                        categoriaAlimento.Clear();
-                        IDAlimentos.Clear();
+                        categoriaAlimento = new List<string>();
+                        IDAlimentos = new List<int>();
                     }
 
                     categoriaAlimento.Add(pedido.Nom_Categoria + ": " + pedido.Nom_Alimento);

@@ -117,6 +117,8 @@ function CadastroCliente(tipoOperacao, caminho, nomeBtn, id, nome, user) {
     //<form method="post" novalidate="novalidate">
     $("<form></form>", { class: "formCategoria", method: 'post', action: caminho }).appendTo("body div.modal div.modal-content ");
 
+    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Id", id: "Id", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
+    document.querySelector("input[type='text'][name='Id']").value = id;
     //<input autocomplete="off" class="login__input text-box single-line" data-val="true"  id="Senha" name="Senha" placeholder="SENHA" type="password" value>
     $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Nome", id: "Nome", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
     document.querySelector("input[type='text'][name='Nome']").value = nome;

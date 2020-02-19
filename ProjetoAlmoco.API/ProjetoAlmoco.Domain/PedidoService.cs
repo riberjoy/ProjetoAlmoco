@@ -83,9 +83,9 @@ namespace ProjetoAlmoco.Domain
                 
                 foreach(string categoriaAlimento in pedidoCliente.CategoriaAlimento)
                 {
-                    txtPedidos += string.Format("{0}" + categoriaAlimento, Environment.NewLine);
+                    txtPedidos += string.Format("%0A" + categoriaAlimento);
                 }
-                txtPedidos += string.Format("{0}{0}", Environment.NewLine); 
+                txtPedidos += string.Format("%0A%0A"); 
             }
 
             return txtPedidos;

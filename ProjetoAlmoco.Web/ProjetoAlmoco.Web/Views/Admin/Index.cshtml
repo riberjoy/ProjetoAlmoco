@@ -7,12 +7,13 @@
             <span class="circle-add" aria-hidden="true">
                 <i class=" fa fa-plus"></i>
             </span>
-            <span class="button-text">ADD Categoria</span>
+            <span class="button-text">Adicionar Categoria</span>
         </button>
         <div id="teste"></div>
 
         @Html.Partial("_CardCriaCardapio")
 
-        <input id="liberarCardapio" class="conteudo liberar-cardapio" type="submit" href="login.html" value="LIBERAR CARDÁPIO">
+        <input id="liberarCardapio" onclick="itensSelecionados('@Url.Action("ListarPedidos")')" class="conteudo liberar-cardapio" type="submit" href="login.html" value="LIBERAR CARDÁPIO">
+        @Html.ActionLink("VOLTAR", "ListarPedidos", "Admin", new { @class = "voltar-btn2" })
     </div>
 </div>

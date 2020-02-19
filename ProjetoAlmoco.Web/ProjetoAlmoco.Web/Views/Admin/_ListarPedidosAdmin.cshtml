@@ -14,7 +14,7 @@
                 }
                 if (action == "PedidoAdd")
                 {
-                    caminho = "../Admin/MudarCardapio";
+                    caminho = "../MudarCardapio";
                 }
             }
             @*<button onclick="location.href='@caminho'; atualizaEstado();" class="lista-pedido-btn">*@
@@ -32,7 +32,7 @@
                 }
                 if (action == "PedidoAdd")
                 {
-                    caminho = "../Admin/ListarClientes";
+                    caminho = "../ListarClientes";
                 }
             }
             <button onclick="location.href='@caminho';" class="lista-pedido-btn">
@@ -64,7 +64,7 @@
         @Html.Partial("_CardPedido")
     </div>
 
-    <button onclick="location.href='../Admin/realizaPedidos';" class="enviar-pedidos-btn"> ENVIAR PEDIDOS</button>
+    <button onclick="location.href='../Admin/realizaPedidos'" class="enviar-pedidos-btn"> ENVIAR PEDIDOS</button>
 
 </div>
 

@@ -33,7 +33,6 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                 cmd.Parameters.AddWithValue("@Num_IDCliente", cliente.Num_IDCliente);
                 cmd.Parameters.AddWithValue("@Nom_Cliente", cliente.Nom_Cliente);
                 cmd.Parameters.AddWithValue("@Nom_Usuario", cliente.Nom_Usuario);
-                cmd.Parameters.AddWithValue("@Num_Senha", cliente.Num_Senha);
 
                 using (contexto = new Context())
                 {

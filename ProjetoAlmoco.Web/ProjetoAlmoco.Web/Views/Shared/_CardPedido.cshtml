@@ -1,10 +1,11 @@
 ﻿@{
-    
+    var action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
+
     int cliente = ViewBag.Cliente.Num_IDCliente;
 
     string actionDeletar, actionEditar;
 
-    if (cliente == 0)
+    if (cliente == 3)
     {
         actionDeletar = "DeletarPedidoAdm";
         actionEditar = "EditarPedidoAdm";
@@ -19,7 +20,7 @@
 
 @foreach (var pedido in ViewBag.ListaPedidos)
 {
-    if (cliente == 0)
+    if (cliente == 3)
     {
         string caminho = "";
 
@@ -27,17 +28,24 @@
             <div class="pedido__superior">
                 <h2>@pedido.Nom_Cliente</h2>
                 <div class="pedido__superior__botoes">
-                    @{ 
+                    @*@{ 
                         if (controleRota == 0)
                         {
                             caminho = "../Admin/EditarPedidos";
                         }
                         else
                         {
-                            caminho = "../Admin/EditarPedidos";
+                            if (action == "PeidoAdd")
+                            {
+                                caminho = "../EditarPedidos";
+                            }
+                            else
+                            {
+                                caminho = "EditarPedidos";
+                            }
                         }
-                    }                    
-                    <buttom onclick="location.href ='@caminho/@pedido.Num_IDCliente';" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                    }*@                    
+                    <buttom onclick="editarPedido(@pedido.Num_IDCliente, '@Url.Action("EditarPedidos")')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
                     @{ 
                         if (controleRota == 0)
                         {

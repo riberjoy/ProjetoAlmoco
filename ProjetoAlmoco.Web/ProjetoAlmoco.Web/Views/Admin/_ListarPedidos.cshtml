@@ -14,7 +14,7 @@
                     }
                     if (action == "PedidoAdd")
                     {
-                        caminho = "../Admin/MudarCardapio";
+                        caminho = "../MudarCardapio";
                     }
                 }
                 <button onclick="location.href='@caminho';" class="lista-pedido-btn">
@@ -31,7 +31,7 @@
                     }
                     if (action == "PedidoAdd")
                     {
-                        caminho = "../Admin/ListarClientes";
+                        caminho = "../ListarClientes";
                     }
                 }
                 <button onclick="location.href='@caminho';" class="lista-pedido-btn">
@@ -42,14 +42,7 @@
                 </button>
                 <!--  -->
                 @{
-                    if (action == "ListarPedidos")
-                    {
-                        caminho = "../Admin/NovoPedido";
-                    }
-                    if (action == "PedidoAdd")
-                    {
-                        caminho = "../Admin/NovoPedido";
-                    }
+                        caminho = "NovoPedido";
                 }
                 <button onclick="location.href='@caminho';" class="lista-pedido-btn">
                     <span class="circle-add-alimento">

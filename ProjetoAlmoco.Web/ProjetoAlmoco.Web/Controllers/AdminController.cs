@@ -52,26 +52,13 @@ namespace ProjetoAlmoco.Web.Controllers
             return RedirectToAction("Index", "Admin");
         }
 
-        public void realizaPedidos() // Mandar para o whatsApp
+        public ActionResult realizaPedidos() // Mandar para o whatsApp
         {
-            string pedidos;
-            pedidos = "Pedidos do dia:%0D";
+            string pedidosTxt = "Pedidos do dia:%0A%0A" + pedidoApp.TxtPedidos().Content.ReadAsStringAsync().Result;
+            alimentoApp.ZerarCardapio();
 
-            var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
-            ViewBag.BuscaClientes = clientes;
-
-            var pedidosClientes  = pedidoApp.Get().Content.ReadAsAsync<List<Pedido>>().Result;
-            foreach(var cl in clientes) {
-                pedidos = pedidos + "%0D" + cl.Nom_Cliente + ": ";
-                foreach (var pd in pedidosClientes)
-                {
-                    if(cl.Num_IDCliente == pd.Num_IDCliente)
-                    {
-                        //pedidos = pedidos +pd.Num_IDAlimento;
-                    }
-                }
-            }
-            //https://api.whatsapp.com/send?phone=${5535998368852}&text=@Pedidos
+            string url = "https://api.whatsapp.com/send?phone=${5535998901582}&text=" + pedidosTxt;
+            return Redirect(url);
         }
 
         //------------------------------------------------------------------------------------------------------------
@@ -83,8 +70,7 @@ namespace ProjetoAlmoco.Web.Controllers
 
             var alimentos = new List<Alimento>();
 
-            ViewBag.ControleRota = 0;
-            ViewBag.Cliente.Num_IDCliente = 0;
+            ViewBag.ControleRota = 1;
             if (ids != null)
             {
                 for (int id=0; id < ids.Length; id++)
@@ -103,19 +89,18 @@ namespace ProjetoAlmoco.Web.Controllers
             return View("_ListarPedidos");
         }
 
-        public ActionResult PedidoAdd(string[] idAlimentos)
+        public ActionResult PedidoAdd(string[] idAlimentos, int Num_IDCliente)
         {
             ViewBag.Cliente = TempData["Cliente"];
             TempData.Keep("Cliente");
 
-            int idCliente = Int32.Parse(idAlimentos[idAlimentos.Length - 1]);
-            ViewBag.Cliente.Num_IDCliente = 0;
+            int idCliente = Num_IDCliente;
             ViewBag.ControleRota = 1;
 
             if (idAlimentos != null)
             {
 
-                for (int i=0; i < idAlimentos.Length - 1; i++)
+                for (int i=0; i < idAlimentos.Length; i++)
                 {
                     var pedido = new Pedido {
                         Num_IDCliente = idCliente,
@@ -140,8 +125,20 @@ namespace ProjetoAlmoco.Web.Controllers
             var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
             ViewBag.BuscaClientes = clientes;
 
+            ViewBag.ControleRota = 1;
+
             var categorias = categoriaApp.GetAtivos().Content.ReadAsAsync<List<Categoria>>().Result;
             ViewBag.CriaCategorias = categorias;
+
+            if (categorias.Count > 0)
+            {
+                ViewBag.ControleCardapio = true;
+                ViewBag.CriaCategorias = categorias;
+            }
+            else
+            {
+                ViewBag.ControleCardapio = false;
+            }
 
             return View("_AdcionarPedidos");
         }
@@ -154,12 +151,20 @@ namespace ProjetoAlmoco.Web.Controllers
 
             ViewBag.Nom_Cliente = "";
 
+            ViewBag.ControleRota = 1;
+
+            ViewBag.ControleCardapio = true;
+
             var categorias = categoriaApp.GetAtivos().Content.ReadAsAsync<List<Categoria>>().Result;
             ViewBag.CriaCategorias = categorias;
 
-            Cliente cliente = clienteApp.GetById(Convert.ToInt32(id)).Content.ReadAsAsync<Cliente>().Result;
-            List<Cliente> Cliente = new List<Cliente>();
-            Cliente.Add(cliente);
+            var cliente = clienteApp.GetById(Convert.ToInt32(id)).Content.ReadAsAsync<Cliente>().Result;
+            List<Cliente> Cliente = new List<Cliente> {cliente};
+
+            var pedido = new Pedido { Num_IDCliente = Convert.ToInt32(id) };
+            var pedidos = pedidoApp.Put(pedido).Content.ReadAsAsync<List<Pedido>>().Result;
+            ViewBag.Pedido = pedidos[0];
+
             ViewBag.BuscaClientes = Cliente;
 
             return View("_AdcionarPedidos");
@@ -188,13 +193,20 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult DeletarClienteAdm(string id)
         {
-            //Apaga cliente do banco!
+            if(Convert.ToInt32(id) != 3)
+            clienteApp.Delete(Convert.ToInt32(id));
              return RedirectToAction("ListarClientes", "Admin");
         }
 
-        public ActionResult AlterarClienteAdm(Cliente cliente)
+        public ActionResult AlterarClienteAdm(ProjetoAlmoco.Web.Models.Cliente cliente)
         {
-            //Alterar o cliente no banco!
+            var Cliente = new Cliente
+            {
+                Num_IDCliente = cliente.Id,
+                Nom_Cliente = cliente.Nome,
+                Nom_Usuario = cliente.Usuario
+            };
+            clienteApp.Put(Cliente);
             return RedirectToAction("ListarClientes", "Admin");
         }
     }

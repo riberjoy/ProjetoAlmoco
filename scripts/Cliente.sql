@@ -41,8 +41,7 @@ GO
 CREATE PROCEDURE [dbo].[AltCliente](
 	@Num_IDCliente	int,
 	@Nom_Cliente	varchar(150),
-	@Nom_Usuario	varchar(10),
-	@Num_Senha		varchar(20)
+	@Nom_Usuario	varchar(10)
 	)
 
 	AS
@@ -61,8 +60,7 @@ CREATE PROCEDURE [dbo].[AltCliente](
 	BEGIN
 		UPDATE  Cliente 
 			SET Cliente.Nom_Cliente = @Nom_Cliente,
-				Cliente.Nom_Usuario = @Nom_Usuario, 
-				Cliente.Num_Senha =  @Num_Senha
+				Cliente.Nom_Usuario = @Nom_Usuario
 			WHERE Cliente.Num_IDCliente = @Num_IDCliente
 	END 
 GO

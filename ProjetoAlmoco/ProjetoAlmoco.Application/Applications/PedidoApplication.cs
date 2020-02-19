@@ -54,5 +54,13 @@ namespace ProjetoAlmoco.Application.Applications
                 return contexto.RequestGet(URL);
             }
         }
+        public HttpResponseMessage EnviarPedidos(string URLWhats)
+        {
+            using (contexto = new Context())
+            {
+                string URL = URLWhats;
+                return contexto.RequestGet(URL);
+            }
+        }
     }
 }

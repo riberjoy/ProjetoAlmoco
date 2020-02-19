@@ -2,27 +2,28 @@
 var id;
 var caminho;
 
-$(document).ready(function () {
-    if ($("#clientes").val() == "") {
-        caminho = "../Admin/ListarPedidos";
-    }else {
-        caminho = "../Admin/PedidoAdd";
-    }
-    console.log(caminho);
-});
+//$(document).ready(function () {
+//    if ($("#clientes").val() == "") {
+//        caminho = "../Admin/ListarPedidos";
+//    }else {
+//        caminho = "../Admin/PedidoAdd";
+//    }
+//    console.log(caminho);
+//});
 
 
-$("#liberarCardapio").click(function (op) {
+function itensSelecionados(actionPedidoAdd) {
+    console.log("sadf");
     $("input:checked").each(function () {
         parametros.push($(this).attr("id"));
     });
     if (parametros.length > 0) {
-        GravaPedidos();
+        GravaPedidos(actionPedidoAdd);
     }
 
-});
+};
 
-function GravaPedidos() {
+function GravaPedidos(actionPedidoAdd) {
     if ($("#liberarCardapio").val() == "ENVIAR PEDIDO") {
         $.ajax({
             url: 'Cliente/EnviarPedido',
@@ -60,26 +61,19 @@ function GravaPedidos() {
         });
     }
     if ($("#liberarCardapio").val() == "ADICIONAR PEDIDO") {
+        console.log("texto");
         if ($('#clientes').val() != "") {
-            parametros.push($('#clientes').val());
             id = $('#clientes').val();
             console.log(parametros);
-            $.ajax({
-                url: caminho,
-                datatype: 'json',
-                cache: false,
-                async: true,
-                contentType: "application/json; charset=utf-8",
-                type: "POST",
-                data: JSON.stringify(parametros),
-                success: function (data) {
-                    $(".conteudo").html(data);
-                },
-                error: function (error) {
-                    console.log(error);
-                    alert("Erro ao enviar os dados")
-                }
+            $.post(actionPedidoAdd, { idAlimentos: parametros, Num_IDCliente: id}).done(function (data) {
+                $(".conteudo").html(data);
             });
         }
     }
+}
+
+var editarPedido = function (Num_IDCliente, actionEditarPedidos) {
+    $.post(actionEditarPedidos, {id: Num_IDCliente}).done(function (data) {
+        $("body").html(data);
+    });
 }

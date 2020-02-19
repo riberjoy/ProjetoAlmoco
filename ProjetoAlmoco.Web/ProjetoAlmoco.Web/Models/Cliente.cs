@@ -8,6 +8,7 @@ namespace ProjetoAlmoco.Web.Models
 {
     public class Cliente
     {
+        public int Id { get; set; }
         [Required(ErrorMessage ="Necessário inserir o nome do cliente!")]
         public string Nome { get; set; }
 

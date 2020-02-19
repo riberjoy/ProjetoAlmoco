@@ -380,6 +380,16 @@
     border-radius: 30px;
     cursor: pointer;
 }
+.voltar-btn2 {
+    background-color: var(--cor-btn-cancela);
+    margin-top: 5px;
+    margin-bottom:20px;
+    padding: 10px 80px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration:none;
+}
 
 #label__EscolheCliente {
     font-size: 26pt;
@@ -392,15 +402,18 @@
     border-style: none;
     border-bottom: solid;
     color: white;
+    outline:none;
     border-radius: 10px;
+    padding:3px;
 }
 
     #clientes::selection {
         text-decoration: none;
     }
 
+
+
 #clientes__op {
-    
     font-size: 24pt;
     background-color: transparent;
     border-style: none;
@@ -409,11 +422,16 @@
     border-image: initial;
 }
 
+select:
+
 option {
+
     font-weight: normal;
     display: block;
     white-space: pre;
     min-height: 1.2em;
     padding: 0px 2px 1px;
-    background-color: transparent;
+    background-color: white;
+    outline:none;
+    border-radius:10px;
 }

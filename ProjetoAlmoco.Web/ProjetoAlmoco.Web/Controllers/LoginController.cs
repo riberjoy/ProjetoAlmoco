@@ -32,11 +32,10 @@ namespace ProjetoAlmoco.Web.Controllers
                     else
                         return RedirectToAction("Index", "Cliente");
                 }
-                else { }
                 //var userInfo = "Usuario: "+usuario.NomeUsuario+" -- Senha: "+usuario.Senha;
                 //ViewBag.selectedUser = userInfo;
 
-                return RedirectToAction("Index","Admin");
+                return RedirectToAction("Index","Login");
                 //return View();
             }
 

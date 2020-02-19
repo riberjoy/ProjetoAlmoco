@@ -27,7 +27,7 @@ CREATE TABLE Alimento(
 	Ind_Ativo			char(1)			NOT NULL
 
 	CONSTRAINT PK_Num_IDAlimento PRIMARY KEY (Num_IDAlimento),
-	CONSTRAINT FK_Num_IDCategoria FOREIGN KEY (Num_IDCategoria) REFERENCES Categoria(Num_IDCategoria)
+	CONSTRAINT FK_Num_IDCategoria FOREIGN KEY (Num_IDCategoria) REFERENCES Categoria(Num_IDCategoria) ON DELETE CASCADE
 )
 
 
@@ -38,6 +38,6 @@ CREATE TABLE Pedido(
 	Num_IDAlimento		int		NOT NULL
 
 	CONSTRAINT PK_Num_IDPedido PRIMARY KEY (Num_IDPedido),
-	CONSTRAINT FK_Num_IDCliente FOREIGN KEY (Num_IDCliente) REFERENCES Cliente(Num_IDCliente),
-	CONSTRAINT FK_Num_IDAlimento FOREIGN KEY (Num_IDAlimento) REFERENCES Alimento(Num_IDAlimento)
+	CONSTRAINT FK_Num_IDCliente FOREIGN KEY (Num_IDCliente) REFERENCES Cliente(Num_IDCliente) ON DELETE CASCADE,
+	CONSTRAINT FK_Num_IDAlimento FOREIGN KEY (Num_IDAlimento) REFERENCES Alimento(Num_IDAlimento) ON DELETE CASCADE
 )

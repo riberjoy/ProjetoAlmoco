@@ -18,18 +18,18 @@ function atualizaEstado() {
 
 
 function CadastroModal(tipoOperacao, caminho, nomeBtn, id) {
-    
+
     $("<div></div>", { id: 'myModal', class: 'modal' }).appendTo("body");
     $("<div></div>", { class: 'modal-content ' }).appendTo("body div.modal");
     $("<span></span>", { class: 'close' }).appendTo("body div.modal div.modal-content");
     $("span.close").html("&times;");
-    
+
     $("<h1></h1>", { class: 'nomeCategoria' }).appendTo("body div.modal div.modal-content");
     $("h1.nomeCategoria").html(tipoOperacao.toString());
     var margem = parseInt($("div.modal-content").width()) - parseInt($("h1.nomeCategoria").width())
     margem = margem / 2;
     $("h1.nomeCategoria").css({
-        "margin-left": margem+"px"
+        "margin-left": margem + "px"
     });
 
 
@@ -47,13 +47,13 @@ function CadastroModal(tipoOperacao, caminho, nomeBtn, id) {
 
     //<input autocomplete="off" class="login__input text-box single-line" data-val="true"  id="Senha" name="Senha" placeholder="SENHA" type="password" value>
     $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Nome", id: "Nome", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
-    
+
 
     if (tipoOperacao.includes("Cliente")) {
         $("<input>", { class: "admin__cadCategoria", type: "text", name: "Usuario", id: "Usuario", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
 
         $("<input>", { class: "admin__cadCategoria", type: "text", name: "Senha", id: "Senha", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
-       
+
     }
 
     $("input.admin__cadCategoria").css({
@@ -74,7 +74,7 @@ function CadastroModal(tipoOperacao, caminho, nomeBtn, id) {
     });
 
     //<input class="login__link" type="submit" value="LOGAR">
-    $("<input>", { id: "btnCadastroModal", class: "admnCadCategoria__link modalInput_Btn", type: "submit", value: nomeBtn, disabled: "disabled"}).appendTo("body div.modal div.modal-content form.formCategoria");
+    $("<input>", { id: "btnCadastroModal", class: "admnCadCategoria__link modalInput_Btn", type: "submit", value: nomeBtn, disabled: "disabled" }).appendTo("body div.modal div.modal-content form.formCategoria");
     $('#btnCadastroModal').css("background-color", "#707070");
 
     ativo = true;
@@ -117,7 +117,7 @@ function CadastroCliente(tipoOperacao, caminho, nomeBtn, id, nome, user) {
     //<form method="post" novalidate="novalidate">
     $("<form></form>", { class: "formCategoria", method: 'post', action: caminho }).appendTo("body div.modal div.modal-content ");
 
-    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Id", id: "Id", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
+    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Id", id: "Id", autocomplete: "off" }).css("display", "none").appendTo("body div.modal div.modal-content form.formCategoria");
     document.querySelector("input[type='text'][name='Id']").value = id;
     //<input autocomplete="off" class="login__input text-box single-line" data-val="true"  id="Senha" name="Senha" placeholder="SENHA" type="password" value>
     $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Nome", id: "Nome", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
@@ -168,8 +168,8 @@ function CadastroCliente(tipoOperacao, caminho, nomeBtn, id, nome, user) {
     });
 
     //<input class="login__link" type="submit" value="LOGAR">
-    $("<input>", { id: "btnCadastroModal", class: "admnCadCategoria__link modalInput_Btn", type: "submit", value: nomeBtn}).appendTo("body div.modal div.modal-content form.formCategoria");
-   
+    $("<input>", { id: "btnCadastroModal", class: "admnCadCategoria__link modalInput_Btn", type: "submit", value: nomeBtn }).appendTo("body div.modal div.modal-content form.formCategoria");
+
 
     ativo = true;
 
@@ -183,7 +183,7 @@ function CadastroCliente(tipoOperacao, caminho, nomeBtn, id, nome, user) {
 
 //----------------------------------------------------------------------------------------------------------------------------
 
-function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso,id, nome) {
+function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso, id, nome) {
 
     $("<div></div>", { id: 'myModal', class: 'modal' }).appendTo("body");
     $("<div></div>", { class: 'modal-content ' }).appendTo("body div.modal");
@@ -200,7 +200,7 @@ function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso,id, nome) {
 
     //<form method="post" novalidate="novalidate">
     $("<form></form>", { class: "formCategoria", method: 'post', action: caminho }).appendTo("body div.modal div.modal-content ");
-    
+
     $("<h3></h3>", { class: 'avisoCategoria' }).appendTo("body div.modal div.modal-content form.formCategoria");
     $("h3.avisoCategoria").html(aviso.toString());
 
@@ -224,7 +224,7 @@ function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso,id, nome) {
 
 window.onclick = function (event) {
     console.log(event.target.id)
-    if (ativo ==  true) {        
+    if (ativo == true) {
         if (event.target == myModal) {
             $("div.modal").remove();
             ativo = false;

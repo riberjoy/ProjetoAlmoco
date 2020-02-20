@@ -24,7 +24,7 @@
                         @Html.ValidationMessageFor(model => model.Num_Senha, "", new { @class = "texto" })
                     </p>
                 </div>
-                <input class="login__link" type="submit" value="LOGAR">
+                <input class="login__link" onclick="Logar(@Url.Action("Index","Login"))" type="submit" value="LOGAR">
                 @Html.ActionLink(" Não tem um Cadastro?", "Index", "Cadastro", null, new { @class = "login__cadastro" })
             </div>
         </div>

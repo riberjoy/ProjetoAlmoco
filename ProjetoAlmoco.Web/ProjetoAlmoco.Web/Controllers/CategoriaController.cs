@@ -12,13 +12,13 @@ namespace ProjetoAlmoco.Web.Controllers
     {
         private readonly CategoriaApplication categoriaApp = new CategoriaApplication();
         public ActionResult Index(Categoria categoria)
-         {
+        {
             var Categoria = new ProjetoAlmoco.Application.Models.Categoria();
 
             ViewBag.Cliente = TempData["Cliente"];
             TempData.Keep("Cliente");
 
-            if(categoria != null)
+            if (categoria != null)
             {
                 Categoria.Nom_Categoria = categoria.Nome;
                 categoriaApp.Post(Categoria);
@@ -30,7 +30,7 @@ namespace ProjetoAlmoco.Web.Controllers
         {
             categoriaApp.Delete(id);
 
-            return RedirectToAction("Index","Admin");
+            return RedirectToAction("Index", "Admin");
         }
     }
 }

@@ -28,23 +28,7 @@
             <div class="pedido__superior">
                 <h2>@pedido.Nom_Cliente</h2>
                 <div class="pedido__superior__botoes">
-                    @*@{ 
-                        if (controleRota == 0)
-                        {
-                            caminho = "../Admin/EditarPedidos";
-                        }
-                        else
-                        {
-                            if (action == "PeidoAdd")
-                            {
-                                caminho = "../EditarPedidos";
-                            }
-                            else
-                            {
-                                caminho = "EditarPedidos";
-                            }
-                        }
-                    }*@                    
+                    
                     <buttom onclick="editarPedido(@pedido.Num_IDCliente, '@Url.Action("EditarPedidos")')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
                     @{ 
                         if (controleRota == 0)

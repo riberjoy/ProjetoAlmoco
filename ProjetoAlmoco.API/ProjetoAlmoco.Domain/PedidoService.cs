@@ -43,7 +43,8 @@ namespace ProjetoAlmoco.Domain
                             Num_IDCliente = pedidoAux.Num_IDCliente,
                             Nom_Cliente = pedidoAux.Nom_Cliente,
                             CategoriaAlimento = categoriaAlimento,
-                            Num_IDAlimentos = IDAlimentos
+                            Num_IDAlimentos = IDAlimentos,
+                            Ind_Ativo = pedidoAux.Ind_Ativo
                         };
 
                         pedidosSeparados.Add(pedidoCliente);
@@ -63,7 +64,8 @@ namespace ProjetoAlmoco.Domain
                     Num_IDCliente = pedidoAux.Num_IDCliente,
                     Nom_Cliente = pedidoAux.Nom_Cliente,
                     CategoriaAlimento = categoriaAlimento,
-                    Num_IDAlimentos = IDAlimentos
+                    Num_IDAlimentos = IDAlimentos,
+                    Ind_Ativo = pedidoAux.Ind_Ativo
                 };
 
                 pedidosSeparados.Add(pedidocliente);

@@ -129,7 +129,8 @@ CREATE PROCEDURE [dbo].[SelPedido](
 					cl.Nom_Cliente,
 					pd.Num_IDAlimento,
 					al.Nom_Alimento,
-					ct.Nom_Categoria
+					ct.Nom_Categoria,
+					pd.Ind_Ativo
 				FROM Pedido pd WITH(NOLOCK) 
 				INNER JOIN Cliente cl ON pd.Num_IDCliente = cl.Num_IDCliente
 				INNER JOIN Alimento al ON pd.Num_IDAlimento = al.Num_IDAlimento
@@ -144,7 +145,8 @@ CREATE PROCEDURE [dbo].[SelPedido](
 					cl.Nom_Cliente,
 					pd.Num_IDAlimento,
 					al.Nom_Alimento,
-					ct.Nom_Categoria
+					ct.Nom_Categoria,
+					pd.Ind_Ativo
 				FROM Pedido pd WITH(NOLOCK) 
 				INNER JOIN Cliente cl ON pd.Num_IDCliente = cl.Num_IDCliente
 				INNER JOIN Alimento al ON pd.Num_IDAlimento = al.Num_IDAlimento

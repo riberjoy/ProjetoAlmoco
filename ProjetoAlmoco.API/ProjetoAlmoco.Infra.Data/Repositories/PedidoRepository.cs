@@ -60,8 +60,11 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                             Nom_Cliente = dados["Nom_Cliente"].ToString(),
                             Num_IDAlimento = Convert.ToInt32(dados["Num_IDAlimento"]),
                             Nom_Alimento = dados["Nom_Alimento"].ToString(),
-                            Nom_Categoria = dados["Nom_Categoria"].ToString()
+                            Nom_Categoria = dados["Nom_Categoria"].ToString(),
                         };
+                        if (Convert.ToInt32(dados["Ind_Ativo"]) == 0)
+                            pedido.Ind_Ativo = false;
+                        else pedido.Ind_Ativo = true;
 
                         pedidos.Add(pedido);
                     }
@@ -94,6 +97,9 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                             Nom_Alimento = dados["Nom_Alimento"].ToString(),
                             Nom_Categoria = dados["Nom_Categoria"].ToString()
                         };
+                        if (Convert.ToInt32(dados["Ind_Ativo"]) == 0)
+                            pedido.Ind_Ativo = false;
+                        else pedido.Ind_Ativo = true;
 
                         pedidos.Add(pedido);
                     }

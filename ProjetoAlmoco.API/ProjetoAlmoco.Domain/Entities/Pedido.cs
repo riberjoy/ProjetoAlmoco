@@ -11,5 +11,6 @@ namespace ProjetoAlmoco.Domain.Entities
         public int Num_IDAlimento { get; set; }
         public string Nom_Alimento { get; set; }
         public string Nom_Categoria { get; set; }
+        public bool Ind_Ativo { get; set; }
     }
 }

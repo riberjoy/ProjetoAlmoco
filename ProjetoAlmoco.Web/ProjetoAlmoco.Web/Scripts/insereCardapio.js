@@ -100,8 +100,3 @@ var NovoPedido = function (actionNovoPedido) {
         $("body").html(data);
     }).progress($(".fundo-loading").css("display", "flex"))
 }
-var restaurarCardapio = function (actionRestaurar, alimentos) {
-    $.post(actionRestaurar, { alimentos: alimentos }).done(function (data) {
-        $("body").html(data);
-    }).progress($(".fundo-loading").css("display", "flex"))
-}

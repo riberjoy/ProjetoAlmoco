@@ -31,7 +31,10 @@ namespace ProjetoAlmoco.WebApi.Controllers
         public IHttpActionResult SalvarCardapio(IEnumerable<Alimento> alimentos)
         {
             if(alimentos != null)
+            {
+                _alimentoRepository.Put(_alimentoRepository.Get(), Convert.ToDateTime("2020-01-01"));
                 _alimentoRepository.Put(alimentos, DateTime.Today);
+            }
             return Ok();
         }
         [HttpGet, Route(template: "api/alimento/editarcardapio")]

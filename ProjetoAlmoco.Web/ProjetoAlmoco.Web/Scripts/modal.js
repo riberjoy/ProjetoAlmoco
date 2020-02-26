@@ -204,9 +204,10 @@ function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso,id, nome) {
     $("<h3></h3>", { class: 'avisoCategoria' }).appendTo("body div.modal div.modal-content form.formCategoria");
     $("h3.avisoCategoria").html(aviso.toString());
 
-
+    if (caminho != "") {
+         $("<input>", { class: "admnCadCategoria__link modalInput_Btn", type: "submit", value: nomeBtn }).appendTo("body div.modal div.modal-content form.formCategoria");
+    }
     //<input class="login__link" type="submit" value="LOGAR">
-    $("<input>", { class: "admnCadCategoria__link modalInput_Btn", type: "submit", value: nomeBtn }).appendTo("body div.modal div.modal-content form.formCategoria");
 
     ativo = true;
 
@@ -223,7 +224,6 @@ function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso,id, nome) {
 }
 
 window.onclick = function (event) {
-    console.log(event.target.id)
     if (ativo ==  true) {        
         if (event.target == myModal) {
             $("div.modal").remove();

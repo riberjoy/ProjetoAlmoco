@@ -13,28 +13,28 @@
 
             <div class="cadastro__form">
                 <div class="cadastro__form__Item">
-                    @Html.EditorFor(model => model.Nom_Cliente, new { htmlAttributes = new { autocomplete = "off", @class = "cadastro__input", placeholder = "NOME" } })
+                    @Html.EditorFor(model => model.Nom_Cliente, new { htmlAttributes = new { autocomplete = "off", @class = "cadastro__input", maxlength = 51, placeholder = "NOME" } })
                     <p>
                         @Html.ValidationMessageFor(model => model.Nom_Cliente, "", new { @class = "texto" })
                     </p>
                 </div>
 
                 <div class="cadastro__form__Item">
-                    @Html.EditorFor(model => model.Nom_Usuario, new { htmlAttributes = new { @class = "cadastro__input", placeholder = "LOGIN", autocomplete = "off" } })
+                    @Html.EditorFor(model => model.Nom_Usuario, new { htmlAttributes = new { @class = "cadastro__input", maxlength = 16, placeholder = "LOGIN", autocomplete = "off" } })
                     <p>
                         @Html.ValidationMessageFor(model => model.Nom_Usuario, "", new { @class = "texto" })
                     </p>
                 </div>
 
                 <div class="cadastro__form__Item">
-                    @Html.EditorFor(model => model.Num_Senha, new { htmlAttributes = new { @class = "cadastro__input", placeholder = "SENHA", autocomplete = "off", type = "password" } })
+                    @Html.EditorFor(model => model.Num_Senha, new { htmlAttributes = new { @class = "cadastro__input", maxlength = 16, placeholder = "SENHA", autocomplete = "off", type = "password" } })
                     <p>
                         @Html.ValidationMessageFor(model => model.Num_Senha, "", new { @class = "texto" })
                     </p>
                 </div>
 
                 <div class="cadastro__form__Item">
-                    @Html.EditorFor(model => model.ConfirmaSenha, new { htmlAttributes = new { @class = "cadastro__input", placeholder = "CONFIRMA SENHA", autocomplete = "off", type = "password" } })
+                    @Html.EditorFor(model => model.ConfirmaSenha, new { htmlAttributes = new { @class = "cadastro__input", maxlength = 16, placeholder = "CONFIRMA SENHA", autocomplete = "off", type = "password" } })
                     <p>
                         @Html.ValidationMessageFor(model => model.ConfirmaSenha, "", new { @class = "texto" })
                     </p>

@@ -3,9 +3,8 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[InsAliment
 GO 
 
 CREATE PROCEDURE [dbo].[InsAlimento](
-	@Nom_Alimento		varchar(150),
-	@Num_IDCategoria	int,
-	@Ind_Ativo			char(1)
+	@Nom_Alimento		varchar(20),
+	@Num_IDCategoria	int
 	)
 
 	AS
@@ -25,7 +24,7 @@ CREATE PROCEDURE [dbo].[InsAlimento](
 	BEGIN 
 		
 		INSERT  INTO Alimento (Nom_Alimento, Num_IDCategoria, Ind_Ativo)
-			VALUES (@Nom_Alimento, @Num_IDCategoria, @Ind_Ativo)
+			VALUES (@Nom_Alimento, @Num_IDCategoria, NULL)
 
 		RETURN 0
 			
@@ -67,7 +66,7 @@ GO
 
 CREATE PROCEDURE [dbo].[AltAlimento](
 	@Num_IDAlimento		int,
-	@Ind_Ativo			char(1))
+	@Ind_Ativo			date)
 
 	AS
 	/*
@@ -79,10 +78,6 @@ CREATE PROCEDURE [dbo].[AltAlimento](
 		Comentários.......: Parâmetro Status :
 							0 - Processado OK
 							1 - Erro ao excluir
-							Tipo alimento:
-							0 - Inativo;
-							1 - Ativo;
-		Ex................: EXEC AltAlimento 1, '0'
 	*/
 
 	BEGIN
@@ -131,7 +126,7 @@ CREATE PROCEDURE [dbo].[SelAlimento](
 					Num_IDCategoria,
 					Ind_Ativo
 				FROM Alimento al WITH(NOLOCK)
-				WHERE al.Ind_Ativo = '0'
+				WHERE cast(al.Ind_Ativo as date) = cast(getDate() as date)
 			END
 
 		RETURN 0

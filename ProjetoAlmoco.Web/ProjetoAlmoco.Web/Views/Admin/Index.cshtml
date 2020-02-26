@@ -14,6 +14,7 @@
         @Html.Partial("_CardCriaCardapio")
 
         <input id="liberarCardapio" onclick="itensSelecionados('@Url.Action("ListarPedidos")')" class="conteudo liberar-cardapio" type="submit" href="login.html" value="LIBERAR CARDÁPIO">
-        @Html.ActionLink("VOLTAR", "ListarPedidos", "Admin", new { @class = "voltar-btn2" })
+        <input id="voltarMenu" onclick="itensSelecionados('@Url.Action("ListarPedidos")')" class="voltar-btn2" type="submit" href="login.html" value="VOLTAR">
+
     </div>
 </div>

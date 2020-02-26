@@ -17,7 +17,6 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                 cmd.CommandText = "InsAlimento";
                 cmd.Parameters.AddWithValue("@Nom_Alimento", alimento.Nom_Alimento);
                 cmd.Parameters.AddWithValue("@Num_IDCategoria", alimento.Num_IDCategoria);
-                cmd.Parameters.AddWithValue("@Ind_Ativo", 1);
 
                 using (contexto = new Context())
                 {
@@ -76,9 +75,14 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                             Nom_Alimento = dados["Nom_Alimento"].ToString(),
                             Num_IDCategoria = Convert.ToInt32(dados["Num_IDCategoria"])
                         };
-                        if (Convert.ToInt32(dados["Ind_Ativo"]) == 0)
-                            alimento.Ind_Ativo = true;
-                        else alimento.Ind_Ativo = false;
+                        if((dados["Ind_Ativo"]).ToString() != "")
+                        {
+                            if (Convert.ToDateTime(dados["Ind_Ativo"]) == DateTime.Today)
+                                alimento.Ind_Ativo = true;
+                            else alimento.Ind_Ativo = false;
+                        }
+                        else
+                            alimento.Ind_Ativo = false;
 
                         alimentos.Add(alimento);
                     }

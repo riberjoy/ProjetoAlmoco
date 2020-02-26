@@ -13,12 +13,14 @@ var caminho;
 
 
 function itensSelecionados(actionPedidoAdd) {
-    console.log("sadf");
     $("input:checked").each(function () {
         parametros.push($(this).attr("id"));
     });
-    if (parametros.length > 0) {
+    if (parametros.length > 0 || $("#voltarMenu").val() == "VOLTAR") {
         GravaPedidos(actionPedidoAdd);
+    }
+    else {
+        DeleteModal("Selecione algum alimento", "", "Voltar", "É necessário escolher no mínimo um alimento", "", "");
     }
 
 };
@@ -61,7 +63,6 @@ function GravaPedidos(actionPedidoAdd) {
         });
     }
     if ($("#liberarCardapio").val() == "ADICIONAR PEDIDO") {
-        console.log("texto");
         if ($('#clientes').val() != "") {
             id = $('#clientes').val();
             console.log(parametros);

@@ -3,7 +3,7 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[InsCategor
 GO 
 
 CREATE PROCEDURE [dbo].[InsCategoria](
-	@Nom_Categoria	varchar(150)
+	@Nom_Categoria	varchar(20)
 	)
 
 	AS

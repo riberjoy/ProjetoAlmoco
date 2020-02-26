@@ -22,8 +22,8 @@ CREATE PROCEDURE [dbo].[InsPedido](
 	*/
 
 	BEGIN
-		INSERT  INTO Pedido (Dat_DataPedido, Num_IDCliente, Num_IDAlimento)
-			VALUES (getDate(), @Num_IDCliente, @Num_IDAlimento)
+		INSERT  INTO Pedido (Dat_DataPedido, Num_IDCliente, Num_IDAlimento, Ind_Ativo)
+			VALUES (getDate(), @Num_IDCliente, @Num_IDAlimento, 0)
 		RETURN 0
 	END 
 GO

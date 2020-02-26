@@ -3,9 +3,9 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[InsCliente
 GO 
 
 CREATE PROCEDURE [dbo].[InsCliente](
-	@Nom_Cliente	varchar(150),
-	@Nom_Usuario	varchar(10),
-	@Num_Senha		varchar(20)
+	@Nom_Cliente	varchar(50),
+	@Nom_Usuario	varchar(15),
+	@Num_Senha		varchar(15)
 	)
 
 	AS
@@ -40,8 +40,8 @@ GO
 
 CREATE PROCEDURE [dbo].[AltCliente](
 	@Num_IDCliente	int,
-	@Nom_Cliente	varchar(150),
-	@Nom_Usuario	varchar(10)
+	@Nom_Cliente	varchar(50),
+	@Nom_Usuario	varchar(15)
 	)
 
 	AS

@@ -2,16 +2,12 @@
 @{
     List<ProjetoAlmoco.Application.Models.Cliente> Clientes = (List<ProjetoAlmoco.Application.Models.Cliente>)ViewBag.BuscaClientes;
     string nomeCliente = ViewBag.Cliente.Nom_Cliente;
-
 }
 <div id="myBtn" class="conteudo">
     <div class="conteudo__titulo">
         @{
             if (ViewBag.ControleCardapio == true)
             {
-
-
-
                 <h1>Montar prato.</h1>
                 <label id="label__EscolheCliente" for="clientes">Cliente:</label>
                 <select id="clientes" name="clientes">
@@ -51,8 +47,11 @@
                     <h2> Aguarde até a liberação do cardápio</h2>
                 </div>
                 <br />
-                @Html.ActionLink("VOLTAR", "ListarPedidos", "Admin", new { @class = "voltar-btn2" })
             }
+            if (ViewBag.ControleCardapio == false || ViewBag.Editar == false || ViewBag.Editar == null)
+            {
+                @Html.ActionLink("VOLTAR", "ListarPedidos", "Admin", new { @class = "voltar-btn2" })
+            }            
         }
     </div>
 </div>

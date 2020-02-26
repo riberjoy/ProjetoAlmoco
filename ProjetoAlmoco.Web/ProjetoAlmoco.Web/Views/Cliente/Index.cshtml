@@ -11,7 +11,7 @@
                 <div id="cardapioDisponivel">
                     <h1>Monte seu prato do dia.</h1>
                     @Html.Partial("_CardCardapio")
-                    <input id="liberarCardapio" onclick="itensSelecionados('@Url.Action("PedidoAdd")')" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ENVIAR PEDIDO">
+                    <input id="liberarCardapio" onclick="itensSelecionados('@Url.Action("EnviarPedido", Num_IDCliente)')" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ENVIAR PEDIDO">
                 </div>
             }
             else

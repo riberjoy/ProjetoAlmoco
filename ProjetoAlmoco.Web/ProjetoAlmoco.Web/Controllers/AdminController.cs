@@ -39,9 +39,9 @@ namespace ProjetoAlmoco.Web.Controllers
             var categoriasAtivas = categoriaApp.EditarCardapio().Content.ReadAsAsync<List<Categoria>>().Result;
             var alimentos = new List<Alimento>();
 
-            foreach(var cat in categoriasAtivas)
+            foreach (var cat in categoriasAtivas)
             {
-                foreach(var alim in cat.Alimentos)
+                foreach (var alim in cat.Alimentos)
                 {
                     alimentos.Add(alim);
                 }
@@ -73,9 +73,10 @@ namespace ProjetoAlmoco.Web.Controllers
             ViewBag.ControleRota = 1;
             if (ids != null)
             {
-                for (int id=0; id < ids.Length; id++)
+                for (int id = 0; id < ids.Length; id++)
                 {
-                    var alimento = new Alimento { 
+                    var alimento = new Alimento
+                    {
                         Num_IDAlimento = Convert.ToInt32(ids[id])
                     };
                     alimentos.Add(alimento);
@@ -100,9 +101,10 @@ namespace ProjetoAlmoco.Web.Controllers
             if (idAlimentos != null)
             {
 
-                for (int i=0; i < idAlimentos.Length; i++)
+                for (int i = 0; i < idAlimentos.Length; i++)
                 {
-                    var pedido = new Pedido {
+                    var pedido = new Pedido
+                    {
                         Num_IDCliente = idCliente,
                         Num_IDAlimento = Convert.ToInt32(idAlimentos[i])
                     };
@@ -149,7 +151,7 @@ namespace ProjetoAlmoco.Web.Controllers
             ViewBag.Cliente = TempData["Cliente"];
             TempData.Keep("Cliente");
 
-            ViewBag.Nom_Cliente = "";
+            ViewBag.Editar = true;
 
             ViewBag.ControleRota = 1;
 
@@ -159,7 +161,7 @@ namespace ProjetoAlmoco.Web.Controllers
             ViewBag.CriaCategorias = categorias;
 
             var cliente = clienteApp.GetById(Convert.ToInt32(id)).Content.ReadAsAsync<Cliente>().Result;
-            List<Cliente> Cliente = new List<Cliente> {cliente};
+            List<Cliente> Cliente = new List<Cliente> { cliente };
 
             var pedido = new Pedido { Num_IDCliente = Convert.ToInt32(id) };
             var pedidos = pedidoApp.Put(pedido).Content.ReadAsAsync<List<Pedido>>().Result;
@@ -193,9 +195,9 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult DeletarClienteAdm(string id)
         {
-            if(Convert.ToInt32(id) != 3)
-            clienteApp.Delete(Convert.ToInt32(id));
-             return RedirectToAction("ListarClientes", "Admin");
+            if (Convert.ToInt32(id) != 3)
+                clienteApp.Delete(Convert.ToInt32(id));
+            return RedirectToAction("ListarClientes", "Admin");
         }
 
         public ActionResult AlterarClienteAdm(ProjetoAlmoco.Web.Models.Cliente cliente)

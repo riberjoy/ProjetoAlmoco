@@ -1,5 +1,8 @@
 ﻿using ProjetoAlmoco.Application.Applications;
 using ProjetoAlmoco.Application.Models;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Mvc;
 
@@ -32,14 +35,20 @@ namespace ProjetoAlmoco.Web.Controllers
                     else
                         return RedirectToAction("Index", "Cliente");
                 }
-                //var userInfo = "Usuario: "+usuario.NomeUsuario+" -- Senha: "+usuario.Senha;
-                //ViewBag.selectedUser = userInfo;
-
                 return RedirectToAction("Index","Login");
-                //return View();
             }
 
             return View(usuario);
+        }
+        public ActionResult LoginUnico(string Nom_Usuario)
+        {
+            var clientes = clienteApp.Get().Content.ReadAsAsync<List<Cliente>>().Result;
+            var clientesString = new Collection<string>();
+            foreach(Cliente cliente in clientes)
+            {
+                clientesString.Add(cliente.Nom_Usuario);
+            };
+            return Json(clientesString.All(x => x.ToLower() != Nom_Usuario.ToLower()), JsonRequestBehavior.AllowGet);
         }
     }
 }

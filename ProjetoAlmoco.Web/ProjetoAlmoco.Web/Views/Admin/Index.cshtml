@@ -3,7 +3,7 @@
     <div class="conteudo__titulo">
         <h1>Selecione o cardápio do dia.</h1>
 
-        <button onclick="CadastroModal('Nova Categoria', 'Categoria/Index','CADASTRAR', 0)" class="learn-more">
+        <button onclick="CadastroModal('Nova Categoria', '@Url.Action("Index","Categoria")','CADASTRAR', 0)" class="learn-more">
             <span class="circle-add" aria-hidden="true">
                 <i class=" fa fa-plus"></i>
             </span>
@@ -14,7 +14,6 @@
         @Html.Partial("_CardCriaCardapio")
 
         <input id="liberarCardapio" onclick="itensSelecionados('@Url.Action("ListarPedidos")')" class="conteudo liberar-cardapio" type="submit" href="login.html" value="LIBERAR CARDÁPIO">
-        <input id="voltarMenu" onclick="itensSelecionados('@Url.Action("ListarPedidos")')" class="voltar-btn2" type="submit" href="login.html" value="VOLTAR">
-
+        <input id="voltarMenu" onclick="restaurarCardapio('@Url.Action("RestaurarCardapio")','@ViewBag.Alimentos')" class="voltar-btn2" type="submit" href="login.html" value="VOLTAR">
     </div>
 </div>

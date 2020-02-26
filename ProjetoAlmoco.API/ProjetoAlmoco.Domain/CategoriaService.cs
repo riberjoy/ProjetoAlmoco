@@ -21,10 +21,10 @@ namespace ProjetoAlmoco.Domain
             var categoriasAtivas = SepararAlimentosAtivos();
             foreach(var categoria in categoriasAtivas)
             {
-                foreach(var alimento in categoria.Alimentos)
-                {
-                    _alimentoRepository.Put(categoria.Alimentos, 1);
-                }
+                //foreach(var alimento in categoria.Alimentos)
+                //{
+                //    _alimentoRepository.Put(categoria.Alimentos, 1);
+                //}
             }
             return categoriasAtivas;
         }

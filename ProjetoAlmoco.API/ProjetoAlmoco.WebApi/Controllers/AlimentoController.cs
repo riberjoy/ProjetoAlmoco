@@ -1,6 +1,7 @@
 ﻿using ProjetoAlmoco.Domain.Entities;
 using ProjetoAlmoco.Domain.Interfaces.Repository;
 using ProjetoAlmoco.Domain.Interfaces.Service;
+using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -30,7 +31,7 @@ namespace ProjetoAlmoco.WebApi.Controllers
         public IHttpActionResult SalvarCardapio(IEnumerable<Alimento> alimentos)
         {
             if(alimentos != null)
-                _alimentoRepository.Put(alimentos, 0);
+                _alimentoRepository.Put(alimentos, DateTime.Today);
             return Ok();
         }
         [HttpGet, Route(template: "api/alimento/editarcardapio")]
@@ -38,7 +39,7 @@ namespace ProjetoAlmoco.WebApi.Controllers
         [HttpGet, Route(template: "api/alimento/zerarcardapio")]
         public IHttpActionResult ZerarCardapio()
         {
-            _alimentoRepository.Put(_alimentoRepository.Get(), 1);
+            //_alimentoRepository.Put(_alimentoRepository.Get(), 1);
             return Ok();
         }
     }

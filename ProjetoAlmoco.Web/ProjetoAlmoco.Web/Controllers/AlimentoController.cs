@@ -10,7 +10,7 @@ namespace ProjetoAlmoco.Web.Controllers
         public ActionResult Index(Alimento alimento)
         {
             var Alimento = new Application.Models.Alimento();
-            if(alimento != null)
+            if (alimento != null)
             {
                 Alimento.Nom_Alimento = alimento.Nome;
                 Alimento.Num_IDCategoria = alimento.CategoriaID;

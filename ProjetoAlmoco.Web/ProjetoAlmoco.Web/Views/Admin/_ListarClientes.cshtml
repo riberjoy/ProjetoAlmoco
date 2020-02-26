@@ -11,8 +11,7 @@
                 <div class="pedido__superior">
                     <h2>@cliente.Nom_Cliente</h2>
                     <div class="pedido__superior__botoes">
-                        @*CadastroCliente(tipoOperacao, caminho, nomeBtn, id, nome, user)*@
-                        <buttom onclick="CadastroCliente('Alterar usuário', '../Admin/AlterarClienteAdm','CADASTRAR', @cliente.Num_IDCliente , '@cliente.Nom_Cliente', '@cliente.Nom_Usuario')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                        <buttom onclick="CadastroCliente('Alterar usuário', '@Url.Action("AlterarClienteAdm","Admin")','CADASTRAR', @cliente.Num_IDCliente , '@cliente.Nom_Cliente', '@cliente.Nom_Usuario')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
                         <buttom onclick="DeleteModal('Apagar Cliente?', '../Admin/DeletarClienteAdm/@cliente.Num_IDCliente','APAGAR', 'O cliente será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
 
                     </div>

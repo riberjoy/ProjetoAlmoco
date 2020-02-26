@@ -24,7 +24,7 @@ namespace ProjetoAlmoco.Infra.Data.Repositories
                 }
             }
         }
-        public void Put(IEnumerable<Alimento> alimentos, int Ind_Ativo)
+        public void Put(IEnumerable<Alimento> alimentos, DateTime Ind_Ativo)
         {
             foreach (Alimento alimento in alimentos)
             {

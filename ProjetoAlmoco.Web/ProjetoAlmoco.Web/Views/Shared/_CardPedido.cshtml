@@ -27,14 +27,7 @@
         <div class="pedido">
             <div class="pedido__superior">
                 <h2>@pedido.Nom_Cliente</h2>
-                @if (pedido.Ind_Ativo)
-                {
-                    <h2>Enviado</h2>
-                }
-                else
-                {
-                    <h2>Não Enviado</h2>
-                }
+               
                 <div class="pedido__superior__botoes">
                     <buttom onclick="editarPedido(@pedido.Num_IDCliente, '@Url.Action("EditarPedidos")')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
                     @{
@@ -61,6 +54,14 @@
                         </li>
                     }
                 </ul>
+                @if (pedido.Ind_Ativo)
+                {
+                    <h3>Enviado</h3>
+                }
+                else
+                {
+                    <h3>Não Enviado</h3>
+                }
             </div>
         </div>
         <script>

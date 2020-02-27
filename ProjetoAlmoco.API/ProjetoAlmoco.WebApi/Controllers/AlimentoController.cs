@@ -37,13 +37,5 @@ namespace ProjetoAlmoco.WebApi.Controllers
             }
             return Ok();
         }
-        [HttpGet, Route(template: "api/alimento/editarcardapio")]
-        public IHttpActionResult EditarCardapio() => Ok(_alimentoService.EditarCardapio());
-        [HttpGet, Route(template: "api/alimento/zerarcardapio")]
-        public IHttpActionResult ZerarCardapio()
-        {
-            //_alimentoRepository.Put(_alimentoRepository.Get(), 1);
-            return Ok();
-        }
     }
 }

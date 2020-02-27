@@ -5,6 +5,6 @@ namespace ProjetoAlmoco.Domain.Interfaces.Service
 {
     public interface IAlimentoService
     {
-        IEnumerable<Alimento> EditarCardapio();
+        
     }
 }

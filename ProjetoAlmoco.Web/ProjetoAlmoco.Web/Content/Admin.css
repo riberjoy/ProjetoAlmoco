@@ -371,6 +371,7 @@
     color: white;
     border-radius: 30px;
     cursor: pointer;
+    text-decoration: none;
 }
 .voltar-btn {
     background-color: var(--cor-btn-cancela);

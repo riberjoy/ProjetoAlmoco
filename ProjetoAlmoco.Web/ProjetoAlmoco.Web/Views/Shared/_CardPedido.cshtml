@@ -27,20 +27,27 @@
         <div class="pedido">
             <div class="pedido__superior">
                 <h2>@pedido.Nom_Cliente</h2>
+                @if (pedido.Ind_Ativo)
+                {
+                    <h2>Enviado</h2>
+                }
+                else
+                {
+                    <h2>Não Enviado</h2>
+                }
                 <div class="pedido__superior__botoes">
-                    
                     <buttom onclick="editarPedido(@pedido.Num_IDCliente, '@Url.Action("EditarPedidos")')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
-                    @{ 
+                    @{
                         if (controleRota == 0)
                         {
-                            caminho = "../Admin/"+@actionDeletar;
+                            caminho = "../Admin/" + @actionDeletar;
                         }
                         else
                         {
-                            caminho = "../Admin/"+@actionDeletar;
+                            caminho = "../Admin/" + @actionDeletar;
                         }
                     }
-                    
+
                     <buttom onclick="DeleteModal('Apagar Pedido?', '@caminho/@pedido.Num_IDCliente','APAGAR', 'O pedido será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
                 </div>
             </div>
@@ -56,8 +63,25 @@
                 </ul>
             </div>
         </div>
+        <script>
+            (function () {
+                if ($("div.pedido")) {
+                    var $a = $("<a>", {
+                        "class": "enviar-pedidos-btn",
+                        "onclick": "EnviarPedido('@Url.Action("realizaPedidos", "Admin")')",
+                        "href": "",
+                        "data-btn-enviar":"",
+                        "target": "_blank",
+                        html: "ENVIAR PEDIDOS"
+                    });
+                    $(".lista-pedido").append($a)
+                }
+                else
+                    $("[data-btn-enviar]").remove();
+            })();
+        </script>
     }
-        else if (cliente == pedido.Num_IDCliente)
+    else if (cliente == pedido.Num_IDCliente)
     {
         <div class="pedido">
             <div class="pedido__superior">

@@ -30,7 +30,5 @@ namespace ProjetoAlmoco.WebApi.Controllers
         [HttpGet, Route(template: "api/categoria/getativos")]
         public IHttpActionResult GetAtivos() => Ok(_categoriaService.SepararAlimentosAtivos());
         public IHttpActionResult GetById(int Num_IDCategoria) => Ok(_categoriaRepository.GetById(Num_IDCategoria));
-        [HttpGet, Route(template: "api/categoria/editarcardapio")]
-        public IHttpActionResult EditarCardapio() => Ok(_categoriaService.EditarCardapio());
     }
 }

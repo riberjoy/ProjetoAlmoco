@@ -37,7 +37,7 @@ function CadastroModal(tipoOperacao, caminho, nomeBtn, id) {
     $("<form></form>", { class: "formCategoria", method: 'post', action: caminho }).appendTo("body div.modal div.modal-content ");
 
     if (tipoOperacao.includes('Alimento')) {
-        $("<input>", { class: "admin__cadAlimentoID", type: "text", name: "CategoriaID", id: "CategoriaID" }).appendTo("body div.modal div.modal-content form.formCategoria");
+        $("<input>", { class: "admin__cadAlimentoID", type: "text", name: "CategoriaID", id: "CategoriaID" }).attr('maxlength', '20').appendTo("body div.modal div.modal-content form.formCategoria");
         $("input.admin__cadAlimentoID").css({
             "display": "none",
         });
@@ -46,13 +46,13 @@ function CadastroModal(tipoOperacao, caminho, nomeBtn, id) {
     }
 
     //<input autocomplete="off" class="login__input text-box single-line" data-val="true"  id="Senha" name="Senha" placeholder="SENHA" type="password" value>
-    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Nome", id: "Nome", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
+    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Nome", id: "Nome", autocomplete: "off" }).attr('maxlength', '20').appendTo("body div.modal div.modal-content form.formCategoria");
 
 
     if (tipoOperacao.includes("Cliente")) {
-        $("<input>", { class: "admin__cadCategoria", type: "text", name: "Usuario", id: "Usuario", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
+        $("<input>", { class: "admin__cadCategoria", type: "text", name: "Usuario", id: "Usuario", autocomplete: "off" }).attr('maxlength', '50').appendTo("body div.modal div.modal-content form.formCategoria");
 
-        $("<input>", { class: "admin__cadCategoria", type: "text", name: "Senha", id: "Senha", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
+        $("<input>", { class: "admin__cadCategoria", type: "text", name: "Senha", id: "Senha", autocomplete: "off" }).attr('maxlength', '15').appendTo("body div.modal div.modal-content form.formCategoria");
 
     }
 
@@ -120,10 +120,10 @@ function CadastroCliente(tipoOperacao, caminho, nomeBtn, id, nome, user) {
     $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Id", id: "Id", autocomplete: "off" }).css("display", "none").appendTo("body div.modal div.modal-content form.formCategoria");
     document.querySelector("input[type='text'][name='Id']").value = id;
     //<input autocomplete="off" class="login__input text-box single-line" data-val="true"  id="Senha" name="Senha" placeholder="SENHA" type="password" value>
-    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Nome", id: "Nome", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
+    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Nome", id: "Nome", autocomplete: "off" }).attr('maxlength', '50').appendTo("body div.modal div.modal-content form.formCategoria");
     document.querySelector("input[type='text'][name='Nome']").value = nome;
 
-    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Usuario", id: "Usuario", autocomplete: "off" }).appendTo("body div.modal div.modal-content form.formCategoria");
+    $("<input>", { id: "inputCadastroModal", class: "admin__cadCategoria", type: "text", name: "Usuario", id: "Usuario", autocomplete: "off" }).attr('maxlength', '15').appendTo("body div.modal div.modal-content form.formCategoria");
     document.querySelector("input[type='text'][name='Usuario']").value = user;
 
     $("input.admin__cadCategoria").css({
@@ -216,11 +216,11 @@ function DeleteModal(tipoOperacao, caminho, nomeBtn, aviso, id, nome) {
         ativo = false;
     });
 
-    $("input.admnCadCategoria__link").click(function () {
-        $.post(urlsCadastrar.abrirModalObservacaoItem, { idItem: idItem, editar: false })
-        $("div.modal").remove();
-        ativo = false;
-    });
+    //$("input.admnCadCategoria__link").click(function () {
+    //    $.post(urlsCadastrar.abrirModalObservacaoItem, { idItem: idItem, editar: false })
+    //    $("div.modal").remove();
+    //    ativo = false;
+    //});
 }
 
 window.onclick = function (event) {

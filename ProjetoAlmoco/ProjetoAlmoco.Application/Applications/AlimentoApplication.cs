@@ -32,22 +32,6 @@ namespace ProjetoAlmoco.Application.Applications
                 return contexto.RequestPut(URL, alimentos);
             }
         }
-        public HttpResponseMessage ZerarCardapio()
-        {
-            using (contexto = new Context())
-            {
-                string URL = URLBase + "/zerarcardapio";
-                return contexto.RequestGet(URL);
-            }
-        }
-        public HttpResponseMessage EditarCardapio()
-        {
-            using (contexto = new Context())
-            {
-                string URL = URLBase + "/salvarcardapio";
-                return contexto.RequestGet(URL);
-            }
-        }
         public HttpResponseMessage Get()
         {
             using (contexto = new Context())

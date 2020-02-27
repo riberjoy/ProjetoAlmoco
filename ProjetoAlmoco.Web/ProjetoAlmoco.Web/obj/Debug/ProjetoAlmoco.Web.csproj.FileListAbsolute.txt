@@ -191,7 +191,6 @@ C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.Web\ProjetoAlmoc
 C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.dll
 C:\Users\riber\Desktop\clone Master\ProjetoAlmoco\ProjetoAlmoco.Web\ProjetoAlmoco.Web\obj\Debug\ProjetoAlmoco.Web.pdb
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\VBCSCompiler.exe
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.dll.config
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\ProjetoAlmoco.Web.pdb
@@ -218,6 +217,7 @@ D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\b
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.exe
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.exe.config
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\vbc.rsp
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\VBCSCompiler.exe
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\roslyn\VBCSCompiler.exe.config
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Antlr3.Runtime.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.Web\ProjetoAlmoco.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll

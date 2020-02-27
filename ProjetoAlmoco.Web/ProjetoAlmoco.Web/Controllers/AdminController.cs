@@ -36,7 +36,7 @@ namespace ProjetoAlmoco.Web.Controllers
 
         public ActionResult MudarCardapio()
         {
-            var categoriasAtivas = categoriaApp.EditarCardapio().Content.ReadAsAsync<List<Categoria>>().Result;
+            var categoriasAtivas = categoriaApp.GetAtivos().Content.ReadAsAsync<List<Categoria>>().Result;
             var alimentos = new List<Alimento>();
 
             foreach (var cat in categoriasAtivas)
@@ -55,7 +55,7 @@ namespace ProjetoAlmoco.Web.Controllers
         public ActionResult realizaPedidos() // Mandar para o whatsApp
         {
             string pedidosTxt = "Pedidos do dia:%0A%0A" + pedidoApp.TxtPedidos().Content.ReadAsStringAsync().Result;
-            alimentoApp.ZerarCardapio();
+
 
             string url = "https://api.whatsapp.com/send?phone=${5535998901582}&text=" + pedidosTxt;
             return Redirect(url);

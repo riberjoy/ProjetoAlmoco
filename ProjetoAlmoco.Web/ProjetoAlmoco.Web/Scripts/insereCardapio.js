@@ -2,14 +2,6 @@
 var id;
 var caminho;
 
-//$(document).ready(function () {
-//    if ($("#clientes").val() == "") {
-//        caminho = "../Admin/ListarPedidos";
-//    }else {
-//        caminho = "../Admin/PedidoAdd";
-//    }
-//});
-
 
 function itensSelecionados(actionPedidoAdd) {
     $("input:checked").each(function () {
@@ -100,3 +92,14 @@ var NovoPedido = function (actionNovoPedido) {
         $("body").html(data);
     }).progress($(".fundo-loading").css("display", "flex"))
 }
+//var EnviarPedido = function (actionEnviar) {
+//    const elem = document.querySelector(".lista-pedidos__scroll > .pedido");
+//    if (elem) {
+//        $.get(actionEnviar).done(function (data) {
+//            $("body").html(data);
+//        }).progress($(".fundo-loading").css("display", "flex"))
+//    }
+//    else {
+//        alert("asdf");
+//    }
+//}

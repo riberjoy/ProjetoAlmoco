@@ -16,19 +16,6 @@ namespace ProjetoAlmoco.Domain
             _categoriaRepository = categoriaRepository;
             _alimentoRepository = alimentoRepository;
         }
-        public IEnumerable<Categoria> EditarCardapio()
-        {
-            var categoriasAtivas = SepararAlimentosAtivos();
-            foreach(var categoria in categoriasAtivas)
-            {
-                //foreach(var alimento in categoria.Alimentos)
-                //{
-                //    _alimentoRepository.Put(categoria.Alimentos, 1);
-                //}
-            }
-            return categoriasAtivas;
-        }
-
         public IEnumerable<Categoria> SepararAlimentosAtivos() 
         {
             var categoriasValidas = new List<Categoria>();

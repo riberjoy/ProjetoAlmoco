@@ -13,13 +13,5 @@ namespace ProjetoAlmoco.Domain
         {
             _alimentoRepository = alimentoRepository;
         }
-        public IEnumerable<Alimento> EditarCardapio()
-        {
-            var alimentosAtivos = _alimentoRepository.GetAtivos();
-            //if (alimentosAtivos != null)
-            //    _alimentoRepository.Put(alimentosAtivos, 1);
-
-            return alimentosAtivos;
-        }
     }
 }

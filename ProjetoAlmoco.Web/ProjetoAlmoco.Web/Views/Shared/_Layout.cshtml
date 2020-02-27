@@ -15,14 +15,15 @@
         if (controller == "Cadastro" || controller == "Login")
         {
             @Styles.Render("~/Content/Login.css", "~/Content/Cadastro.css")
-            @Scripts.Render("~/bundles/modernizr")
+            @*@Scripts.Render("~/bundles/modernizr")*@
         }
         else
         {
             @Styles.Render("~/Content/Admin.css")
-            @Scripts.Render("~/bundles/modernizr", "~/Scripts/modal.js", "~/Scripts/insereCardapio.js")
+            @Scripts.Render(@*"~/bundles/modernizr",*@ "~/Scripts/modal.js", "~/Scripts/insereCardapio.js")
             @Html.Partial("_Topo")
         }
+        @Scripts.Render("~/bundles/jquery")
     }
     <div class="fundo-loading">
         <div class="loading">
@@ -38,7 +39,6 @@
     </div>
     @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
 </html>

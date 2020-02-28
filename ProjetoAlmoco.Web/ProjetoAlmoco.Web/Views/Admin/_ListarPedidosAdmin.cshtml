@@ -31,8 +31,9 @@
     <div class="lista-pedidos__scroll">
         @Html.Partial("_CardPedido")
     </div>
-
-    <a class="enviar-pedidos-btn" href='@Url.Action("realizaPedidos", "Admin")' target="_blank">ENVIAR PEDIDOS</a>
-
+    @if (ViewBag.ListaPedidos.Count > 0 && ViewBag.Cliente.Num_IDCliente == 3)
+    {
+        <a class="enviar-pedidos-btn" href='@Url.Action("realizaPedidos", "Admin")' target="_blank">ENVIAR PEDIDOS</a>
+    }
 </div>
 

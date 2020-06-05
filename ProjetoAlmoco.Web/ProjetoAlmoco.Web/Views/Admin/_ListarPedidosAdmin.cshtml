@@ -1,26 +1,57 @@
 ﻿@{ 
     Layout = null;
     var action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
+    string caminho = "";
 }
 <div class="lista-pedido">
     <div class="lista-pedido__botoes">
         <div class="lista-pedido__btn">
-
-            <button onclick="MudarCardapio('@Url.Action("MudarCardapio")')" class="lista-pedido-btn">
+            <!--  -->
+            @{
+                if (action == "ListarPedidos")
+                {
+                    caminho = "../Admin/MudarCardapio";
+                }
+                if (action == "PedidoAdd")
+                {
+                    caminho = "../MudarCardapio";
+                }
+            }
+            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
                 <span class="circle-add-alimento " aria-hidden="true">
                     <i class=" fas fa-pencil-alt" id="azul"></i>
                 </span>
                 <span class="button-text2">Editar Cardápio</span>
             </button>
-
-            <button onclick="ListarClientes('@Url.Action("ListarClientes")')" class="lista-pedido-btn">
+            <!--  -->
+            @{
+                if (action == "ListarPedidos")
+                {
+                    caminho = "../Admin/ListarClientes";
+                }
+                if (action == "PedidoAdd")
+                {
+                    caminho = "../ListarClientes";
+                }
+            }
+            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
                 <span class="circle-add-alimento " aria-hidden="true">
                     <i class="  fas fa-pencil-alt" id="amarelo"></i>
                 </span>
                 <span class="button-text2">Editar Clientes</span>
             </button>
-
-            <button onclick="ListarClientes('@Url.Action("NovoPedido")')" class="lista-pedido-btn">
+            <!--  -->
+            @{
+                if (action == "ListarPedidos")
+                {
+                    caminho = "../Admin/NovoPedido";
+                }
+                if (action == "PedidoAdd")
+                {
+                    caminho = "../NovoPedido";
+                }
+            }
+            <button onclick="location.href='@caminho';" class="lista-pedido-btn">
                 <span class="circle-add-alimento">
                     <i class=" fa fa-plus" id="verde"></i>
                 </span>
@@ -31,9 +62,8 @@
     <div class="lista-pedidos__scroll">
         @Html.Partial("_CardPedido")
     </div>
-    @if (ViewBag.ListaPedidos.Count > 0 && ViewBag.Cliente.Num_IDCliente == 3)
-    {
-        <a class="enviar-pedidos-btn" href='@Url.Action("realizaPedidos", "Admin")' target="_blank">ENVIAR PEDIDOS</a>
-    }
+
+    <button class="enviar-pedidos-btn"> ENVIAR PEDIDOS</button>
+
 </div>
 

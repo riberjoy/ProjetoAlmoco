@@ -16,9 +16,11 @@ D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Applicati
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\ProjetoAlmoco.Application.pdb
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\Newtonsoft.Json.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.Extensions.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.Formatting.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.Primitives.dll
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.WebRequest.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Web.Helpers.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Web.Mvc.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Web.Razor.dll
@@ -26,6 +28,8 @@ D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Applicati
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Web.WebPages.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Web.WebPages.Razor.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\Newtonsoft.Json.xml
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.xml
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Net.Http.WebRequest.xml
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Web.Helpers.xml
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Web.Mvc.xml
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\System.Web.Razor.xml
@@ -38,7 +42,6 @@ D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Applicati
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\pt-br\System.Web.WebPages.resources.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\pt-br\System.Web.WebPages.Deployment.resources.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\bin\Debug\pt-br\System.Web.WebPages.Razor.resources.dll
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.csprojAssemblyReference.cache
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.csproj.CopyComplete
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.csprojResolveAssemblyReference.cache
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco\ProjetoAlmoco.Application\obj\Debug\ProjetoAlmoco.Application.pdb

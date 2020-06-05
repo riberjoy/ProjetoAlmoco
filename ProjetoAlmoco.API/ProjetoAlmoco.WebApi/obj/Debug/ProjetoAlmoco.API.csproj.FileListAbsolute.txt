@@ -217,7 +217,6 @@ D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebAp
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebApi\bin\System.Web.Http.xml
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebApi\bin\System.Web.Http.WebHost.xml
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebApi\obj\Debug\ProjetoAlmoco.API.csprojAssemblyReference.cache
-D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebApi\obj\Debug\ProjetoAlmoco.API.csproj.CopyComplete
+D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebApi\obj\Debug\ProjetoAlmoco.API.csprojResolveAssemblyReference.cache
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebApi\obj\Debug\ProjetoAlmoco.WebApi.dll
 D:\DADOS\Projeto Almoço\ProjetoAlmoco 1.2\ProjetoAlmoco.API\ProjetoAlmoco.WebApi\obj\Debug\ProjetoAlmoco.WebApi.pdb

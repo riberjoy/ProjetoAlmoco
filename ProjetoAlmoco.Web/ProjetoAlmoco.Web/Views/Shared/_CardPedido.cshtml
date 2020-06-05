@@ -1,11 +1,10 @@
 ﻿@{
-    var action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
-
-    int cliente = ViewBag.Cliente.Num_IDCliente;
+    List<ProjetoAlmoco.Application.Models.Pedido> Pedidos = (List<ProjetoAlmoco.Application.Models.Pedido>)ViewBag.ListaPedidos;
+    int cliente = ViewBag.IdCliente;
 
     string actionDeletar, actionEditar;
 
-    if (cliente == 3)
+    if (cliente == 0)
     {
         actionDeletar = "DeletarPedidoAdm";
         actionEditar = "EditarPedidoAdm";
@@ -18,17 +17,27 @@
     int controleRota = ViewBag.ControleRota;
 }
 
-@foreach (var pedido in ViewBag.ListaPedidos)
+@foreach (var pedido in Pedidos)
 {
-    if (cliente == 3)
+    if (cliente == 0)
     {
         string caminho = "";
-
         <div class="pedido">
             <div class="pedido__superior">
                 <h2>@pedido.Nom_Cliente</h2>
                 <div class="pedido__superior__botoes">
-                    <buttom onclick="editarPedido(@pedido.Num_IDCliente, '@Url.Action("EditarPedidos")')" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                    @{
+                        if (controleRota == 0)
+                        {
+                            caminho = "../Admin/EditarPedidos";
+                        }
+                        else
+                        {
+                            caminho = "../EditarPedidos";
+                        }
+                    }
+
+                    <buttom onclick="location.href ='@caminho/@pedido.Nom_Cliente';" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
                     @{
                         if (controleRota == 0)
                         {
@@ -36,7 +45,7 @@
                         }
                         else
                         {
-                            caminho = "../Admin/" + @actionDeletar;
+                            caminho = "../" + @actionDeletar;
                         }
                     }
 
@@ -62,7 +71,7 @@
             <div class="pedido__superior">
                 <h2>@pedido.Nom_Cliente</h2>
                 <div class="pedido__superior__botoes">
-                    <buttom onclick="location.href='../Pedido/@actionEditar/@pedido.Num_IDCliente';" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
+                    <buttom onclick="location.href='../Pedido/@actionEditar';" class="p_s_b_add"><i class=" fa fa-pencil-alt"></i></buttom>
                     <buttom onclick="DeleteModal('Apagar Pedido?', 'Pedido/@actionDeletar/@pedido.Num_IDCliente','APAGAR', 'O pedido será deletado permanentemente!')" class="p_s_b_delete"><i class=" fa fa-trash"></i></buttom>
                 </div>
             </div>

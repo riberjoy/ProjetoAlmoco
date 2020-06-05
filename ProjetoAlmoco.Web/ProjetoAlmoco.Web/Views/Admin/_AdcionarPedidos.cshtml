@@ -1,57 +1,41 @@
-﻿@model ProjetoAlmoco.Application.Models.Pedido
+﻿﻿@model ProjetoAlmoco.Application.Models.Pedido
 @{
     List<ProjetoAlmoco.Application.Models.Cliente> Clientes = (List<ProjetoAlmoco.Application.Models.Cliente>)ViewBag.BuscaClientes;
-    string nomeCliente = ViewBag.Cliente.Nom_Cliente;
+    string nomeCliente = ViewBag.Cliente;
+
 }
 <div id="myBtn" class="conteudo">
     <div class="conteudo__titulo">
-        @{
-            if (ViewBag.ControleCardapio == true)
+        <h1>Montar prato.</h1>
+        <label id="label__EscolheCliente" for="clientes">Cliente:</label>
+        <select id="clientes" name="clientes">
+            @if (nomeCliente == "")
             {
-                <h1>Montar prato.</h1>
-                <label id="label__EscolheCliente" for="clientes">Cliente:</label>
-                <select id="clientes" name="clientes">
-                    @if (nomeCliente == "")
-                    {
-                        <option id="clientes__op" value=""></option>
-                        foreach (var client in Clientes)
-                        {
-                            <option id="clientes__op" value="@client.Num_IDCliente">@client.Nom_Cliente</option>
-                        }
-                    }
-                    else
-                    {
-                        foreach (var client in Clientes)
-                        {
-                            if (client.Nom_Cliente.Equals(nomeCliente))
-                            {
-                                <option id="clientes__op" value="@client.Num_IDCliente">@client.Nom_Cliente</option>
-                            }
-                        }
-                        foreach (var client in Clientes)
-                        {
-                            if (!client.Nom_Cliente.Equals(nomeCliente))
-                            {
-                                <option id="clientes__op" value="@client.Num_IDCliente">@client.Nom_Cliente</option>
-                            }
-                        }
-                    }
-                </select>
-                @Html.Partial("_CardCardapio")
-                <input id="liberarCardapio" onclick="itensSelecionados('@Url.Action("PedidoAdd")')" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ADICIONAR PEDIDO">
+                <option id="clientes__op" value=""></option>
+                foreach (var client in Clientes)
+                {
+                    <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                }
             }
             else
             {
-                <div id="cardapioIndisponivel">
-                    <h1>Cardápio indisponível no momento!</h1>
-                    <h2> Aguarde até a liberação do cardápio</h2>
-                </div>
-                <br />
+                foreach (var client in Clientes)
+                {
+                    if (client.Nom_Cliente.Equals(nomeCliente))
+                    {
+                        <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                    }
+                }
+                foreach (var client in Clientes)
+                {
+                    if (!client.Nom_Cliente.Equals(nomeCliente))
+                    {
+                        <option id="clientes__op" value="@client.Nom_Usuario">@client.Nom_Cliente</option>
+                    }
+                }
             }
-            if (ViewBag.ControleCardapio == false || ViewBag.Editar == false || ViewBag.Editar == null)
-            {
-                @Html.ActionLink("VOLTAR", "ListarPedidos", "Admin", new { @class = "voltar-btn2" })
-            }            
-        }
+        </select>
+        @Html.Partial("_CardCardapio")
+        <input id="liberarCardapio" class="conteudo liberar-cardapio" type="submit" href="login.html" value="ADICIONAR PEDIDO">
     </div>
 </div>
